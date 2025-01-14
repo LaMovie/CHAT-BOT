@@ -31,12 +31,25 @@ video {
       box-shadow: none;
   }
 }
+#B {
+    color: #000;
+    opacity: .5;
+    margin-top: 3vh;
+    font-weight: bold;
+    background: violet;
+    border-radius: 20px;
+    animation: Latencia 1s infinite running;
+}
+@keyframes Latencia {
+    0% {opacity: 1;}
+   100% {opacity: .5;}
+}
 </style>
 </head>
 <body>
 <center>
        <h1 id="H">X-Tv</h1>
- <iframe id="Thor" src="" frameborder="0" allowfullscreen="true" allow="encrypted-media" scrolling="true"></iframe>
+ <video poster="https://bit.ly/49X0ijf" id="Thor" autoplay loop preload controls src="https://streamtv.mediasector.es/hls/activatv/index.m3u8" alt="PRINCIPAL"></video>
    
         <div id="Div">
   <video muted loop autoplay src="https://imagenuniversaltv.net:3771/live/iutvlive.m3u8">UNIVERSAL-IMG</video>
@@ -46,16 +59,27 @@ video {
   <video muted loop autoplay src="https://streamtv.mediasector.es/hls/activatv/index.m3u8">ACTIVA</video>
   <video muted loop autoplay src="https://is.gd/7CaWXu">CLASSIC</video>
            </div>
+    <button id="B">CORREGIR LATENCIA</button>
 </center>
 
 <script>
    var Video = document.querySelectorAll('video');
+       let TTT = true;
+       
    Video.forEach(video => {
        video.onclick = () => {
-     Thor.src = 'https://fast-channels.atresmedia.com/648ef5882bfab0e4627e0d61/648ef5882bfab0e4627e0d61.m3u8';  
+     Thor.src = video.src;  
  H.textContent = video.textContent;
    }
-});
+});      
+        B.onclick = () => {
+          TTT = !TTT;
+ Div.style.display = TTT ? "block" : "none";
+   B.textContent = TTT ? 'CORREGIR LATENCIA' : 'LATENCIA 0°';
+   B.style.background = TTT ? 'violet' : 'gray';
+   B.style.animation = TTT ? 'Latencia 1s infinite running' : 'none';
+};
 </script>
 </body>
 </html>
+
