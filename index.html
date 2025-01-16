@@ -1,85 +1,49 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miniaturas de Video</title>
+   <meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
-body{
-   color: red;
-   background: black;
-   font-family: 'Lacquer', cursive;
+body {
+    margin: 0 10vh;
 }
-video {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-    object-fit: cover;
-    border-radius: 15px;
-  &:hover {
-      scale: 120%;
-      filter: saturate(150%);
-      box-shadow: 0 0 30px blue;      
-  }
-}
-#Thor {
-    width: 100%;
-    height: 210px;
-  &:hover {
-      scale: 100%;
-      box-shadow: none;
-  }
-}
-#B {
-    color: #000;
-    opacity: .5;
-    margin-top: 3vh;
+#Input {
+    color: #fff;
     font-weight: bold;
+    background: blue;
+    border-radius: 20px;
+}
+.Marcado {
     background: violet;
     border-radius: 20px;
-    animation: Latencia 1s infinite running;
-}
-@keyframes Latencia {
-    0% {opacity: 1;}
-   100% {opacity: .5;}
 }
 </style>
 </head>
 <body>
-<center>
-       <h1 id="H">X-Tv</h1>
- <video poster="https://bit.ly/49X0ijf" id="Thor" autoplay loop preload controls src="https://streamtv.mediasector.es/hls/activatv/index.m3u8" alt="PRINCIPAL"></video>
-   
-        <div id="Div">
-  <video muted loop autoplay src="https://imagenuniversaltv.net:3771/live/iutvlive.m3u8">UNIVERSAL-IMG</video>
-  <video muted loop autoplay src="https://movil.ejeserver.com/live/visiondorada.m3u8">BUM TV</video>
-  <video muted loop autoplay src="https://is.gd/GyYDz0">CINE TERROR</video>
-  <video muted loop autoplay src="https://fast-channels.atresmedia.com/648ef5882bfab0e4627e0d61/648ef5882bfab0e4627e0d61.m3u8">EL HORMIGUERO</video>
-  <video muted loop autoplay src="https://streamtv.mediasector.es/hls/activatv/index.m3u8">ACTIVA</video>
-  <video muted loop autoplay src="https://is.gd/7CaWXu">CLASSIC</video>
-           </div>
-    <button id="B">CORREGIR LATENCIA</button>
-</center>
-
+    <h2 id="H">SPEECH</h2>
+    <form onsubmit="event.preventDefault(); Speech();">
+        <input id="Input" type="text" placeholder="Buscador..."/>
+</form>
 <script>
-   var Video = document.querySelectorAll('video');
-       let TTT = true;
-       
-   Video.forEach(video => {
-       video.onclick = () => {
-     Thor.src = video.src;  
- H.textContent = video.textContent;
+        function Speech() {
+            var text = document.getElementById("Input").value; 
+       if (text !== "") {
+       var voz = new SpeechSynthesisUtterance(text);
+      voz.lang = "es-ES"; 
+      voz.volume = 1;
+  var timer = setInterval(() => {
+      var voices = speechSynthesis.getVoices();
+   if (voices.length !== 0) { 
+      voz.voice = voices[0];
+                        clearInterval(timer);
+                        window.speechSynthesis.speak(voz); 
+ }
+}, 100);
+            } else {
+   alert("Introduce un texto.");
    }
-});      
-        B.onclick = () => {
-          TTT = !TTT;
- Div.style.display = TTT ? "block" : "none";
-   B.textContent = TTT ? 'CORREGIR LATENCIA' : 'LATENCIA 0°';
-   B.style.background = TTT ? 'violet' : 'gray';
-   B.style.animation = TTT ? 'Latencia 1s infinite running' : 'none';
+   Input.value = '';
 };
 </script>
 </body>
 </html>
-
