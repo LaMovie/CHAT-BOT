@@ -5,30 +5,135 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
 body {
-    margin: 0 10vh;
+    background: #000;
 }
 #Input {
-    color: #fff;
+    z-index: 10;
+    color: #000;
+    padding: 2vh;
+    position: fixed;
+    background: gold;
     font-weight: bold;
-    background: blue;
+    margin: 80vh -15vh;
     border-radius: 20px;
 }
-.Marcado {
-    background: violet;
+ul li {    
+    width: 80%; 
+    margin-top: 3vh;
+    list-style: none;
+    font-weight: bold;
     border-radius: 20px;
+}
+ul li:nth-child(odd){
+    color: #000;
+    background: gold;
+    margin-left: 10vh;
+}
+ul li:nth-child(even){
+    color: #fff;
+    background: blue;
+    margin-left: -20vh;
+}
+#All {
+    gap: 10px;
+    width: 90%;
+    height: 70vh;
+    display: grid;
+    overflow-y: auto;  
+    position: fixed;  
+    margin-left: 1vh;
 }
 </style>
 </head>
 <body>
-    <h2 id="H">SPEECH</h2>
-    <form onsubmit="event.preventDefault(); Speech();">
-        <input id="Input" type="text" placeholder="Buscador..."/>
-</form>
+<br/>
+<center>
+  <div id="Container">
+     <div id="All">
+        <ul id="Lista"></ul>
+             </div>
+                </div>
+  <form onsubmit="event.preventDefault(); Chat()">
+   <input id="Input" type="text" placeholder="CHAT..."/>
+  </form>
+</center>
+
 <script>
-        function Speech() {
-            var text = document.getElementById("Input").value; 
-       if (text !== "") {
-       var voz = new SpeechSynthesisUtterance(text);
+      function Chat() {
+    var Input = document.getElementById("Input").value.toLowerCase().trim();
+    
+    var SALUDO = ["hola", "estas", "estás"];
+    
+    var SOFIA = [
+        { Chat: ["arconte", "arconte?", "arcontes", "arcontes?", "seres", "manipuladores", "astral"],
+            R: ["Son seres del bajo Astral", "Nos manipulan e utilizan desde otros planos influyendo en nuestros comportamientos y pensamientos", "Se alimentan de las bajas vibraciones"] },
+            
+        { Chat: ["dios", "dios?", "divinidad", "creador", "creador?", "esencia", "inmaterial", "creó", "creo", "arquitecto", "hizo", "conciencia"],
+            R: ["Es una conciencia fuera del Todo", "Es la esencia suprema más allá del entendimiento", "A lo que llamamos Dios es todo lo inmaterial ya que es el creador de la materia"] },
+            
+        { Chat: ["eter", "eter?", "tejido", "materia", "materia?", "conexión", "conexion", "gnostisismo", "gnostisismo?", "sustancia"],
+            R: ["Es el tejido del Todo mismo", "Es la sustancia que conecta todas las cosas y toda la existencia misma", "Es aquello que la ciencia pasa por alto a la hora de explicar las dimensiones y la existencia misma, pero que si está bien explicado en el Gnostisismo"] }
+    ];
+
+   var ARGUMENTO = ["argumenta", "continua", "continúa", "sigue", "explica", "explicar", "explicalo", "explícamelo", "explicamelo", "explicame", "explícame", "mas", "más", "detallalo", "detalles"];
+
+    var Usuario = document.createElement('li');
+    var Bot = document.createElement('li');    
+    Lista.appendChild(Usuario); 
+       
+       setTimeout(() => { 
+    Lista.appendChild(Bot);       Bot.scrollIntoView({ behavior: "smooth" }); 
+     <!-- Desplazar al último mensaje del bot -->
+    }, 1000);
+   
+    var BOT = "🤖: ";
+    var Respuesta = BOT.concat("No tengo información sobre " + Input);
+    
+  <!--  Variable para almacenar el tema del último mensaje -->
+    if (!window.temaActual) {
+      window.temaActual = null;
+  };
+
+  <!-- Para verificar si el tema actual está en el array --> 
+
+function Relacionado(tema, input) {
+ var Clave = tema.Chat;
+ var palabrasInput = input.split(' ');
+        return palabrasInput.some(palabra => Clave.includes(palabra));
+ };
+
+      <!-- LOGISTICA -->
+      
+    SOFIA.forEach((item) => {
+   if (Relacionado(item, Input)) {
+            Respuesta = BOT + item.R[Math.floor(Math.random() * item.R.length)];    
+      window.temaActual = item;  
+   <!-- Guardar el tema actual -->               
+   } 
+ });
+ 
+       <!-- ARGUMENTO -->
+     if (ARGUMENTO.some(arg => Input.includes(arg)) && window.temaActual) {
+         Respuesta = BOT + window.temaActual.R[Math.floor(Math.random() * window.temaActual.R.length)];
+  };
+  
+    SALUDO.forEach((item) => {
+      if (Input.includes(item)) {
+          Respuesta = BOT + 'Hola! Como estás?, Yo bien!';
+   };
+});
+     Bot.textContent = Respuesta;
+  Usuario.textContent = Input || "...";
+  
+  Usuario.scrollIntoView({ behavior: "smooth" }); 
+    <!-- Desplazar al último mensaje del usuario -->
+    document.getElementById("Input").value = '';
+
+
+         <!-- SPEECH -->    
+    var text = document.getElementById("Input").value; 
+       if (Respuesta) {
+       var voz = new SpeechSynthesisUtterance(Respuesta);
       voz.lang = "es-ES"; 
       voz.volume = 1;
   var timer = setInterval(() => {
@@ -39,11 +144,13 @@ body {
                         window.speechSynthesis.speak(voz); 
  }
 }, 100);
-            } else {
-   alert("Introduce un texto.");
-   }
-   Input.value = '';
+    };
+        Input.value = '';
 };
 </script>
 </body>
 </html>
+
+
+
+
