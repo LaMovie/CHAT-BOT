@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+   <meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+body {
+    background: #000;
+}
+#Input {
+    z-index: 10;
+    color: #000;
+    padding: 2vh;
+    position: fixed;
+    background: gold;
+    font-weight: bold;
+    margin: 70vh -15vh;
+    border-radius: 20px;
+}
+ul li {    
+    width: 70%; 
+    margin-top: 3vh;
+    list-style: none;
+    font-weight: bold;
+    border-radius: 20px;
+}
+ul li:nth-child(odd){
+    color: #000;
+    background: gold;
+    margin-left: 10vh;
+}
+ul li:nth-child(even){
+    color: #fff;
+    background: blue;
+    margin-left: -20vh;
+}
+#All {
+    gap: 10px;
+    width: 90%;
+    height: 70vh;
+    display: grid;
+    overflow-y: auto;  
+    position: fixed;  
+    margin-left: 1vh;
+}
+iframe {
+    border-radius: 10px;
+}
+#No {
+    scale: 60%;
+    display: none;
+    margin-left: -10vh;
+}
+</style>
+</head>
+<body>
+<br/>
+<center>
+  <div id="Container">
+     <div id="All">
+        <ul id="Lista"></ul>
+             </div>
+                </div>
+  <form onsubmit="event.preventDefault(); Chat()">
+   <input id="Input" type="text" placeholder="CHAT..."/>
+  </form>
+</center>
+<img id="No" src="https://bit.ly/3y2BVCO"/>
+
+<audio id="Inicio" src="https://archive.org/download/efecto-maquina/INICIO_mp3.mp3"></audio>
+<audio autoplay id="Ayuda" src="https://archive.org/download/efecto-maquina/AYUDA_mp3.mp3"></audio>
+<audio id="Envio" src="https://archive.org/download/efecto-maquina/ENVIO_mp3.mp3"></audio>
+<audio id="Erro" src="https://archive.org/download/efecto-maquina/ERROR_mp3.mp3"></audio>
+<audio id="Enlace" src="https://archive.org/download/efecto-maquina/ENLACE_mp3.mp3"></audio>
+
+<script src="PELIS.js"></script>
+<script>
+      function Chat() {
+    var Input = document.getElementById("Input").value.toLowerCase().trim();
+    
+    var HELP = ["hola", "estas", "estás", "ayuda", "ayudame", "que sabes hacer", "que sabes hacer?", "que puedes hacer", "que puedes hacer?", "que eres", "que eres?", "tele", "televisión", "television", "canales", "info", "información", "informacion", "tiene", "alguna", "menu", "juego"];
+    
+    var LISTA = ["sugerencia", "sugieres", "lista", "lista de peliculas", "lista de series", "contenido", "pelicula", "película", "peliculas", "películas", "serie", "series", "pelis", "mas", "más", "otra", "otro", "otros", "catalogo", "catálogo", "buscar"];
+    
+    var RESP = `Hola! Como estás?, Yo bien! <br/> Tengo juegos como: <br/> "TRES EN LINEA" <br/> "FLAPPY DINO" <br/> "AHORCADO" <br/> También contengo pelis, series & canales de Tv <br/><ul style="width: 70%;"><li>📺 Aida Tv</li><li>📺 Flow Tv</li><li>📺 Ritmos Tv</li><li>📺 Pop Tv</li><li>📺 IPTV</li><li>📺 Dark Play Tv</li><li>📺 Universal Tv</li><li>📺 X Tv</li><li>📺 Bass Nation Tv</li><li>📺 Activa Tv</li><li>📺 Bob Esponja Tv</li><li>📺 4Fun Tv</li><li>📺 Vevo R&B Tv</li><li>📺 Vevo 90s Tv</li><li>📺 Cine Terror Tv</li><li>📺 El Hormiguero Tv</li><li>📺 GH Tv</li><li>📺 Comedy Center Tv</li><li>📺 Classic Tv</li><li>📺 Toons Tv</li><li>📺 Studio Delta Tv</li><li>📺 Series Tv</li></ul><br/><p style="color: red">recuerda usar texto en concreto</p>`;   
+       
+     
+      var GAMES = [
+      { name: "Tres En Linea", url: `<iframe src="3EnLinea.html" style="width: 50vh; height: 50vh;"></iframe>`}, 
+      { name: "Flappy Dino", url: `<a href="https://codepen.io/mlho/full/zMejmo" style="color: #4f9; text-decoration: none">🦖 FLAPPY DINO</a>`}, 
+      { name: "Ahorcado", url: `<a href="AHORCADO.html" style="color: #4f9; text-decoration: none">⛓️ AHORCADO</a>`}
+      ];
+
+       var Usuario = document.createElement('li');
+    var Bot = document.createElement('li');    
+    Lista.appendChild(Usuario); 
+       
+       setTimeout(() => { 
+    Lista.appendChild(Bot);       Bot.scrollIntoView({ behavior: "smooth" }); 
+     <!-- Desplazar al último mensaje del bot -->
+    }, 1000);
+   
+    
+    var BOT = "🤖: ";
+    var Respuesta = BOT.concat("No tengo información sobre " + Input);
+    No.style.display = "block";
+           Erro.play();
+
+ 
+         <!-- PELIS -->
+    PELIS.forEach(item => {
+  var NN = item.name || item.NAME;
+  var URL = item.url || item.URL;
+var In = Input.replace(/\s+/g, ' ');
+      var Items = NN.toLowerCase().replace(/\s+/g, ' ');
+   <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
+    if (In.includes(Items)) {
+  Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/> <a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+     No.style.display = 'none';
+           Enlace.play();
+           Envio.play();
+           Erro.pause();
+  } 
+});
+ 
+       <!-- CANALES TV -->
+    CANALES.forEach(item => {
+var In = Input.replace(/\s+/g, ' ');    
+   var Items = item.name.toLowerCase().replace(/\s+/g, ' ');
+   <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS --> 
+    if (In.includes(Items)) {
+  Respuesta = BOT + `Disfruta de: "${item.name}"<br/><br/> <iframe src="${item.url}"></iframe>`;
+    No.style.display = 'none';
+          Envio.play();
+          Erro.pause();
+  }
+});  
+  
+         <!-- AYUDA -->
+   HELP.forEach((item) => {
+var In = Input.replace(/\s+/g, ' ');      
+      if (In.includes(item)) {
+       Respuesta = BOT + RESP;
+       No.style.display = 'none';
+          Inicio.play();
+          Envio.play();
+          Erro.pause();
+   };
+});
+
+
+     <!-- SUGERENCIAS -->
+   LISTA.forEach((item) => {
+var In = Input.replace(/\s+/g, ' ');      
+    var SUGG =  SUGGEST[Math.floor(Math.random() * SUGGEST.length)];
+      if (In.includes(item)) {
+       Respuesta = BOT + 'Sugerencias:' + SUGG;
+       No.style.display = 'none';
+          Envio.play();
+          Erro.pause();
+   };
+});
+     
+
+         <!-- GAMES -->
+   GAMES.forEach((item) => {
+var In = Input.replace(/\s+/g, ' ');
+        var Items = item.name.toLowerCase().replace(/\s+/g, ' ');
+   <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->      
+      if (In.includes(Items)) {
+     Respuesta = BOT + item.url;
+     No.style.display = 'none';
+         Envio.play();
+         Erro.pause();
+   };
+});
+    
+
+
+  <!-- NO CONCATENAR RESPUESTA -->
+   Bot.innerHTML = Respuesta;
+  Usuario.textContent = Input || "...";
+  
+  Usuario.scrollIntoView({ behavior: "smooth" }); 
+    <!-- Desplazar al último mensaje del usuario -->
+    document.getElementById("Input").value = '';             
+
+      
+          
+         <!-- SPEECH -->    
+    var text = document.getElementById("Input").value; 
+       if (Respuesta) {
+       var voz = new SpeechSynthesisUtterance(Respuesta);
+      voz.lang = "es-ES"; 
+      voz.volume = 1;
+  var timer = setInterval(() => {
+      var voices = speechSynthesis.getVoices();
+   if (voices.length !== 0) { 
+      voz.voice = voices[0];
+                        clearInterval(timer);
+                        window.speechSynthesis.speak(voz); 
+ }
+}, 100);
+    };
+        Input.value = '';
+};
+
+        <!-- PREFIJO -->
+  Input.addEventListener('keydown', function(event) {
+   if (event.key === 'Enter') { 
+                event.preventDefault(); 
+  var TextPre = Input.value.toLowerCase().trim(); 
+  let Prefijo;
+ 
+ if (TextPre.includes('tv')) {
+         Prefijo = '📺';
+     } else if(TextPre.includes('sofia')){
+         Prefijo = '⚙️';
+     } else {
+         Prefijo = '🍿';
+     }   
+   var Texto = Prefijo + TextPre;       
+   Input.value = Texto; 
+         Chat();
+  }
+});     
+</script>
+</body>
+</html>
+
+
+  
+
