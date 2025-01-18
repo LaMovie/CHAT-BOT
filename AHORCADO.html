@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahorcado</title>
+  <link rel="stylesheet" href="styles.css">
+  
+<style>
+body {
+    background: #000;
+}
+#letterInput {
+    color: black;
+    background: gold;
+    font-weight: bold;
+    border-radius: 15px;   
+    box-shadow: 0 0 30px red; 
+    
+  &:hover {
+      scale: 105%;
+  }
+}
+#Buscar {
+    color: #fdf;
+    opacity: .7;
+    background: maroon;   
+    border-radius: 10px;  
+    box-shadow: 0 0 30px red; 
+    border: .5px solid Brown; 
+    
+  &:hover {
+      scale: 120%;
+  }   
+}
+#wordToGuess {
+      margin: 5px;
+      color: #fdf;
+      height: 60px;
+      transition: .8s;
+      font-size: 38px;   
+      background: black;
+      border-radius: 10px;  
+  }  
+  
+#X {
+    color: red;  
+    width: 50%;
+    display: flex; 
+     
+    font-weight: bold;
+    border-radius: 20px;
+    animation: toons 3s linear infinite running;
+    
+  &:hover {
+      transform: scale(.5);
+  }
+}   
+@keyframes toons {
+      0%{
+          scale: 90%;
+          box-shadow: 0 0 30px gold;
+      }
+      25%{
+          transform: perspective(500px)rotateY(20deg);
+          box-shadow: 0 0 30px red; 
+      }
+      50%{
+          scale: 80%;
+          box-shadow: 0 0 30px #4f9;
+      }
+}
+#guessedLetters {
+    color: #f9f;
+    width: 70%;    
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid #4f9;
+    box-shadow: 0 0 30px #4f9;
+    animation: toons 20s linear infinite alternate running;
+}
+#message {        
+    color: #4f9;
+    font-size: 40px;
+    border-radius: 20px;
+    animation: toons 3s linear infinite running;
+}
+#mess {   
+    color: orange;
+}
+#miss {
+    color: red;
+    font-size: 40px;
+    border-radius: 20px;
+    animation: toons 3s linear infinite running;
+}
+#Ojos {
+    display: flex;
+    width: 50%;
+    height: 100px;
+}
+#Load {
+    width: 20%;
+    color: #fff;
+    opacity: .6;
+    background: #000;   
+    border-radius: 10px;
+    transform: translate(140%, 20px);
+    border: 1px solid #f9f;   
+    
+  &:hover {
+      scale: 110%;
+  } 
+}
+#Music {
+    width: 15%;
+    color: #fff;
+    left: -110px;   
+    top: 65px;
+    opacity: .6;
+    background: #000;   
+    position: relative;   
+    border-radius: 10px;
+    border: 1px solid #f9f;  
+    transform: perspective(500px)rotateX(50deg);
+    
+  &:hover {
+      scale: 120%;
+      animation: toon 3s linear infinite running;
+  }
+    
+}
+@keyframes toon {
+    0%{
+        border: 1px solid green;
+    }
+    25%{
+        border: 1px solid red;
+    }
+    50%{
+        border: 1px solid fuchsia;
+    }
+    75%{
+        border: 1px solid gold;
+    }
+    100%{
+        border: 1px solid orange;
+    }
+}
+#All {
+    margin: 4rem auto;
+}
+#Compact {
+    scale: 75%;
+}
+#D {
+    color: gold;
+}
+#Menta {
+    color: #4f9;
+    opacity: 1;
+    animation: dMenta 1s infinite 3s running;
+    
+}
+@keyframes dMenta {
+    0%{
+        opacity: .5;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .5;
+    }
+    55%{
+        opacity: .5;
+    }
+    60%{
+        opacity: 1;
+    }
+    70%{
+        opacity: .5;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#contador {
+    color: red;
+    opacity: .5;
+    margin: 0% 30%;
+    font-weight: bold;
+}
+
+</style>
+
+<style>
+#Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fondo 2s linear 1 running;
+  opacity: 0;
+}
+
+.loader {
+    box-shadow: 0 0 30px 10px #f6d;
+  background: ;
+  border: 8px solid fuchsia; 
+  border-top: 8px solid #999;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear 1 running;
+  opacity: 0;
+}
+
+@keyframes spin {
+    0% {opacity: 1; }
+  10% { transform: rotate(0deg); }
+  95% { transform: rotate(360deg); }
+  99% { opacity: 0; }
+  100% { display: none; }
+}
+
+@keyframes fondo {
+    0% {opacity: 1; }
+    99% {opacity: 1; }
+  100% { opacity: 0; }
+}
+#H {
+    margin: 20rem 5rem;
+    color: gold;
+}
+#xXx {
+    opacity: 0.5;
+}
+
+</style>
+
+
+<style>
+.G {
+    animation: win 2s linear 1 running;
+}
+@keyframes win {
+    0%{ transform: scale(2); }
+    30%{ transform: scale(1); }
+    75%{ transform: scale(2); }
+    100%{ transform: scale(1); }
+}
+.L {
+	-webkit-animation: puff-in-hor 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-hor 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes puff-in-hor {
+  0% {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-hor {
+  0% {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+#Volumen {
+    left: 5%;
+    top: -70vh;
+    z-index: 4000;
+    display: none;
+    position: relative;
+}
+</style>
+
+</head>
+<body>
+            <center>
+         <div id="Modal">
+    <div class="loader"></div>
+            </div>
+             
+   <input id="Load" type="button" value="Load" onclick="recaRgar()">
+  
+  <input id="Music" type="button" value="Music" onclick="play3()">
+             <br/>
+       
+         <div id="All">
+  
+        <div id="Ojos">
+<h1 id="X">❤️</h1><h1 id="X">❤️</h1>  
+        </div>
+        
+ <p id="guessedLetters"></p>  
+           <br/>
+  <p id="contador">ViDAS: 9</p> 
+           <br/>
+     <div id="Compact">
+  <p><span id="wordToGuess"></span></p>
+         </div>
+           <br/>
+    
+  <input type="text" id="letterInput">
+ 
+ 
+  <p id="message"></p>
+  <p id="mess"></p><br/>
+  <p id="miss"></p>
+  <script src="script.js"></script>
+  
+           </div>
+  
+          </center>
+           
+
+<audio id="1" src="https://archive.org/download/sergio-mendes-feat.-black-eyed-peas-mas-que-nada-mp-3-160-k-1/Sergio%20Mendes%20feat.%20Black%20Eyed%20Peas%20-%20Mas%20Que%20Nada%28MP3_160K%29_1.mp3"></audio>
+         
+<audio id="2" src="https://cdn-cf.vidyard.com/uploads/3940821/govideo/13e83770-8f2d-11ee-bbe1-5107ab9af334.mp4"></audio>
+                
+ <audio id="3" autoplay src=""></audio>    
+ 
+<audio id="4" src="https://ia600404.us.archive.org/19/items/efecto-maquina/Efecto%20%28M%C3%A1quina%29.mp3"></audio>
+
+<audio id="5" src="https://ia600404.us.archive.org/19/items/efecto-maquina/Efecto%20%28M%C3%A1quina%29.mp3"></audio>
+
+<input type="range" id="Volumen" min="0" max="1" step="0.01" value="1">
+          
+<script> 
+  var words = ["hiperactivo", "claudicar", "arraigado", "anarquicamente", "cizaña", "trombon", "liturgia", "litigio", "musculatura", "logopeda", "psiquiatrico", "lemuria", "incandescente", "trascendental", "intransigente", "declinar", "ostentoso", "secta", "metodologias", "sustituir", "melmar", "autoria", "renegar", "minuciosamente", "extrañarse", "monigote", "cometa", "castellanoi"];
+  
+var wordToGuess = words[Math.floor(Math.random() * words.length)];
+var guessedLetters = [];
+var remainingGuesses = 9;
+
+function displayWord() {
+  var displayString = '';
+  for (var i = 0; i < wordToGuess.length; i++) {
+    if (guessedLetters.includes(wordToGuess[i])) {
+      displayString += wordToGuess[i] + ' ';
+    } else {
+      displayString += '_ ';
+    }
+  }
+  document.getElementById('wordToGuess').textContent = displayString;
+}
+
+function checkLetter() {
+  var letter = letterInput.value.toLowerCase().trim();
+  if (guessedLetters.includes(letter)) {
+    mess.textContent = 'Ya has intentado esa letra.';
+  } else {
+    guessedLetters.push(letter);
+    if (!wordToGuess.includes(letter)) {
+      remainingGuesses--;
+      
+     contador.textContent = 'ViDAS: ' + remainingGuesses; 
+      
+    }
+    mess.textContent = '';
+    letterInput.value = '';
+    displayWord();
+    displayGuessedLetters();
+    checkGameEnd();
+  }
+} 
+          <!-- ENTER -->
+
+letterInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                
+    checkLetter();
+}
+});
+
+function displayGuessedLetters() {
+    document.querySelector('#guessedLetters').textContent = '' + guessedLetters.join(', ');
+}
+
+function checkGameEnd() {
+  if (remainingGuesses === 0) {
+     
+     miss.textContent = 'Game Over!';
+     
+    var audio = 
+document.getElementById('5');
+    audio.play();   
+    
+ letterInput.style.display = 'none';
+ Buscar.style.display = 'none';
+ document.body.setAttribute("class", "L");
+     
+  } else if (!document.querySelector('#wordToGuess').textContent.includes('_')) {
+    message.textContent = 'You Win!';
+    
+    var audio = 
+document.getElementById('4');
+    audio.play();
+    
+ letterInput.style.display = 'none';
+ Buscar.style.display = 'none';
+ document.body.setAttribute("class", "G");
+  }
+}
+
+displayWord();
+
+</script>
+
+         <!-- AUDIO -->
+       
+<script>
+
+letterInput.addEventListener('click', function() {
+  var audio = document.getElementById('1');
+  audio.play();
+});
+
+Buscar.addEventListener('click', function() {
+  var audio = document.getElementById('2');
+  audio.play();
+});
+
+
+function play3(){
+    var audio = document.getElementById("3");
+      audio.play();
+}
+
+Music.addEventListener('click', function(){
+    
+  Music.style.animation = 'toon 3s linear infinite running';
+});
+
+</script>
+
+
+<script>
+Clon.addEventListener('click', function(){
+    location.reload();
+
+});
+</script>
+
+<script>
+function recaRgar() {
+  location.reload();
+}
+</script>
+
+<script>
+Music.addEventListener("click", function() {
+  if (Volumen.style.display === 'block') {
+   Volumen.style.display = 'none';
+  } else {
+   Volumen.style.display = 'block';
+  }
+}); 
+
+Volumen.addEventListener('input', function() {
+    var audio = document.getElementById('1');
+    audio.volume = this.value;
+});
+</script>
+
+<script>
+window.onload = function() {
+    Modal.style.display = 'none';
+}
+</script>
+ 
+</body>
+</html>
+
+<!-- <h3><span id="D">D</span><span id="Menta">MENTA🍭</span></h3> -->
+ 
+
+
+
+
+
