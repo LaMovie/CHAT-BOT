@@ -541,7 +541,7 @@ var PELIS = [
   { name: "📺GH Tv", url: "https://tv.ghtelevision.com:3018/live/ghtelevisionlive.m3u8"}, 
   { name: "📺El Hormiguero Tv", url: "https://fast-channels.atresmedia.com/648ef5882bfab0e4627e0d61/648ef5882bfab0e4627e0d61.m3u8"}, 
   { name: "📺Classic Tv", url: "https://is.gd/7CaWXu"},
-  { name: "📺Bum Tv", url: "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8" },
+  { name: "📺Bum Tv", url: "https://movil.ejeserver.com/live/visiondorada.m3u8" },
   { name: "📺Lilo y Stitch Tv", url: "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8" }
     ];
     
