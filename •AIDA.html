@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIDA-TV</title>
+<style>
+body {
+    background: #000;
+}
+#video-container {
+    width: 100%;
+    text-align: center;
+}
+iframe {
+    width: 90%;
+    height: 200px;
+    aspect-ration: 16/9;
+    border-radius: 5%;
+    border-top: .5vh solid brown;
+    border-left: 2vh solid brown;
+    border-right: .1vh solid brown;
+    border-bottom: 2vh solid #800000;
+}
+.link {
+    background: gold;
+    border-radius:50%;
+    font-weight: bold;
+    border: 2px solid purple;
+}
+.link:hover{
+    transform: scale(1.5) perspective(500px)rotateY(50deg);
+    padding-right: 50px;
+    width: 30%;
+    background: orange;
+    border: 2px solid green;
+}
+h1 {
+    color: gold;
+}
+#fullscreenButton{
+    background:gray;
+    color:black;
+    opacity:0.5;
+    font-weight:bold;
+    font-size:15px;
+    padding:1px;
+    border-radius:50px;
+}
+#Hr1 {
+    width: 10%;
+    height: 1px;
+    background: gray;
+    transform: rotate(80deg);
+}
+#Hr2 {
+    width: 10%;
+    height: 1px;
+    background: gray;
+    transform: translate(2vh, -1vh)rotate(-80deg);
+}
+#Opaco {
+    opacity: .5;
+}
+</style>
+</head>
+<body>        
+             <center>
+      <div id="video-container">
+    <iframe id="random-video" src="" frameborder="0"></iframe>
+</div>
+             
+<h3 style="color: gold; font-family: cursive">📺 AIDA-TV 📺</h3>             
+  
+  <button id="fullscreenButton">Pantalla completa</button>
+       
+       <img id="Opaco" src="https://bit.ly/3G2A4hx" alt="Retroceder" style="scale: 70%"/>  
+            </center>
+     
+<script>
+    window.onload = function() {
+        var AIDA = [
+            'https://archive.org/download/3x-01-source/3x01%28Source%29.mp4',
+            'https://archive.org/download/3x-01-source/3x02%28Source%29.mp4',
+            'https://archive.org/download/3x-01-source/3x03%28Source%29.mp4',
+             'https://archive.org/download/3x-01-source/3x04%28Source%29_1.mp4', 
+             'https://archive.org/download/3x-01-source/3x05%28Source%29_1.mp4', 
+             'https://archive.org/download/3x-01-source/3x06%28Source%29_1.mp4', 
+             'https://archive.org/download/3x-01-source/3x07%28Source%29_1.mp4',
+              'https://archive.org/download/3x-01-source/3x08%28Source%29_1.mp4',
+               'https://archive.org/download/3x-01-source/3x09%28Source%29_1.mp4',
+                'https://archive.org/download/3x-01-source/3x10%28Source%29_1.mp4', 
+                'https://archive.org/download/3x-01-source/3x11%28Source%29_1.mp4',
+                 'https://archive.org/download/3x-01-source/3x12%28Source%29_1.mp4',
+                  'https://archive.org/download/3x-01-source/3x13%28Source%29_1.mp4', 
+                  'https://archive.org/download/3x-01-source/3x14%28Source%29.mp4',
+                   'https://archive.org/download/4x-08-source-1/4x01%28Source%29.mp4',
+                    'https://archive.org/download/4x-08-source-1/4x02%28Source%29.mp4', 
+                    'https://archive.org/download/4x-08-source-1/4x03%28Source%29.mp4', 
+                    'https://archive.org/download/4x-08-source-1/4x04%28Source%29.mp4', 
+                    'https://archive.org/download/4x-08-source-1/4x05%28Source%29.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x06%28Source%29.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x07%28Source%29_1.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x08%28Source%29_1.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x09%28Source%29.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x10%28Source%29.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x11%28Source%29.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x12%28Source%29.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x13%28Source%29.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x14%28Source%29.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x15%28Source%29.mp4',
+                     'https://archive.org/download/4x-08-source-1/4x16%28Source%29.mp4',
+                  'https://archive.org/download/5x-03_202405/5x01%28Source%29.mp4',
+                  'https://archive.org/download/5x-03_202405/5x02%28Source%29.mp4',
+                  'https://archive.org/download/5x-03_202405/5x03.mp4',
+                  'https://archive.org/download/5x-03_202405/5x04.mp4',
+                  'https://archive.org/download/5x-03_202405/5x05.mp4',
+                  'https://archive.org/download/5x-03_202405/5x06%28MP4%29.mp4',
+                  'https://archive.org/download/5x-03_202405/5x07%28MP4%29.mp4',
+                  'https://archive.org/download/5x-03_202405/5x08%28MP4%29.mp4',
+                  'https://archive.org/download/5x-03_202405/5x09%28MP4%29.mp4',
+                  'https://archive.org/download/5x-03_202405/5x10%28MP4%29.mp4',
+                  
+"https://geo.dailymotion.com/player.html?video=x8zjily",
+  "https://drive.google.com/file/d/1-J8XHg0zwfBGMThsty21oyopBQx9dJOL/preview",
+  "https://geo.dailymotion.com/player.html?video=x8zkoku",
+  "https://geo.dailymotion.com/player.html?video=x8zkuqg",
+  "https://geo.dailymotion.com/player.html?video=x8zl6uw",
+  "https://geo.dailymotion.com/player.html?video=x8zlerc",
+  "https://geo.dailymotion.com/player.html?video=x8zlf8o",
+  "https://geo.dailymotion.com/player.html?video=x8zlit8",
+  "https://drive.google.com/file/d/1G8wb4aSClhIiXbwKJsVjQZoqfMsCmsEQ/preview",
+  "https://drive.google.com/file/d/1GjwNnTH8QcmcQw9MwzK4UYngM8M7tR8r/preview",
+  "https://geo.dailymotion.com/player.html?video=x8zlqeu",
+  "https://geo.dailymotion.com/player.html?video=x8znaec",
+  "https://geo.dailymotion.com/player.html?video=x8znfge",
+  "https://geo.dailymotion.com/player.html?video=x8znq5c",
+  "https://geo.dailymotion.com/player.html?video=x8znre4",
+  "https://geo.dailymotion.com/player.html?video=x8znv6i",
+  "https://geo.dailymotion.com/player.html?video=x8zpfgy",
+  "https://geo.dailymotion.com/player.html?video=x8zpy6a",
+  "https://geo.dailymotion.com/player.html?video=x8zr3wo",
+  "https://geo.dailymotion.com/player.html?video=x8zrqlg",
+  "https://geo.dailymotion.com/player.html?video=x8zrqs8",
+  "https://geo.dailymotion.com/player.html?video=x8zvm8i",
+  "https://geo.dailymotion.com/player.html?video=x8zw8eo",
+  "https://geo.dailymotion.com/player.html?video=x8zwl3o",
+  "https://geo.dailymotion.com/player.html?video=x8zwnvc",
+  "https://geo.dailymotion.com/player.html?video=x8zz3oo",
+  "https://geo.dailymotion.com/player.html?video=x8zz4ja",
+  "https://geo.dailymotion.com/player.html?video=x8zz5fk",
+  "https://geo.dailymotion.com/player.html?video=x8zz5fm",
+  "https://geo.dailymotion.com/player.html?video=x8zzfpm",
+  "https://geo.dailymotion.com/player.html?video=x8zzgp0",
+  "https://geo.dailymotion.com/player.html?video=x8zzgzk",
+  "https://geo.dailymotion.com/player.html?video=x901irg",
+  "https://geo.dailymotion.com/player.html?video=x9042t8",
+  "https://geo.dailymotion.com/player.html?video=x905m64",
+  "https://geo.dailymotion.com/player.html?video=x905wty",
+  "https://geo.dailymotion.com/player.html?video=x905yg0",
+  "https://geo.dailymotion.com/player.html?video=x95ipcg",
+  "https://geo.dailymotion.com/player.html?video=x95ipi4",
+  "https://geo.dailymotion.com/player.html?video=x95mx3o",
+  "https://geo.dailymotion.com/player.html?video=x95mxde",
+  "https://geo.dailymotion.com/player.html?video=x95rqc6",
+  "https://geo.dailymotion.com/player.html?video=x95rr5q",
+  "https://geo.dailymotion.com/player.html?video=x95rr80",
+  "https://geo.dailymotion.com/player.html?video=x95rrh4",
+  "https://geo.dailymotion.com/player.html?video=x95rsgg",
+  "https://geo.dailymotion.com/player.html?video=x95rshk",
+  "https://geo.dailymotion.com/player.html?video=x95tqrg",
+  "https://geo.dailymotion.com/player.html?video=x95trpw",
+  "https://geo.dailymotion.com/player.html?video=x95tsn6",
+  "https://geo.dailymotion.com/player.html?video=x95tvg2",
+  "https://geo.dailymotion.com/player.html?video=x95twfa",
+  "https://geo.dailymotion.com/player.html?video=x95twgq",
+  "https://geo.dailymotion.com/player.html?video=x95twku",
+  "https://geo.dailymotion.com/player.html?video=x95twnw",
+  "https://geo.dailymotion.com/player.html?video=x95xleo",
+  "https://geo.dailymotion.com/player.html?video=x95xllu",
+  "https://geo.dailymotion.com/player.html?video=x9610fg",
+  "https://geo.dailymotion.com/player.html?video=x962ocw",
+  "https://geo.dailymotion.com/player.html?video=x962whu",
+  "https://geo.dailymotion.com/player.html?video=x969nb0",
+  "https://geo.dailymotion.com/player.html?video=x96hdg6",
+  "https://geo.dailymotion.com/player.html?video=x96hdg8",
+  "https://geo.dailymotion.com/player.html?video=x96ki18",
+  "https://geo.dailymotion.com/player.html?video=x96ki1a",
+  "https://geo.dailymotion.com/player.html?video=x96mfxw",
+  "https://geo.dailymotion.com/player.html?video=x96ovik",  
+  "https://geo.dailymotion.com/player.html?video=x96r9jq",
+  "https://geo.dailymotion.com/player.html?video=x96ymkg",
+  "https://geo.dailymotion.com/player.html?video=x971a30",
+  "https://geo.dailymotion.com/player.html?video=x973dys",
+  "https://geo.dailymotion.com/player.html?video=x9763fs",
+  "https://geo.dailymotion.com/player.html?video=x977zcg",
+  "https://geo.dailymotion.com/player.html?video=x979s68",
+  "https://geo.dailymotion.com/player.html?video=x97bde2",
+  "https://geo.dailymotion.com/player.html?video=x97ezci",
+  "https://geo.dailymotion.com/player.html?video=x97k7ga",
+  "https://geo.dailymotion.com/player.html?video=x97mv0g",
+  "https://geo.dailymotion.com/player.html?video=x97qrju",
+  "https://geo.dailymotion.com/player.html?video=x97tjwm",
+  "https://geo.dailymotion.com/player.html?video=x97tmc8",
+  "https://geo.dailymotion.com/player.html?video=x97xdxe",
+  "https://geo.dailymotion.com/player.html?video=x97zulo",
+  "https://geo.dailymotion.com/player.html?video=x983n1a",
+  "https://geo.dailymotion.com/player.html?video=x988akw",
+  "https://geo.dailymotion.com/player.html?video=x98enk8",
+  "https://geo.dailymotion.com/player.html?video=x98gz4w",
+  "https://geo.dailymotion.com/player.html?video=x98wjs0",
+  "https://geo.dailymotion.com/player.html?video=x994lbs",
+  "https://geo.dailymotion.com/player.html?video=x997dr4",
+  "https://geo.dailymotion.com/player.html?video=x999lyu", 
+  "https://geo.dailymotion.com/player.html?video=x99c53q", 
+  "https://geo.dailymotion.com/player.html?video=x99fiqq",
+  "https://geo.dailymotion.com/player.html?video=x99jilk",
+  "https://geo.dailymotion.com/player.html?video=x99mfng",
+  "https://geo.dailymotion.com/player.html?video=x99pti4"
+         ];
+
+        var currentIndex = Math.floor(Math.random() * AIDA.length); 
+        var iframe = document.getElementById('random-video');
+        iframe.src = AIDA[currentIndex];
+    };
+</script>
+
+<script>
+var fullscreenButton = document.querySelector('#fullscreenButton');
+var iframe = document.querySelector('iframe');
+
+fullscreenButton.addEventListener('click', function() {
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  } else if (iframe.mozRequestFullScreen) { // Firefox
+    iframe.mozRequestFullScreen();
+  } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+    iframe.webkitRequestFullscreen();
+  } else if (iframe.msRequestFullscreen) { // IE/Edge
+    iframe.msRequestFullscreen();
+  }
+});
+</script>
+         <!-- HORIZONTAL -->
+<script>
+        function Handle() {
+     (window.innerWidth > window.innerHeight) ? evento() : invento();            
+};
+
+        function evento() {
+    var style = document.createElement('style');
+   style.innerHTML = `
+<style>
+iframe {
+    width: 50%;
+    height: auto;
+    aspect-ration: 16/9;
+    border-radius: 5%;
+    border-top: .5vh solid brown;
+    border-left: 2vh solid brown;
+    border-right: .1vh solid brown;
+    border-bottom: 2vh solid #800000;
+}
+#fullscreenButton{
+    position: relative;
+    top: -95vh;
+    left: 50vh;
+    background:gray;
+    color:black;
+    opacity:0.5;
+    font-weight:bold;
+    font-size:15px;
+    padding:1px;
+    border-radius:50px;
+}
+</style>     
+`;        document.head.appendChild(style);
+} 
+
+       function invento() {
+   var style = document.createElement('style');
+   style.innerHTML = `
+<style>
+iframe {
+    width: 90%;
+    height: 200px;
+    aspect-ration: 16/9;
+    border-radius: 5%;
+    border-top: .5vh solid brown;
+    border-left: 2vh solid brown;
+    border-right: .1vh solid brown;
+    border-bottom: 2vh solid #800000;
+}
+#fullscreenButton{
+    position: relative;
+    top: 0;
+    left: 0;
+    color:black;
+    opacity:0.5;
+    font-weight:bold;
+    font-size:15px;
+    padding:1px;
+    border-radius:50px;
+}
+</style>   
+`;        document.head.appendChild(style);
+}
+
+ window.addEventListener("resize", Handle);
+
+  <!-- Llama a la función al cargar la página para establecer el estado inicial -->
+      Handle();
+</script>       
+</body>
+</html>
+  
