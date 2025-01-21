@@ -523,7 +523,7 @@ var PELIS = [
 
 
      var CANALES = [
-    { name: "📺Aida Tv", url: "https://lamovie.github.io/AIDA-TV/" },
+    { name: "📺Aida Tv", url: "•AIDA.html" },
   { name: "📺Flow Tv", url: "https://bit.ly/3vueUqF" },
   { name: "📺Ritmos Tv", url: "https://bit.ly/3unJf9W" },
   { name: "📺Pop Tv", url: "https://bit.ly/3R5TwQT" },
