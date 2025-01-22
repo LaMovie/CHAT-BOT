@@ -515,7 +515,7 @@ var PELIS = [
     { name: "🍿Heretic", url: "https://drive.google.com/file/d/1EhJMQdYh_gIpk_miJOW6QHBH-e3XSDCr/view?usp=drivesdk" },
   { name: "🍿Red One", url: "https://drive.google.com/file/d/1E1AprgH-FruccueU-9HSwcZ0_pPAxFbC/view?usp=drivesdk" },
   { name: "🍿57 Segundos", url: "https://drive.google.com/file/d/1a674Ccso4wS99zKICv6e83qWdtR8qVS3/view?usp=drivesdk" },
-  { name: "🍿Nosferatu", url: "https://drive.google.com/file/d/1In2MfQ8SyBZLbK5maAUgF2oX28qjeQG-/view?usp=drivesdk" },
+  { name: "🍿Nosferatu", url: "https://drive.google.com/file/d/1OHtD9EJsNpzq9f3enjUwNobqWAZrGzRm/view?usp=drivesdk" },
   { name: "🍿Kraven", url: "https://drive.google.com/file/d/1noIE34Zh0QDTfJAzTD9bzyG_6dMVyxj0/view?usp=drivesdk" }  
 ];
 
