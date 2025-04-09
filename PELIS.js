@@ -517,7 +517,7 @@ var PELIS = [
   { name: "🍿57 Segundos", url: "https://drive.google.com/file/d/1a674Ccso4wS99zKICv6e83qWdtR8qVS3/view?usp=drivesdk" },
   { name: "🍿Nosferatu", url: "https://drive.google.com/file/d/1OHtD9EJsNpzq9f3enjUwNobqWAZrGzRm/view?usp=drivesdk" },
   { name: "🍿Kraven", url: "https://drive.google.com/file/d/1noIE34Zh0QDTfJAzTD9bzyG_6dMVyxj0/view?usp=drivesdk" },
-  { name: "🍿Compañera Perfecta", url: "https://drive.google.com/file/d/1bsZ10vfq5xNuV-qbQy6_6sc4QN_bEvLw/view?usp=drivesdk" },  
+  { name: "🍿Compañera Perfecta", url: "https://drive.google.com/file/d/1DecN2-1vYkdwLbqG83F95kGM9mWggN14/view?usp=drivesdk" },  
   { name: "🍿Desencanto 5", url: "https://drive.google.com/drive/folders/1ahKbN0K3IdhEIWs9p1xbvfxalSECTQrh" }, 
   { name: "🍿Los Horrores De Caddo Lake", url: "https://drive.google.com/file/d/1eSDfIDWjKOqDaRX4U0eG53obfR3zSw-1/view?usp=drivesdk" }   
 ];
