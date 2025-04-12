@@ -497,7 +497,7 @@ var PELIS = [
     { NAME: "🍿The Killer", URL: "https://drive.google.com/file/d/15Xxhy5gW39sWXJB65cyZYNFNxfCJHEGe/view?usp=drivesdk" },
     { NAME: "🍿Kaos", URL: "https://drive.google.com/drive/folders/18djiKUm4Znpv9fpptyWa9He0na4xBxey" },
     { NAME: "🍿Anillos De Poder 2", URL: "https://drive.google.com/drive/folders/1AeP5Qb-w6Zb15w2joUHCLEN1WhK0loac" },
-    { NAME: "🍿Agatha En Todas Partes 1", URL: "https://drive.google.com/drive/folders/1Eb0Hqh5ciz_lriSqSBWcfP9NWTECv9t9" },
+    { NAME: "🍿Agatha 1", URL: "https://drive.google.com/drive/folders/1Eb0Hqh5ciz_lriSqSBWcfP9NWTECv9t9" },
     { NAME: "🍿Parpadea Dos Veces", URL: "https://drive.google.com/file/d/1KXDO89HmDOjYf7Zmw83G54qW6nIiNcUM/view?usp=drivesdk" },
     { NAME: "🍿El Hoyo 2", URL: "https://drive.google.com/file/d/1TC0MlmPnBVvddiRVL07IBiUeyRXebtqp/view?usp=drivesdk" },
     { NAME: "🍿Salem s Lot", URL: "https://drive.google.com/file/d/1tByfyOr1-bEfUgbWARhcSVHBDyPx5P-j/view?usp=drivesdk" },
@@ -516,14 +516,16 @@ var PELIS = [
   { name: "🍿Red One", url: "https://drive.google.com/file/d/1E1AprgH-FruccueU-9HSwcZ0_pPAxFbC/view?usp=drivesdk" },
   { name: "🍿57 Segundos", url: "https://drive.google.com/file/d/1a674Ccso4wS99zKICv6e83qWdtR8qVS3/view?usp=drivesdk" },
   { name: "🍿Nosferatu", url: "https://drive.google.com/file/d/1OHtD9EJsNpzq9f3enjUwNobqWAZrGzRm/view?usp=drivesdk" },
-  { name: "🍿Kraven", url: "https://drive.google.com/file/d/1noIE34Zh0QDTfJAzTD9bzyG_6dMVyxj0/view?usp=drivesdk" },
-  { name: "🍿Compañera Perfecta", url: "https://drive.google.com/file/d/1DecN2-1vYkdwLbqG83F95kGM9mWggN14/view?usp=drivesdk" },  
+  { name: "🍿Kraven", url: "https://drive.google.com/file/d/1noIE34Zh0QDTfJAzTD9bzyG_6dMVyxj0/view?usp=drivesdk" }, 
+  { name: "🍿Compañera Perfecta", url: "https://drive.google.com/file/d/1DecN2-1vYkdwLbqG83F95kGM9mWggN14/view?usp=drivesdk" }, 
   { name: "🍿Desencanto 5", url: "https://drive.google.com/drive/folders/1ahKbN0K3IdhEIWs9p1xbvfxalSECTQrh" }, 
-  { name: "🍿Los Horrores De Caddo Lake", url: "https://drive.google.com/file/d/1eSDfIDWjKOqDaRX4U0eG53obfR3zSw-1/view?usp=drivesdk" },
+  { name: "🍿Los Horrores De Caddo Lake", url: "https://drive.google.com/file/d/1eSDfIDWjKOqDaRX4U0eG53obfR3zSw-1/view?usp=drivesdk" }, 
   { name: "🍿La Rueda Del Tiempo 3", url: "https://drive.google.com/drive/folders/1KC_t3WcbLaF3INgIfZcW5I7uXZ7nAxmU" },
   { name: "🍿Novocaine", url: "https://drive.google.com/file/d/1nrGqoPR0FhL5kRN7GXjsdCImWN5kx0bT/view?usp=drivesdk" },
-  { name: "🍿Rescate Implacable", url: "https://drive.google.com/file/d/1HLFGCKgev_X63xZHSBVIdaEGlg54k_6m/view?usp=drivesdk" }, 
-  { name: "🍿Capitan America", url: "https://drive.google.com/file/d/1w7AixkBlI-4L4zESr1cNeO7Imkq7YP2O/view?usp=drivesdk" }    
+  { name: "🍿Rescate Implacable", url: "https://drive.google.com/file/d/1HLFGCKgev_X63xZHSBVIdaEGlg54k_6m/view?usp=drivesdk" },
+  { name: "🍿Capitan America", url: "https://drive.google.com/file/d/1w7AixkBlI-4L4zESr1cNeO7Imkq7YP2O/view?usp=drivesdk" }, 
+  { name: "🍿Un Rey En La Habana", url: "https://drive.google.com/file/d/1liAuNkkrDf-eUm0vcCau_tspejvG0LfT/view?usp=drivesdk" }, 
+  { name: "🍿Agentes Del Desorden", url: "https://drive.google.com/file/d/10j-eMI6Z1bBW3gdU8rk9gerV9e4pe6S4/view?usp=drivesdk" }    
 ];
 
 
