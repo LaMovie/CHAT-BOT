@@ -534,9 +534,6 @@ var PELIS = [
 
      var CANALES = [
     { name: "📺Aida Tv", url: "•AIDA.html" },
-  { name: "📺Flow Tv", url: "https://bit.ly/3vueUqF" },
-  { name: "📺Ritmos Tv", url: "https://bit.ly/3unJf9W" },
-  { name: "📺Pop Tv", url: "https://bit.ly/3R5TwQT" },
   { name: "📺Universal Tv", url: "https://imagenuniversaltv.net:3771/live/iutvlive.m3u8" },
   { name: "📺Activa Tv", url: "https://streamtv.mediasector.es/hls/activatv/index.m3u8"}, 
   { name: "📺Vevo R&B Tv", url: "https://is.gd/FLLYMV"}, 
