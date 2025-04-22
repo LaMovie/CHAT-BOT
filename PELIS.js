@@ -526,7 +526,9 @@ var PELIS = [
   { name: "🍿Capitan America", url: "https://drive.google.com/file/d/1w7AixkBlI-4L4zESr1cNeO7Imkq7YP2O/view?usp=drivesdk" }, 
   { name: "🍿Un Rey En La Habana", url: "https://drive.google.com/file/d/1liAuNkkrDf-eUm0vcCau_tspejvG0LfT/view?usp=drivesdk" },
   { name: "🍿Agentes Del Desorden", url: "https://drive.google.com/file/d/10j-eMI6Z1bBW3gdU8rk9gerV9e4pe6S4/view?usp=drivesdk" }, 
-  { name: "🍿De Vuelta A La Accion", url: "https://drive.google.com/file/d/19CabyollA3QZ4rrfIhb_o_PAh21zZsIG/view?usp=drivesdk" }    
+  { name: "🍿De Vuelta A La Accion", url: "https://drive.google.com/file/d/19CabyollA3QZ4rrfIhb_o_PAh21zZsIG/view?usp=drivesdk" }, 
+  { name: "🍿Buenos Vecinos 1", url: "https://drive.google.com/file/d/1XHOXk8HuR0SiecPzuzyxfzrnv2QfDdnM/view?usp=drivesdk" }, 
+  { name: "🍿Buenos Vecinos 2", url: "https://drive.google.com/file/d/1UUobDqUFglgXO8Q62R9LevqPmHEEgDbo/view?usp=drivesdk" }    
 ];
 
 
