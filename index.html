@@ -75,11 +75,12 @@ iframe {
 <audio id="Emision" src="https://archive.org/download/efecto-maquina/TV_mp3.mp3"></audio>
 
 <script src="PELIS.js"></script>
+<script src="Buscador3.js"></script>
 <script>
       function Chat() {
     var Input = document.getElementById("Input").value.toLowerCase().trim();
     
-    var HELP = ["hola", "estas", "ayuda", "ayudame", "que sabes hacer", "que sabes hacer?", "que puedes hacer", "que puedes hacer?", "que eres", "que eres?", "tele", "television", "canales", "info", "informacion", "tiene", "alguna", "juego", "dato"];
+    var HELP = ["hola", "estas", "ayuda", "ayudame", "que sabes hacer", "que sabes hacer?", "que puedes hacer", "que puedes hacer?", "que eres", "que eres?", "tele", "television", "canales", "info", "informacion", "tiene", "alguna", "dato"];
     
     var LISTA = ["sugerencia", "sugiere", "lista", "lista de pelicula", "lista de series", "contenido", "pelicula", "serie", "pelis", "mas", "otra", "otro", "catalogo", "buscar"];
     
@@ -139,6 +140,25 @@ var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
     }
   } 
 });
+ 
+        <!-- LISTA 3--> 
+    Lista3.forEach(item => {
+  var NN = item.name || item.NAME;
+  var URL = item.url || item.URL;
+var In = Tildes(Input.replace(/\s+/g, ' '));   
+var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
+   <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
+    if (In.includes(Items)) {
+ if (URL.includes('h5.sw')) { 
+   Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+     No.style.display = 'none';
+           Enlace.play();
+           Envio.play();
+           Erro.pause();
+      } 
+  } 
+});
+ 
  
        <!-- CANALES TV -->
     CANALES.forEach(item => {
