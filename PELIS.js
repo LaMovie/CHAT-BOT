@@ -530,7 +530,8 @@ var PELIS = [
   { name: "🍿Buenos Vecinos 2", url: "https://drive.google.com/file/d/1UUobDqUFglgXO8Q62R9LevqPmHEEgDbo/view?usp=drivesdk" }, 
   { name: "🍿SeeKee", url: "https://h5.swplayer.com" }, 
   { name: "🍿Constantine", url: "https://drive.google.com/file/d/185RuQOH2eZerthlAMzg_-1SzPB5yOGvn/view?usp=drivesdk" }, 
-  { name: "🍿Invencible 3", url: "https://drive.google.com/drive/folders/1AM2MxJzkCanL7iYXJQLrQWHmdT7A-pPn" }   
+  { name: "🍿Invencible 3", url: "https://drive.google.com/drive/folders/1AM2MxJzkCanL7iYXJQLrQWHmdT7A-pPn" }, 
+  { name: "🍿Sport", url: "https://lamovie.github.io/Sport-Tv/" }   
 ];
 
 
@@ -553,8 +554,7 @@ var PELIS = [
   { name: "📺El Hormiguero Tv", url: "https://fast-channels.atresmedia.com/648ef5882bfab0e4627e0d61/648ef5882bfab0e4627e0d61.m3u8"}, 
   { name: "📺Classic Tv", url: "https://is.gd/7CaWXu"},
   { name: "📺Bum Tv", url: "https://movil.ejeserver.com/live/visiondorada.m3u8" },
-  { name: "📺Lilo y Stitch Tv", url: "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8" }, 
-  { name: "📺Sport Tv", url: "https://lamovie.github.io/Sport-Tv/" }
+  { name: "📺Lilo y Stitch Tv", url: "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8" } 
 ];
     
 
