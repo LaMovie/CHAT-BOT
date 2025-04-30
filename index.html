@@ -109,18 +109,25 @@ iframe {
            Erro.play();
 
 
-      <!-- TILDES -->
-  function Tildes(texto) {
-       return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-}  
+         <!-- TILDES -->
+  function Tildes(texto, preservarÑ = false) {
+  let limpio = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  if (!preservarÑ) {
+    limpio = limpio.replace(/ñ/g, "n");
+  }
+  return limpio;
+};
 
  
          <!-- PELIS --> 
     PELIS.forEach(item => {
   var NN = item.name || item.NAME;
   var URL = item.url || item.URL;
-var In = Tildes(Input.replace(/\s+/g, ' '));   
-var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
+  
+  var incluyeÑ = Input.toLowerCase().includes("ñ");
+  
+var In = Tildes(Input.replace(/\s+/g, ' '), incluyeÑ);   
+var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '), incluyeÑ);
    <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
     if (In.includes(Items)) {
  if (URL.includes('file')) { 
