@@ -532,7 +532,9 @@ var PELIS = [
   { name: "🍿Constantine", url: "https://drive.google.com/file/d/185RuQOH2eZerthlAMzg_-1SzPB5yOGvn/view?usp=drivesdk" }, 
   { name: "🍿Invencible 3", url: "https://drive.google.com/drive/folders/1AM2MxJzkCanL7iYXJQLrQWHmdT7A-pPn" }, 
   { name: "🍿Sport", url: "https://lamovie.github.io/Sport-Tv/" }, 
-  { name: "🍿La Mujer En Las Sombras", url: "https://drive.google.com/file/d/1U_91j6dWT23QHnhca5wm8tP_ZnYATw0T/view?usp=drivesdk" }   
+  { name: "🍿La Mujer En Las Sombras", url: "https://drive.google.com/file/d/1U_91j6dWT23QHnhca5wm8tP_ZnYATw0T/view?usp=drivesdk" }, 
+  { name: "🍿911", url: "https://drive.google.com/file/d/1lqTiLDezenKB_6ZKfYO1MX22hLkBA-sH/view?usp=drivesdk" }, 
+  { name: "🍿Tierra Plana", url: "https://drive.google.com/file/d/18-Gw04kF5JE6vBN0b2EKiQDKUstOQp8r/view?usp=drivesdk" }   
 ];
 
 
