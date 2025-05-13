@@ -536,7 +536,9 @@ var PELIS = [
   { name: "🍿Tierra Plana", url: "https://drive.google.com/file/d/18-Gw04kF5JE6vBN0b2EKiQDKUstOQp8r/view?usp=drivesdk" }, 
   { name: "📺Sport Tv", url: "https://lamovie.github.io/Sport-Tv/" }, 
   { name: "🍿El Juego Del Calamar 2", url: "https://drive.google.com/drive/folders/1QHu4Br2gxdwj66KrlGPO-oE5vuuJugEp" }, 
-  { name: "🍿SALEM", url: "https://drive.google.com/drive/folders/1VQKqWevYKGLTXaoYMUdCWuSJVxZf-8kq" }   
+  { name: "🍿Salem", url: "https://drive.google.com/drive/folders/1VQKqWevYKGLTXaoYMUdCWuSJVxZf-8kq" }, 
+  { name: "🍿Amenaza En El Aire", url: "https://drive.google.com/file/d/1QKSfMcu9nD0aTcwELLUN9md_Qfi1x9GO/view?usp=drivesdk" }, 
+  { name: "🍿Ocho Apellidos Marroquies", url: "https://drive.google.com/file/d/10gnD7qGAiteaibKfySqoP82ltDixdoDO/view?usp=drivesdk" }   
 ];
 
 
