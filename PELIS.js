@@ -538,7 +538,8 @@ var PELIS = [
   { name: "🍿El Juego Del Calamar 2", url: "https://drive.google.com/drive/folders/1QHu4Br2gxdwj66KrlGPO-oE5vuuJugEp" }, 
   { name: "🍿Salem", url: "https://drive.google.com/drive/folders/1VQKqWevYKGLTXaoYMUdCWuSJVxZf-8kq" }, 
   { name: "🍿Amenaza En El Aire", url: "https://drive.google.com/file/d/1QKSfMcu9nD0aTcwELLUN9md_Qfi1x9GO/view?usp=drivesdk" }, 
-  { name: "🍿Ocho Apellidos Marroquies", url: "https://drive.google.com/file/d/10gnD7qGAiteaibKfySqoP82ltDixdoDO/view?usp=drivesdk" }   
+  { name: "🍿Ocho Apellidos Marroquies", url: "https://drive.google.com/file/d/10gnD7qGAiteaibKfySqoP82ltDixdoDO/view?usp=drivesdk" }, 
+  { name: "🍿The Midnight Gospel", url: "https://drive.google.com/drive/folders/1ifmfxToSEPA-hfF8FcZ6ngGIp1EYh3ZQ" }   
 ];
 
 
