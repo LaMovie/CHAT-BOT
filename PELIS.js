@@ -263,7 +263,7 @@ var PELIS = [
   { name: "🍿Maestras Del Engaño", url: "https://drive.google.com/file/d/13bnv6Vnn7reULBO1rRzbg88L-sMgSB0X/view?usp=drive_link" },
   { name: "🍿Misterio A Bordo 1", url: "https://drive.google.com/file/d/12Mkx5mj1F4NAgg4WnkNSB_oxBNwurhN5/view?usp=drive_link" },
   { name: "🍿No Dormiras", url: "https://drive.google.com/file/d/19HVNsYh4UnOFkYz6LPX7WYCrM1sIbUvW/view?usp=drive_link" },
-  { name: "🍿Love And Death Robot 2", url: "https://drive.google.com/drive/folders/12mvN2GK-dc6jRCyP7QREWV2dkLCc7GBl?usp=drive_link" },
+  { name: "🍿Love Death And Robot 2", url: "https://drive.google.com/drive/folders/12mvN2GK-dc6jRCyP7QREWV2dkLCc7GBl?usp=drive_link" },
   { name: "🍿Sky Rojo", url: "https://drive.google.com/drive/folders/10S594Np6EkL7plAU1eOo8-v748hCKsQ1?usp=drive_link" },
   { name: "🍿The Umbrella Academy", url: "https://drive.google.com/drive/folders/1-gJb71A-Ou7NwLO6tPoQ7QRehqU9RhM1?usp=drive_link" },
   { name: "🍿A Quiet Place 1", url: "https://drive.google.com/file/d/1pzpkAK9ZKaHDA6JKV-GYHHvboOixjn1F/view?usp=drive_link" },
@@ -414,8 +414,8 @@ var PELIS = [
   { NAME: "🍿GhostBusters", URL: "https://drive.google.com/file/d/1GjcBxPWTq-fQAYzid2x9mJBAX73RA12m/view?usp=drive_link" },
   { NAME: "🍿Stranger Things 4", URL: "https://drive.google.com/drive/folders/1QaqhtNVHSKjm9JpDTsQrToFOoIHbTylI" },
   { NAME: "🍿WestWorld 4", URL: "https://drive.google.com/drive/folders/1xza8b-oJev3i3m9J8_hboSB5JDg_lssZ" },
-  { NAME: "🍿Love And Death Robot 1", URL: "https://drive.google.com/drive/folders/1JE_stMQdixzGOwDaOm4ip0F6MsZTGcjA" },
-  { NAME: "🍿Love And Death Robot 3", URL: "https://drive.google.com/drive/folders/1JJdQXs30vfZ-JP1sU3prrqD1qKPDI51c" },
+  { NAME: "🍿Love Death And Robot 1", URL: "https://drive.google.com/drive/folders/1JE_stMQdixzGOwDaOm4ip0F6MsZTGcjA" },
+  { NAME: "🍿Love Death And Robot 3", URL: "https://drive.google.com/drive/folders/1JJdQXs30vfZ-JP1sU3prrqD1qKPDI51c" },
   { NAME: "🍿Inside Job 1", URL: "https://drive.google.com/drive/folders/1seR4MPUA5WDyJQceb_SBzbtFeTDzLCA8" },
   { NAME: "🍿El Juego Del Calamar", URL: "https://drive.google.com/drive/folders/1HpOPpxhGqiMCO9Xphh9PdsT9kyhucy6C" },
   { NAME: "🍿La Casa De Papel 5.1", URL: "https://drive.google.com/drive/folders/1-X2MLSZdtYfProOFIV02G1trzTCqD7gJ" },
@@ -539,7 +539,8 @@ var PELIS = [
   { name: "🍿Salem", url: "https://drive.google.com/drive/folders/1VQKqWevYKGLTXaoYMUdCWuSJVxZf-8kq" }, 
   { name: "🍿Amenaza En El Aire", url: "https://drive.google.com/file/d/1QKSfMcu9nD0aTcwELLUN9md_Qfi1x9GO/view?usp=drivesdk" }, 
   { name: "🍿Ocho Apellidos Marroquies", url: "https://drive.google.com/file/d/10gnD7qGAiteaibKfySqoP82ltDixdoDO/view?usp=drivesdk" }, 
-  { name: "🍿The Midnight Gospel", url: "https://drive.google.com/drive/folders/1ifmfxToSEPA-hfF8FcZ6ngGIp1EYh3ZQ" }   
+  { name: "🍿The Midnight Gospel", url: "https://drive.google.com/drive/folders/1ifmfxToSEPA-hfF8FcZ6ngGIp1EYh3ZQ" }, 
+  { name: "🍿Love Death And Robot 4", url: "https://drive.google.com/drive/folders/19qbosVBk8M-oilltDOekqKZSz3V3h4O3" }   
 ];
 
 
