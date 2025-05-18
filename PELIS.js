@@ -541,7 +541,7 @@ var PELIS = [
   { name: "🍿Ocho Apellidos Marroquies", url: "https://drive.google.com/file/d/10gnD7qGAiteaibKfySqoP82ltDixdoDO/view?usp=drivesdk" }, 
   { name: "🍿The Midnight Gospel", url: "https://drive.google.com/drive/folders/1ifmfxToSEPA-hfF8FcZ6ngGIp1EYh3ZQ" }, 
   { name: "🍿Love Death And Robot 4", url: "https://drive.google.com/drive/folders/19qbosVBk8M-oilltDOekqKZSz3V3h4O3" }, 
-  { name: "🍿Thunderbolts", url: "https://drive.google.com/file/d/18H7h-fzQOl0NQtkzfxyv8z0lOQHERb1G/view?usp=drivesdk" }, 
+  { name: "🍿Thunderbolts", url: "https://drive.google.com/file/d/1kl9SdVn28M4suPbuoh5icbGNPfj7iwLg/view?usp=drivesdk" }, 
   { name: "🍿Destino Final 6", url: "https://drive.google.com/file/d/1FulxfbvFkUYZELifyw7tJ0875ZWr81dF/view?usp=drivesdk" }   
 ];
 
