@@ -566,8 +566,7 @@ var PELIS = [
   { name: "📺Classic Tv", url: "https://is.gd/7CaWXu"},
   { name: "📺Bum Tv", url: "https://movil.ejeserver.com/live/visiondorada.m3u8" },
   { name: "📺Lilo y Stitch Tv", url: "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8" }, 
-  { name: "📺Animes Tv", url: "https://is.gd/2nVBaq" },
-  { name: "📺Anime Classic Tv", url: "https://is.gd/ZbUCIE" }   
+  { name: "📺Anime Tv", url: "https://is.gd/ZbUCIE"}   
 ];
     
 
