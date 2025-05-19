@@ -565,7 +565,9 @@ var PELIS = [
   { name: "📺El Hormiguero Tv", url: "https://fast-channels.atresmedia.com/648ef5882bfab0e4627e0d61/648ef5882bfab0e4627e0d61.m3u8"}, 
   { name: "📺Classic Tv", url: "https://is.gd/7CaWXu"},
   { name: "📺Bum Tv", url: "https://movil.ejeserver.com/live/visiondorada.m3u8" },
-  { name: "📺Lilo y Stitch Tv", url: "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8" }   
+  { name: "📺Lilo y Stitch Tv", url: "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8" }, 
+  { name: "📺Animes Tv", url: "https://is.gd/2nVBaq" },
+  { name: "📺Anime Classic Tv", url: "https://is.gd/ZbUCIE" }   
 ];
     
 
