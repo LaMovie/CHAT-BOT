@@ -123,32 +123,31 @@ iframe {
     PELIS.forEach(item => {
   var NN = item.name || item.NAME;
   var URL = item.url || item.URL;
-  
+
   var incluyeÑ = Input.toLowerCase().includes("ñ");
   
-var In = Tildes(Input.replace(/\s+/g, ' '), incluyeÑ);   
-var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '), incluyeÑ);
-   <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
-    if (In.includes(Items)) {
- if (URL.includes('file')) { 
-  var URL = URL.substring(0, URL.indexOf('view?usp'));
- var PRE = 'preview';
-  Respuesta = BOT + `Disfruta La Emisión: ${NN} <br/><br/><iframe src="${URL}${PRE}" style="height: 30vh" allowfullscreen="true" allow="encrypted-media"></iframe>`;
-     No.style.display = 'none';
-           Emision.play();
-           Envio.play();
-           Erro.pause();
-        } else {
-    Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-     No.style.display = 'none';
-           Enlace.play();
-           Envio.play();
-           Erro.pause();
+  var In = Tildes(Input.replace(/\s+/g, ' '), incluyeÑ);   
+  var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '), incluyeÑ);
+
+  if (In.includes(Items)) {
+    if (URL.includes('file')) { 
+      var limpioURL = URL.substring(0, URL.indexOf('view?usp'));
+      Respuesta = BOT + `Disfruta La Emisión: ${NN} <br/><br/><iframe src="${limpioURL}preview" style="height: 30vh" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+      No.style.display = 'none';
+      Emision.play();
+      Envio.play();
+      Erro.pause();
+    } else {
+      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      No.style.display = 'none';
+      Enlace.play();
+      Envio.play();
+      Erro.pause();
     }
   } 
 });
  
-        <!-- LISTA 3--> 
+        <!-- LISTA 3 --> 
     Lista3.forEach(item => {
   var NN = item.name || item.NAME;
   var URL = item.url || item.URL;
@@ -156,7 +155,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
    <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
     if (In.includes(Items)) {
- if (URL.includes('h5.sw')) { 
+ if (URL.includes('okpeliz')) { 
    Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
      No.style.display = 'none';
            Enlace.play();
