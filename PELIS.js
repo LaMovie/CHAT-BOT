@@ -551,7 +551,8 @@ var PELIS = [
   { name: "🍿El Conjuro 1", url: "https://drive.google.com/file/d/1whFra7HbT2ZJF7nCIu3UiiT4ZGRlQ3te/view?usp=drivesdk" }, 
   { name: "🍿Scary Movie 2", url: "https://drive.google.com/file/d/1IIbMI6LFbEz4OPB7hKC38qOqlPeavfD2/view?usp=drivesdk" }, 
   { name: "🍿Scary Movie 5", url: "https://drive.google.com/file/d/1e4zY0WA3N8q8AvaVMEvnbOrPFqMxTK3K/view?usp=drivesdk" }, 
-  { name: "🍿La Milla Verde", url: "https://drive.google.com/file/d/1agkAGIXIS569EwtlKID4FIFytU-gJwvP/view?usp=drivesdk" }    
+  { name: "🍿La Milla Verde", url: "https://drive.google.com/file/d/1agkAGIXIS569EwtlKID4FIFytU-gJwvP/view?usp=drivesdk" }, 
+  { name: "🍿Aida Full", url: "https://lamovie.github.io/AIDA-FULL/" }    
 ];
 
 
