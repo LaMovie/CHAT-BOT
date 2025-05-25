@@ -51,6 +51,17 @@ iframe {
     display: none;
     margin-left: -10vh;
 }
+#FULL {   
+    scale: .7;
+    color: black;
+    opacity: 0.8;    
+    padding: 1px;
+    font-size: 15px;
+    background: gray;
+    margin-left: 0vh; 
+    font-weight: bold;
+    border-radius: 50px;
+}
 </style>
 </head>
 <body>
@@ -155,13 +166,13 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
    <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
     if (In.includes(Items)) {
- if (['okpeliz', '.github'].some(part => URL.includes(part))) { 
-   Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-     No.style.display = 'none';
-           Enlace.play();
-           Envio.play();
-           Erro.pause();
-      } 
+ if (URL.includes('okpeliz')) { 
+   Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><embed src="${URL}" allowfullscreen="true" allow="encrypted-media"></embed id="EE"><br/><button id="FULL" onclick="fullScreens()">Pantalla Completa</button>`;
+    No.style.display = 'none';
+          Emision.play();
+          Envio.play();
+          Erro.pause();          
+    } 
   } 
 });
  
@@ -174,6 +185,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
     if (In.includes(Items)) {
   Respuesta = BOT + `Disfruta de: "${item.name}"<br/><br/><iframe src="${item.url}" allowfullscreen="true" allow="encrypted-media"></iframe>`;
     No.style.display = 'none';
+          Emision.play()
           Envio.play();
           Erro.pause();
   }
@@ -267,7 +279,20 @@ Lista.addEventListener("click", function (event) {
    }                     
 });
 </script>
-
+<script>
+  function fullScreens() {
+    var EMB = document.querySelector('embed');
+    if (EMB.requestFullscreen) {
+      EMB.requestFullscreen();
+    } else if (EMB.mozRequestFullScreen) { // Firefox
+      EMB.mozRequestFullScreen();
+    } else if (EMB.webkitRequestFullscreen) { // Chrome, Safari and Opera
+      EMB.webkitRequestFullscreen();
+    } else if (EMB.msRequestFullscreen) { // IE/Edge
+      EMB.msRequestFullscreen();
+    }
+  }
+</script>
 <script>
 <!-- Detectar cuando entra o sale de fullscreen -->
 document.addEventListener('fullscreenchange', function() {
