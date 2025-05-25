@@ -147,7 +147,7 @@ iframe {
   } 
 });
  
-        <!-- LISTA 3 --> 
+        <!-- LISTA 3--> 
     Lista3.forEach(item => {
   var NN = item.name || item.NAME;
   var URL = item.url || item.URL;
@@ -155,7 +155,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
    <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
     if (In.includes(Items)) {
- if (URL.includes('okpeliz' && '.github')) { 
+ if (['okpeliz', '.github'].some(part => URL.includes(part))) { 
    Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
      No.style.display = 'none';
            Enlace.play();
