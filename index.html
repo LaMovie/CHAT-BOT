@@ -172,7 +172,13 @@ var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
           Emision.play();
           Envio.play();
           Erro.pause();          
-    } 
+        } else if (URL.includes('.github')) {
+      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      No.style.display = 'none';
+      Enlace.play();
+      Envio.play();
+      Erro.pause();
+    }
   } 
 });
  
