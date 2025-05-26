@@ -266,7 +266,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 
 Lista.addEventListener("click", function (event) {
  var Text = event.target.textContent;
- Input.value = Text;
+ <!-- Input.value = Text; --> 
       if (Text.includes('📺')) {
   var SUGG = Text.split('📺')[1];   
        Input.value = SUGG;
