@@ -553,7 +553,8 @@ var PELIS = [
   { name: "🍿La Milla Verde", url: "https://drive.google.com/file/d/1agkAGIXIS569EwtlKID4FIFytU-gJwvP/view?usp=drivesdk" }, 
   { name: "🍿Aida Full", url: "https://lamovie.github.io/AIDA-FULL/" }, 
   { name: "🍿Fragmentado 2", url: "https://drive.google.com/file/d/1EjO8ZRD-0g9g8s-36tDb-8dCJYjLqNWA/view?usp=drivesdk" }, 
-  { name: "🍿Mickey 17", url: "https://drive.google.com/file/d/1G1BeR10b3ahYG7lw2TQCY6aoy4-rFtp_/view?usp=drivesdk" }    
+  { name: "🍿Mickey 17", url: "https://drive.google.com/file/d/1G1BeR10b3ahYG7lw2TQCY6aoy4-rFtp_/view?usp=drivesdk" }, 
+  { name: "🍿Sinners", url: "https://drive.google.com/file/d/1IcpH5Q3qiM9Hybjh0SENFjvZYdZ_4feL/view?usp=drivesdk" }    
 ];
 
 
