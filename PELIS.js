@@ -477,7 +477,7 @@ var PELIS = [
   { NAME: "🍿Evil Dead 1", URL: "https://drive.google.com/file/d/1NCDSC_xcgQnH-X-EiToNlG5b6ldbVCfr/view?usp=drivesdk" },
   { NAME: "🍿El Bar", URL: "https://drive.google.com/file/d/1PnObRCUoUECtB-TMNE7TBgrTInQl76T9/view?usp=drivesdk" },
   { NAME: "🍿Verdad O Reto", URL: "https://drive.google.com/file/d/1hMBpk83kbgUUa-4-pdMuyGIkAcXJgg4J/view?usp=drivesdk" },
-  { NAME: "🍿Heroes", URL: "https://lamovie.github.io/HEROES/" },
+  { NAME: "🍿Heroes", URL: "https://lamovie.github.io/CONTENIDO/HEROES.html" },
   { NAME: "🍿El Astronauta", URL: "https://drive.google.com/file/d/1jqHmSdsdd1SyvqJuHhwp9B5x4E4QaR5n/view?usp=drivesdk" },
   { NAME: "🍿Bad Boys 4", URL: "https://drive.google.com/file/d/1kDpXxuLzNpR4GqLFKYq_3ZIVItSEmDNy/view?usp:drivesdk" },
   { NAME: "🍿Deadpool 3", URL: "https://drive.google.com/file/d/1X8lkdllwCh1Fm53iMg-24fsq0irex8UA/view?usp=drivesdk" },
@@ -554,7 +554,8 @@ var PELIS = [
   { name: "🍿Aida Full", url: "https://lamovie.github.io/AIDA-FULL/" }, 
   { name: "🍿Fragmentado 2", url: "https://drive.google.com/file/d/1EjO8ZRD-0g9g8s-36tDb-8dCJYjLqNWA/view?usp=drivesdk" }, 
   { name: "🍿Mickey 17", url: "https://drive.google.com/file/d/1G1BeR10b3ahYG7lw2TQCY6aoy4-rFtp_/view?usp=drivesdk" }, 
-  { name: "🍿Sinners", url: "https://drive.google.com/file/d/1IcpH5Q3qiM9Hybjh0SENFjvZYdZ_4feL/view?usp=drivesdk" }    
+  { name: "🍿Sinners", url: "https://drive.google.com/file/d/1IcpH5Q3qiM9Hybjh0SENFjvZYdZ_4feL/view?usp=drivesdk" }, 
+  {name: "🍿Until Dawn", url: "https://drive.google.com/file/d/1u0fCfJkNA3Rw_HR2T0WtoZlKptXskPNb/view?usp=drivesdk"}    
 ];
 
 
