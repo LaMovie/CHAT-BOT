@@ -166,7 +166,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
    <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
     if (In.includes(Items)) {
- if (URL.includes('okpeliz')) { 
+ if (URL.includes('okpeliz') || URL.includes('lamovie.link')) { 
    Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><embed src="${URL}" allowfullscreen="true" allow="encrypted-media"></embed id="EE"><br/><button id="FULL" onclick="fullScreens()">Pantalla Completa</button>`;
     No.style.display = 'none';
           Emision.play();
