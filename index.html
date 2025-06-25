@@ -166,12 +166,18 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
    <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
     if (In.includes(Items)) {
- if (URL.includes('okpeliz') || URL.includes('lamovie.link')) { 
-   Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><embed src="${URL}" allowfullscreen="true" allow="encrypted-media"></embed id="EE"><br/><button id="FULL" onclick="fullScreens()">Pantalla Completa</button>`;
+ if (URL.includes('okpeliz')) { 
+   Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><embed src="${URL}"  allowfullscreen="true" allow="encrypted-media"></embed id="EE"><br/><button id="FULL" onclick="fullScreens()">Pantalla Completa</button>`;
     No.style.display = 'none';
           Emision.play();
           Envio.play();
           Erro.pause();          
+        } else if (URL.includes('lamovie.link')){
+           Respuesta = BOT + `Disfruta La Emisión: ${NN} <br/><br/><iframe src="${URL}" style="height: 30vh" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+   No.style.display = 'none';
+      Emision.play();
+      Envio.play();
+      Erro.pause(); 
         } else if (URL.includes('.github')) {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
