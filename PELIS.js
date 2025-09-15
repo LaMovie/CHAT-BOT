@@ -566,7 +566,7 @@ var PELIS = [
   {name: "🍿M3gan 2.0", url: "https://drive.google.com/file/d/1taNBm3YY5yRanQpU0xZGgD1UP2Nk_n_x/view?usp=drivesdk"}, 
   {name: "🍿Palm Springs", url: "https://drive.google.com/file/d/14G22DcbsEi3eYMUcXjhhatk2t4p2Aggq/view?usp=drivesdk"}, 
   {name: "🍿Criatura Voraz", url: "https://drive.google.com/file/d/11dp_uM5fdtHvCx-LWwgiJHljKLnQirkI/view?usp=drivesdk"}, 
-  {name: "🍿Traela De Vuelta", url: "https://drive.google.com/file/d/1brXNmY7jXEIqsWWpRCzfU2RH7DNos2vB/view?usp=drivesdk"}, 
+  {name: "🍿Traela De Vuelta", url: "https://drive.google.com/file/d/1nXQ_7KmwzaUUy5q3kBYOaZ9-zmdCumzz/view?usp=drivesdk"}, 
   {name: "🍿Happy Gilmore 2", url: "https://drive.google.com/file/d/19fH0jz8Q1VNTgy1vepBubiwIXRdV3q3-/view?usp=drivesdk"}, 
   {name: "🍿Merlina Addams 2", url: "https://drive.google.com/drive/folders/1Shr3KmMS4J4wELZwIg5k_Ji-WMmipXzh"}, 
   {name: "🍿Mushoku Tensei 1", url: "https://drive.google.com/drive/folders/1YiMZHUfgjjH0MLatkTEAp2gou92kt9Zr"}, 
