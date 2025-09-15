@@ -401,7 +401,6 @@ var PELIS = [
   { NAME: "🍿The Witcher 2", URL: "https://drive.google.com/folderview?id=1ofhqc_aF5qVWEUgH1aIc1SE4eiIqvMOZ" },
   { NAME: "🍿El Sistema K E OPS", URL: "https://drive.google.com/file/d/1MUgaQtz6J5wJ49G844VDOye8Ri4Y31-g/view?usp=drive_link" },
   { NAME: "🍿Dr Strange 2", URL: "https://drive.google.com/file/d/1vlScjrLRWtTFG-Dqu8uz6KdejL1HHZbq/view?usp=drive_link" },
-  { NAME: "🍿La Ciudad Perdida", URL: "https://drive.google.com/file/d/1RWp8IIMnufsftfDbEXo038ID9qLqaCIi/view?usp=drive_link" },
   { NAME: "🍿Memory", URL: "https://drive.google.com/file/d/1R8J_tzvdzbKs34LdQlPavCdnbuPuXc4E/view?usp=drive_link" },
   { NAME: "🍿Tren Bala", URL: "https://drive.google.com/file/d/1DaT8euWjr84q2nG3DtCQYaapRac-dFHS/view?usp=drive_link" },
   { NAME: "🍿Inception", URL: "https://drive.google.com/file/d/1hV6eC_ca5HaVi02E0xCS4c2J-Zcgj_Te/view?usp=drive_link" },
