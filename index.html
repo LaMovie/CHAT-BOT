@@ -113,11 +113,12 @@ iframe {
      <!-- Desplazar al último mensaje del bot -->
     }, 1000);
    
-    
+   
+     var ENLACE = 'https://h5.onfilom.com/es/search?keyword=' + Input;
     var BOT = "🤖: ";
-    var Respuesta = BOT.concat("No tengo información sobre " + Input);
-    No.style.display = "block";
-           Erro.play();
+    var Respuesta = BOT + `Aquí tienes el enlace a: ${Input}<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      Envio.play();
+      
 
 
          <!-- TILDES -->
