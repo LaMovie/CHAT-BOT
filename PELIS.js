@@ -554,8 +554,27 @@ var PELIS = [
   { name: "🍿Fragmentado 2", url: "https://drive.google.com/file/d/1EjO8ZRD-0g9g8s-36tDb-8dCJYjLqNWA/view?usp=drivesdk" }, 
   { name: "🍿Mickey 17", url: "https://drive.google.com/file/d/1G1BeR10b3ahYG7lw2TQCY6aoy4-rFtp_/view?usp=drivesdk" }, 
   { name: "🍿Sinners", url: "https://drive.google.com/file/d/1IcpH5Q3qiM9Hybjh0SENFjvZYdZ_4feL/view?usp=drivesdk" }, 
-  {name: "🍿Until Dawn", url: "https://drive.google.com/file/d/1u0fCfJkNA3Rw_HR2T0WtoZlKptXskPNb/view?usp=drivesdk"}    
-];
+  {name: "🍿Until Dawn", url: "https://drive.google.com/file/d/1u0fCfJkNA3Rw_HR2T0WtoZlKptXskPNb/view?usp=drivesdk"}, 
+  {name: "🍿Scary Movie 4", url: "https://drive.google.com/file/d/1OCKvSXB65P5_cE9pzMVelJmW4dz0bkHL/view?usp=drivesdk"},  
+  {name: "🍿Amigos Pasajeros 2", url: "https://drive.google.com/file/d/1p6JA0al6agCSSTqZJijfJQ8KJFFd1r88/view?usp=drivesdk"}, 
+  {name: "🍿Tierra De Mafia", url: "https://drive.google.com/drive/folders/1Bi7i07BAjikDaeiQZ8AF7vi0IOIYwni1"}, 
+  {name: "🍿El Juego Del Calamar 3", url: "https://drive.google.com/drive/folders/1dToU2efDj6Oh7F9W1l23-6Q7tuIwAAu7"}, 
+  {name: "🍿La Vieja Guardia 2", url: "https://drive.google.com/file/d/1uCPncTAUNmfgSfIJEB2Egn9QiiG93Bds/view?usp=drivesdk"}, 
+  {name: "🍿Sandman 2", url: "https://drive.google.com/drive/folders/1oHFSPz7MQA33vY6KuJB5M-edY7nYyniG"}, 
+  {name: "🍿Ballerina", url: "https://drive.google.com/file/d/1sfOc9g8tL8ZmH5KB5jwwUxgmXG8wNiA9/view?usp=drivesdk"}, 
+  {name: "🍿Jefes De Estado", url: "https://drive.google.com/file/d/1hzAeO8Pw74BG_cD70IKm4euZeH-_gFz6/view?usp=drivesdk"}, 
+  {name: "🍿M3gan 2.0", url: "https://drive.google.com/file/d/1taNBm3YY5yRanQpU0xZGgD1UP2Nk_n_x/view?usp=drivesdk"}, 
+  {name: "🍿Palm Springs", url: "https://drive.google.com/file/d/14G22DcbsEi3eYMUcXjhhatk2t4p2Aggq/view?usp=drivesdk"}, 
+  {name: "🍿Criatura Voraz", url: "https://drive.google.com/file/d/11dp_uM5fdtHvCx-LWwgiJHljKLnQirkI/view?usp=drivesdk"}, 
+  {name: "🍿Traela De Vuelta", url: "https://drive.google.com/file/d/1brXNmY7jXEIqsWWpRCzfU2RH7DNos2vB/view?usp=drivesdk"}, 
+  {name: "🍿Happy Gilmore 2", url: "https://drive.google.com/file/d/19fH0jz8Q1VNTgy1vepBubiwIXRdV3q3-/view?usp=drivesdk"}, 
+  {name: "🍿Merlina Addams 2", url: "https://drive.google.com/drive/folders/1Shr3KmMS4J4wELZwIg5k_Ji-WMmipXzh"}, 
+  {name: "🍿Mushoku Tensei 1", url: "https://drive.google.com/drive/folders/1YiMZHUfgjjH0MLatkTEAp2gou92kt9Zr"}, 
+  {name: "🍿Mushoku Tensei 2", url: "https://drive.google.com/drive/folders/1522N97BqgdgpYu1A8an-KbsoHeJhJVpc"}, 
+  {name: "🍿El Club Del Crimen De Los Jueves", url: "https://drive.google.com/file/d/1ewtn5OwmnfFnBDSbQl89QGyH2myTwW8E/view?usp=drivesdk"}, 
+  {name: "🍿Mision Imposible 8", url: "https://drive.google.com/file/d/1dljw3aFv_VxR9oxRa5hHcGnB2QE18BTq/view?usp=drivesdk"}, 
+  {name: "🍿Los Niños De Masameer", url: "https://drive.google.com/file/d/1fFe-YuIwnaECIiDrY4CRQMYsRpKb-V5B/view?usp=drivesdk"}    
+]; 
 
 
 
