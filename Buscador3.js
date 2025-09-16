@@ -28,7 +28,7 @@ var Lista3 = [
   { NAME: "🍿LOS SIMPSON: EN PLUSNIVERSARIO", URL: "https://lamovie.link/embed-g6hw1r7a27rn.html" },
   { NAME: "🍿LOS SIMPSON: EL BUENO, EL BART Y EL LOKI", URL: "https://lamovie.link/embed-mt1828un9umq.html" },  
   { NAME: "🍿TIERRA DE MAFIA", URL: "https://lamovie.github.io/CONTENIDO/TIERRA%20DE%20MAFIA.html" },   
-  { NAME: "🍿LOS 4 FANTASTICOS", URL: "https://player.okpeliz.com/embed/617126" },
+  { NAME: "🍿SUPERMAN", URL: "https://player.okpeliz.com/embed/1061474" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
