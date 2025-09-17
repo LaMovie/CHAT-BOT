@@ -29,7 +29,7 @@ var Lista3 = [
   { NAME: "🍿LOS SIMPSON: EL BUENO, EL BART Y EL LOKI", URL: "https://lamovie.link/embed-mt1828un9umq.html" },  
   { NAME: "🍿TIERRA DE MAFIA", URL: "https://lamovie.github.io/CONTENIDO/TIERRA%20DE%20MAFIA.html" },   
   { NAME: "🍿SUPERMAN", URL: "https://player.okpeliz.com/embed/1061474" }, 
-  { NAME: "🍿I KNOW WHAT YOU DID LAST SUMMER", URL: "https://lamovie.link/embed-1ckba6cumd8v.html" }, 
+  { NAME: "🍿SE LO QUE HICIERON EL VERANO PASADO", URL: "https://lamovie.link/embed-1ckba6cumd8v.html" }, 
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
