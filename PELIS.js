@@ -578,7 +578,7 @@ var PELIS = [
   {name: "🍿La Hora De La Desaparicion", url: "https://drive.google.com/file/d/1xpWd5EczrxDo2bikV6szLZDL65FOdhXA/view?usp=drivesdk"}, 
   {name: "🍿Y Donde Esta El Policia", url: "https://drive.google.com/file/d/1CKPk2zwupSOZSKTuigQ67Rk2RUr7G5BY/view?usp=drivesdk"}, 
   {name: "🍿Together", url: "https://drive.google.com/file/d/1UztJfh94xU8CzM3ik5iO6WZa6V8PjuyF/view?usp=drivesdk"}, 
-  {name: "🍿Los 4 Fantasticos", url: "https://player.okpeliz.com/embed/617126"}    
+  {name: "🍿Los 4 Fantasticos", url: "https://drive.google.com/file/d/1ObIPlnXYU-HEFzVr1vsGno-sA9PfcDmP/view?usp=drivesdk"}    
 ]; 
 
 
