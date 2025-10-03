@@ -391,7 +391,7 @@ var PELIS = [
   { NAME: "🍿El Hogar De Miss Peregrine", URL: "https://share.vidyard.com/watch/r2e6DWBtAitdL6xVLqHYYa?" },
   { NAME: "🍿Jung_E", URL: "https://share.vidyard.com/watch/YTDDHKX1ot4LAwatHYiBhe?" },
   { NAME: "🍿Venus", URL: "https://share.vidyard.com/watch/k4hDVazRShTurPR2Wm9vmi?" },
-  { NAME: "⚙️La Movie Apps⚙️", URL: "https://u.pcloud.link/publink/show?code=kZlCub0ZggmeCSMu8AH4eEKOq03YaJEYsQuX#folder=22071115816&tpl=publicfoldergrid" },
+  { NAME: "⚙️La Movie Apps⚙️", URL: "https://is.gd/QvFaXy" },
   { NAME: "🍿Futurama", URL: "https://drive.google.com/drive/folders/1-aiBDqtDm8F3aqzWS68VA0TIKn_lEdbI" },
   { NAME: "🍿Avengers End Game", URL: "https://drive.google.com/file/d/102H5bd-h4_BIII9bqhH89huFYhaPEI9P/view?usp=drivesdk" },
   { NAME: "🍿Asylum", URL: "https://drive.google.com/file/d/1lYiJZNYv83lutXM_I4EMe_vT-WszAhM-/view?usp=drivesdk" },
