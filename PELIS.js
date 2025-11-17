@@ -579,7 +579,9 @@ var PELIS = [
   {name: "🍿Y Donde Esta El Policia", url: "https://drive.google.com/file/d/1CKPk2zwupSOZSKTuigQ67Rk2RUr7G5BY/view?usp=drivesdk"}, 
   {name: "🍿Together", url: "https://drive.google.com/file/d/1UztJfh94xU8CzM3ik5iO6WZa6V8PjuyF/view?usp=drivesdk"}, 
   {name: "🍿Los 4 Fantasticos", url: "https://drive.google.com/file/d/1ObIPlnXYU-HEFzVr1vsGno-sA9PfcDmP/view?usp=drivesdk"}, 
-  {name: "🍿El Conjuro 4", url: "https://drive.google.com/file/d/1zlUISL4r6E2jLYHkwAt8FXXKdjb7sh_x/view?usp=drivesdk"}    
+  {name: "🍿El Conjuro 4", url: "https://drive.google.com/file/d/1zlUISL4r6E2jLYHkwAt8FXXKdjb7sh_x/view?usp=drivesdk"}, 
+  {name: "🍿Black Phone 2", url: "https://drive.google.com/file/d/1wxy7HTa0FkqOPgkLRLLnMjjuNTewa8LQ/view?usp=drivesdk"}, 
+  {name: "🍿Frankestein 2025", url: "https://drive.google.com/file/d/1vNgKyYfg0BAJWTOF_YPqO8Cy80BOUMF5/view?usp=drivesdk"}    
 ]; 
 
 
