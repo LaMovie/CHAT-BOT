@@ -583,7 +583,8 @@ var PELIS = [
   {name: "🍿Black Phone 2", url: "https://drive.google.com/file/d/1wxy7HTa0FkqOPgkLRLLnMjjuNTewa8LQ/view?usp=drivesdk"}, 
   {name: "🍿Frankestein 2025", url: "https://drive.google.com/file/d/1vNgKyYfg0BAJWTOF_YPqO8Cy80BOUMF5/view?usp=drivesdk"}, 
   {name: "🍿Stranger Things 5", url: "https://drive.google.com/drive/folders/1lvRqt0taQz9BrIyZwnNQHNS98-b2X7fD"}, 
-  {name: "🍿One Punch Man 3", url: "https://drive.google.com/drive/folders/1GO0iBjovWf-Kk9K074CINCq4as1oNscg"}    
+  {name: "🍿One Punch Man 3", url: "https://drive.google.com/drive/folders/1GO0iBjovWf-Kk9K074CINCq4as1oNscg"}, 
+  {name: "🍿Cuando El Cielo Se Equivoca", url: "https://drive.google.com/file/d/1qQFdP7DXzOaFVn0P0_fdO23xyL2_jMGb/view?usp=drivesdk"}    
 ]; 
 
 
