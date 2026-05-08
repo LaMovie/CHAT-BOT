@@ -593,7 +593,8 @@ var PELIS = [
   {name: "🍿They Will Kill You", url: "https://drive.google.com/file/d/1pWvuis59ElwxQU5ZXpkljQsnF9KwhtAk/view?usp=drivesdk"}, 
   {name: "🍿Castle Rock 1", url: "https://drive.google.com/drive/folders/1P96INzsSs2dui4WE9t8FRjmrbZ0LoKxF"}, 
   {name: "🍿Castle Rock 2", url: "https://drive.google.com/drive/folders/1awlzfLzH01ZiDX95U3G4vJO1Zw0ug76b"}, 
-  {name: "🍿Awareness", url: "https://drive.google.com/file/d/1f45tKKrRiQWp3TEBG8BzkdfYT5ENI_Aw/view?usp=drivesdk"}    
+  {name: "🍿Awareness", url: "https://drive.google.com/file/d/1f45tKKrRiQWp3TEBG8BzkdfYT5ENI_Aw/view?usp=drivesdk"}, 
+  {name: "🍿Boda Sangrienta 2", url: "https://drive.google.com/file/d/17yFvMC47tWYbfn94PIGxZBMDnyHIbFjV/view?usp=drivesdk"}    
 ]; 
 
 
@@ -616,7 +617,7 @@ var PELIS = [
   { name: "📺Classic Tv", url: "https://is.gd/7CaWXu"},
   { name: "📺Bum Tv", url: "https://movil.ejeserver.com/live/visiondorada.m3u8" },
   { name: "📺Lilo y Stitch Tv", url: "https://cloudvideo.servers10.com:8081/impactotv/index.m3u8" }, 
-  { name: "📺Anime Tv", url: "https://is.gd/ZbUCIE"}   
+  { name: "📺Anime Tv", url: "https://is.gd/ZbUCIE"}    
 ];
     
 
