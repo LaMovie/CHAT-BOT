@@ -28,7 +28,7 @@ var Lista3 = [
   { name: "🍿EVIL", url: "https://h5.swplayer.com/es/detail/drama/ddsgdunU4e2xi7R5NT3K4-Evil-Season-1" },
   { name: "🍿THE LAST OF US", url: "https://h5.swplayer.com/es/detail/drama/rvYsv23lPziLIw5oz2KjV-The-Last-of-Us-Season-1%5BAudio-Latino%5D/1" },  
   { NAME: "🍿KARMA", URL: "https://youtu.be/TkZsog3y-FU?si=VJgFBVKCG645oI0k" },
-  { NAME: "🍿", URL: "" }, 
+  { NAME: "🍿DIRK GENTLY", URL: "https://ver.123pelicula.com/es/detail/drama/9BmxQONumy1KNNbbmGpt0-Dirk-Gentlys-Holistic-Detective-Agency-Season-1/1" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
