@@ -595,7 +595,8 @@ var PELIS = [
   {name: "🍿Castle Rock 2", url: "https://drive.google.com/drive/folders/1awlzfLzH01ZiDX95U3G4vJO1Zw0ug76b"}, 
   {name: "🍿Awareness", url: "https://drive.google.com/file/d/1f45tKKrRiQWp3TEBG8BzkdfYT5ENI_Aw/view?usp=drivesdk"}, 
   {name: "🍿Boda Sangrienta 2", url: "https://drive.google.com/file/d/17yFvMC47tWYbfn94PIGxZBMDnyHIbFjV/view?usp=drivesdk"}, 
-  {name: "🍿Citadel 2", url: "https://drive.google.com/drive/folders/1DWmRKcb22Q_qtUdfTjxYirIWQQ1UWrmY"}    
+  {name: "🍿Citadel 2", url: "https://drive.google.com/drive/folders/1DWmRKcb22Q_qtUdfTjxYirIWQQ1UWrmY"}, 
+  {name: "🍿Debris", url: "https://drive.google.com/drive/folders/12fTU1ZYr4M_f9l7Uhk8ODf2MeHRineDa"}    
 ]; 
 
 
