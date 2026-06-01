@@ -597,7 +597,8 @@ var PELIS = [
   {name: "🍿Boda Sangrienta 2", url: "https://drive.google.com/file/d/17yFvMC47tWYbfn94PIGxZBMDnyHIbFjV/view?usp=drivesdk"}, 
   {name: "🍿Citadel 2", url: "https://drive.google.com/drive/folders/1DWmRKcb22Q_qtUdfTjxYirIWQQ1UWrmY"}, 
   {name: "🍿Debris", url: "https://drive.google.com/drive/folders/12fTU1ZYr4M_f9l7Uhk8ODf2MeHRineDa"}, 
-  {name: "🍿La Posesion De La Momia", url: "https://drive.google.com/file/d/1vfwzJu3qzWx1x5rN0H3fEPnBPcc7MxAN/view?usp=drivesdk"}    
+  {name: "🍿La Posesion De La Momia", url: "https://drive.google.com/file/d/1vfwzJu3qzWx1x5rN0H3fEPnBPcc7MxAN/view?usp=drivesdk"}, 
+  {name: "🍿The Boroughs", url: "https://drive.google.com/drive/folders/1KBHBqymYhCnQcB3uiYxRfyoih8zWDhPA"}    
 ]; 
 
 
