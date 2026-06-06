@@ -177,19 +177,13 @@ var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
           Emision.play();
           Envio.play();
           Erro.pause();          
-        } else if (URL.includes('lamovie.link')){
-           Respuesta = BOT + `Disfruta La Emisión: ${NN} <br/><br/><iframe src="${URL}" style="height: 30vh" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+        } else {
+           Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
    No.style.display = 'none';
       Emision.play();
       Envio.play();
       Erro.pause(); 
-        } else if (URL.includes('.github')) {
-      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-      No.style.display = 'none';
-      Enlace.play();
-      Envio.play();
-      Erro.pause();
-    }
+        } 
   } 
 });
  
