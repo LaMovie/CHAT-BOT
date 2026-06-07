@@ -177,14 +177,14 @@ var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
           Emision.play();
           Envio.play();
           Erro.pause();          
-        } else {
-           Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-   No.style.display = 'none';
-      Emision.play();
+        } else if (URL.includes('latino.solo-latino')) {
+      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      No.style.display = 'none';
+      Enlace.play();
       Envio.play();
-      Erro.pause(); 
-        } 
-  } 
+      Erro.pause();
+    }  
+   } 
 });
  
  
