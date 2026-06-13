@@ -104,7 +104,7 @@ var Lista3 = [
   { NAME: "🍿ALF", URL: "https://latino.solo-latino.com/es/detail/drama/P75j6RP6vKMCR8TYKUq2Z-ALF-Season-1" },
   { NAME: "🍿UN JEFE EN PAÑALES", URL: "https://latino.solo-latino.com/es/detail/movie/JYxynnmyZkQvyBsjY5APn-The-Boss-Baby" }, 
   { NAME: "🍿OLYMPUS HAS FALLEN", URL: "https://latino.solo-latino.com/es/detail/movie/614uZOnQj8NoNZjsM8DhZ-Olympus-Has-Fallen" },
-  { NAME: "🍿", URL: "" }, 
+  { NAME: "🍿BERLIN 2", URL: "https://latino.solo-latino.com/es/detail/drama/2UuTijrQv4N1eAetg3HSB-Berlin-and-the-Lady-with-an-Ermine-Season-2" }, 
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
