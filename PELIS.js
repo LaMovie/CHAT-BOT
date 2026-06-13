@@ -598,7 +598,12 @@ var PELIS = [
   {name: "🍿Citadel 2", url: "https://drive.google.com/drive/folders/1DWmRKcb22Q_qtUdfTjxYirIWQQ1UWrmY"}, 
   {name: "🍿Debris", url: "https://drive.google.com/drive/folders/12fTU1ZYr4M_f9l7Uhk8ODf2MeHRineDa"}, 
   {name: "🍿La Posesion De La Momia", url: "https://drive.google.com/file/d/1_liKGsGMoRJTHEN9gsee4okpa6otMxhG/view?usp=drivesdk"}, 
-  {name: "🍿The Boroughs", url: "https://drive.google.com/drive/folders/1KBHBqymYhCnQcB3uiYxRfyoih8zWDhPA"}    
+  {name: "🍿The Boroughs", url: "https://drive.google.com/drive/folders/1KBHBqymYhCnQcB3uiYxRfyoih8zWDhPA"}, 
+  {name: "🍿El Unico", url: "https://drive.google.com/file/d/1O3HvJzYWCxnla7WoWCoPeNx_4F7LtL1O/view?usp=drivesdk"}, 
+  {name: "🍿Fallen", url: "https://drive.google.com/file/d/1SyF7cpEcs3w4R-gKa8KzXSlcNiNRunNF/view?usp=drivesdk"}, 
+  {name: "🍿Hombre En Llamas", url: "https://drive.google.com/file/d/17TpSh0ZcmtxCagW0-M246kJQ1Wg2ciw9/view?usp=drivesdk"}, 
+  {name: "🍿Minority Report", url: "https://drive.google.com/file/d/1JA0wKLsHrkyckPAM2xv6-hw3Nla-EJLB/view?usp=drivesdk"}, 
+  {name: "🍿Pandillas De Nueva York", url: "https://drive.google.com/file/d/1LOV_MDEws4Kmi0aK2TAYWUPV_zrhJgG8/view?usp=drivesdk"}    
 ]; 
 
 
