@@ -603,7 +603,14 @@ var PELIS = [
   {name: "🍿Fallen", url: "https://drive.google.com/file/d/1SyF7cpEcs3w4R-gKa8KzXSlcNiNRunNF/view?usp=drivesdk"}, 
   {name: "🍿Hombre En Llamas", url: "https://drive.google.com/file/d/17TpSh0ZcmtxCagW0-M246kJQ1Wg2ciw9/view?usp=drivesdk"}, 
   {name: "🍿Minority Report", url: "https://drive.google.com/file/d/1JA0wKLsHrkyckPAM2xv6-hw3Nla-EJLB/view?usp=drivesdk"}, 
-  {name: "🍿Pandillas De Nueva York", url: "https://drive.google.com/file/d/1LOV_MDEws4Kmi0aK2TAYWUPV_zrhJgG8/view?usp=drivesdk"}    
+  {name: "🍿Pandillas De Nueva York", url: "https://drive.google.com/file/d/1LOV_MDEws4Kmi0aK2TAYWUPV_zrhJgG8/view?usp=drivesdk"}, 
+  {name: "🍿Desde El Infierno", url: "https://drive.google.com/file/d/1j_RcLDbqn2sV9wxcoyZI0D8j4KfCCCxo/view?usp=drivesdk"}, 
+  {name: "🍿El Beso Del Dragon", url: "https://drive.google.com/file/d/1fue2qeYaaFNN1iBVkwpsLwPHfg1XRxM-/view?usp=drivesdk"}, 
+  {name: "🍿El Hip-Hop Esta Que Arde", url: "https://drive.google.com/file/d/1LfcpBNW_Iq26-bCR6rbgTVcKIMt3szNU/view?usp=drivesdk"}, 
+  {name: "🍿Ip Man", url: "https://drive.google.com/file/d/13GQdLJXZALkmjcmwhAwzA-61WSJzRWio/view?usp=drivesdk"}, 
+  {name: "🍿Ip Man 2", url: "https://drive.google.com/file/d/1ZuJmBJicckDMfJ7jkReM1sy7jvqjcZmT/view?usp=drivesdk"}, 
+  {name: "🍿Ip Man 3", url: "https://drive.google.com/file/d/1aFC2edu1GuVOXU1HAujzqOvcCUeWJFX_/view?usp=drivesdk"}, 
+  {name: "🍿Ip Man 4", url: "https://drive.google.com/file/d/1LDctjF-JXrPOV8iEFv-tsm9rMt-RSSMZ/view?usp=drivesdk"}    
 ]; 
 
 

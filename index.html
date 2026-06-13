@@ -91,11 +91,11 @@ iframe {
       function Chat() {
     var Input = document.getElementById("Input").value.toLowerCase().trim();
     
-    var HELP = ["hola", "estas", "ayuda", "ayudame", "que sabes hacer", "que sabes hacer?", "que puedes hacer", "que puedes hacer?", "que eres", "que eres?", "tele", "television", "canales", "info", "informacion", "tiene", "alguna", "dato"];
+    var HELP = ["hola", "ayuda", "ayudame", "que eres", "que haces", "tele", "television", "canales", "info", "informacion", "tienes", "alguna", "dato"];
     
-    var LISTA = ["sugerencia", "sugiere", "lista", "lista de pelicula", "lista de series", "contenido", "pelicula", "serie", "pelis", "mas", "otra", "otro", "catalogo", "buscar"];
+    var LISTA = ["sugerencia", "sugiere", "lista", "peliculas", "series", "contenido", "pelicula", "serie", "pelis", "mas", "otra", "otro", "catalogo", "buscar"];
     
-    var RESP = `Hola! Como estás?, Yo bien! <br/> Tengo juegos como: <br/> "TRES EN LINEA" <br/> "FLAPPY DINO" <br/> "AHORCADO" <br/> También contengo pelis, series & canales de Tv <br/><ul style="width: 70%;"><li>📺 Aida Tv</li><li>📺 IPTV</li><li>📺 Dark Play Tv</li><li>📺 Universal Tv</li><li>📺 X Tv</li><li>📺 Bass Nation Tv</li><li>📺 Activa Tv</li><li>📺 Bob Esponja Tv</li><li>📺 4Fun Tv</li><li>📺 Vevo R&B Tv</li><li>📺 Vevo 90s Tv</li><li>📺 Cine Terror Tv</li><li>📺 El Hormiguero Tv</li><li>📺 GH Tv</li><li>📺 Comedy Center Tv</li><li>📺 Classic Tv</li><li>📺 Toons Tv</li><li>📺 Studio Delta Tv</li><li>📺 Series Tv</li></ul><br/><p style="color: red">recuerda usar texto en concreto</p>`;   
+    var RESP = `Hola! Como estás?, Yo bien! <br/> Tengo juegos como: <br/> "TRES EN LINEA" <br/> "FLAPPY DINO" <br/> "AHORCADO" <br/> También contengo pelis, series & canales de Tv <br/><ul style="width: 70%;"><li>📺 Aida Tv</li><li>📺 IPTV</li><li>📺 Pop World Tv</li><li>📺 Universal Tv</li><li>📺 X tv</li><li>📺 Bass Nation tv</li><li>📺 Activa Tv</li><li>📺 Lilo Y Stitch Tv</li><li>📺 4Fun Tv</li><li>📺 Gol Classics Tv</li><li>📺 Autentica Tv</li><li>📺 Fifa Spain Tv</li><li>📺 Studio Delta Tv</li><li>📺 Bum Tv</li></ul><br/><p style="color: red">recuerda usar texto en concreto</p>`;   
        
      
       var GAMES = [
@@ -145,7 +145,7 @@ iframe {
   var In = Tildes(Input.replace(/\s+/g, ' '), incluyeÑ);   
   var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '), incluyeÑ);
 
-  if (In.includes(Items)) {
+  if (In === Items) {
     if (URL.includes('file')) { 
       var limpioURL = URL.substring(0, URL.indexOf('view?usp'));
       Respuesta = BOT + `Disfruta La Emisión: ${NN} <br/><br/><iframe src="${limpioURL}preview" style="height: 35vh" allowfullscreen="true" allow="encrypted-media"></iframe>`;
@@ -170,7 +170,7 @@ iframe {
 var In = Tildes(Input.replace(/\s+/g, ' '));   
 var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
    <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
-    if (In.includes(Items)) {
+    if (In === Items) {
   if (URL.includes('latino.solo-latino')) {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
