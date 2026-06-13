@@ -395,7 +395,7 @@ var PELIS = [
   { NAME: "🍿Futurama", URL: "https://drive.google.com/drive/folders/1-aiBDqtDm8F3aqzWS68VA0TIKn_lEdbI" },
   { NAME: "🍿Avengers End Game", URL: "https://drive.google.com/file/d/102H5bd-h4_BIII9bqhH89huFYhaPEI9P/view?usp=drivesdk" },
   { NAME: "🍿Asylum", URL: "https://drive.google.com/file/d/1lYiJZNYv83lutXM_I4EMe_vT-WszAhM-/view?usp=drivesdk" },
-  { NAME: "🍿HellBoy", URL: "https://drive.google.com/file/d/11ezbIXCh-G8XGanfdBkcBTEuaK6t_zqC/view?usp=drive_link" },
+  { NAME: "🍿Hellboy 3", URL: "https://drive.google.com/file/d/11ezbIXCh-G8XGanfdBkcBTEuaK6t_zqC/view?usp=drive_link" },
   { NAME: "🍿Spiderman No Way Home", URL: "https://drive.google.com/file/d/11pHR3sxk-Yb7meZqbz8RD5nMVhb-Rx46/view?usp=drive_link" },
   { NAME: "🍿No Mires Arriba", URL: "https://drive.google.com/file/d/11vYw1DB7nuDExNvvn5-ZqAyU5zD8Sk_d/view?usp=drive_link" },
   { NAME: "🍿The Witcher 2", URL: "https://drive.google.com/folderview?id=1ofhqc_aF5qVWEUgH1aIc1SE4eiIqvMOZ" },
