@@ -153,7 +153,13 @@ iframe {
       Emision.play();
       Envio.play();
       Erro.pause();
-    } else {
+    } else if (URL.includes('play.vidyard')) {
+    Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><iframe src="${URL}" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+    No.style.display = 'none';
+          Emision.play()
+          Envio.play();
+          Erro.pause();          
+          } else {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
       Enlace.play();

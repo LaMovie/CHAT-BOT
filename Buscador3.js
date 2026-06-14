@@ -116,7 +116,7 @@ var Lista3 = [
   { NAME: "🍿GODZILLA vs KONG", URL: "https://latino.solo-latino.com/es/detail/movie/26066-Godzilla-vs-Kong" }, 
   { NAME: "🍿PROMETHEUS", URL: "https://latino.solo-latino.com/es/detail/movie/91311-Prometheus" },
   { NAME: "🍿PASAJEROS", URL: "https://latino.solo-latino.com/es/detail/movie/80891-Passengers" }, 
-  { NAME: "🍿", URL: "" },
+  { NAME: "🍿NOW YOU SEE ME", URL: "https://latino.solo-latino.com/es/detail/movie/SmrB739qbL0BI5WwwLluE-Now-You-See-Me" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
