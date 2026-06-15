@@ -139,7 +139,7 @@ var Lista3 = [
   { NAME: "🍿RAPIDOS Y FURIOSOS", URL: "https://latino.solo-latino.com/es/detail/movie/XADcAL21CyH6QcPuLjnSV-The-Fast-and-the-Furious" }, 
   { NAME: "🍿xXx", URL: "https://latino.solo-latino.com/es/detail/movie/T2A9Xrf77tOaf0MVW1JVs-xXx" },
   { NAME: "🍿PAPRIKA", URL: "https://latino.solo-latino.com/es/detail/movie/4uzzrrfFkltsYeV9xVO3Z-Paprika" }, 
-  { NAME: "🍿", URL: "" },
+  { NAME: "🍿SOBRENATURAL", URL: "https://latino.solo-latino.com/es/detail/drama/MyFSJqr3OxZYuNLQGvfDj-Supernatural-Season-1" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
