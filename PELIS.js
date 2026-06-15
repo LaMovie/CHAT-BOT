@@ -439,7 +439,7 @@ var PELIS = [
   { NAME: "🍿Kingsman", URL: "https://drive.google.com/file/d/108vQFtcd8-N1mbTLHb5DqKIU_SJRGBaf/view?usp/drivesdk" },
   { NAME: "🍿Kingsman 2", URL: "https://drive.google.com/file/d/1-_CqjxhKKTISJ_k7fMZZyFT3FVMDqygY/view?usp.sug" },
   { NAME: "🍿Mama O Papa", URL: "https://drive.google.com/file/d/13Mcr2JWeYJ13t0FmtMKYLPMtARyKPmsz/view?usp=drivesdk" },
-  { NAME: "🍿Resident Evil", URL: "https://drive.google.com/file/d/1-Sl2gzf4NiyPuQadBvWIvkcb4JrI3y7p/view?usp=drivesdk" },
+  { NAME: "🍿Resident Evil 7", URL: "https://drive.google.com/file/d/1-Sl2gzf4NiyPuQadBvWIvkcb4JrI3y7p/view?usp=drivesdk" },
   { NAME: "🍿Imaginario", URL: "https://u.pcloud.link/publink/show?code=XZSVNR0ZsRoxywYzNLuDXGotKMCaSRb2LARy" },
   { NAME: "🍿La Monja 2", URL: "https://u.pcloud.link/publink/show?code=XZMJbiVZ2ysLWtLqjvyYfR9siJQVRJgpU1p7" },
   { NAME: "🍿Madre Androide", URL: "https://drive.google.com/file/d/15vB1YAdyImhtboPr7DZgvKGfn9kIIsywA/view?usp=drivesdk" },
