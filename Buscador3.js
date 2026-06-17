@@ -140,14 +140,14 @@ var Lista3 = [
   { NAME: "🍿xXx", URL: "https://latino.solo-latino.com/es/detail/movie/T2A9Xrf77tOaf0MVW1JVs-xXx" },
   { NAME: "🍿PAPRIKA", URL: "https://latino.solo-latino.com/es/detail/movie/4uzzrrfFkltsYeV9xVO3Z-Paprika" }, 
   { NAME: "🍿SOBRENATURAL", URL: "https://latino.solo-latino.com/es/detail/drama/MyFSJqr3OxZYuNLQGvfDj-Supernatural-Season-1" },
-  { NAME: "🍿SCARFACE", URL: "https://latino.solo-latino.com/es/detail/movie/OIA4lZtiF5aOFdSUUAdZF-Scarface" }, 
-  { NAME: "🍿THIS IS THE END", URL: "https://latino.solo-latino.com/es/detail/movie/81130-Armageddon-Time" },
-  { NAME: "🍿DIVERGENTE", URL: "https://latino.solo-latino.com/es/detail/movie/85243-Divergent" }, 
-  { NAME: "🍿", URL: "" },
-  { NAME: "🍿", URL: "" }, 
-  { NAME: "🍿", URL: "" },
-  { NAME: "🍿", URL: "" }, 
-  { NAME: "🍿", URL: "" },
+  { NAME: "🍿DETECTIVE DE MASCOTAS", URL: "https://latino.solo-latino.com/es/detail/movie/nHxWIgHnPdkY9z9vlaqhJ-Ace-Ventura-Pet-Detective" }, 
+  { NAME: "🍿SCARFACE", URL: "https://latino.solo-latino.com/es/detail/movie/OIA4lZtiF5aOFdSUUAdZF-Scarface" },
+  { NAME: "🍿THIS IS THE END", URL: "https://latino.solo-latino.com/es/detail/movie/81130-Armageddon-Time" }, 
+  { NAME: "🍿DIVERGENTE", URL: "https://latino.solo-latino.com/es/detail/movie/85243-Divergent" },
+  { NAME: "🍿MISION IMPOSIBLE", URL: "https://latino.solo-latino.com/es/detail/movie/tI6cJMZEoMCNyzxrEJmMu-Mission-Impossible" }, 
+  { NAME: "🍿LA BRUJA DORADA", URL: "https://latino.solo-latino.com/es/detail/movie/So5Cd36EDKa9KkO6TK0CD-The-Golden-Compass" },
+  { NAME: "🍿LA LIGA EXTRAORDINARIA", URL: "https://latino.solo-latino.com/es/detail/movie/mu7nzS9yAabL2899oCatd-The-League-of-Extraordinary-Gentlemen" }, 
+  { NAME: "🍿EXTRAORDINARY", URL: "https://latino.solo-latino.com/es/detail/drama/8iFrXbuYUm6QOt9u8O48R-Extraordinary/1" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
@@ -169,7 +169,6 @@ var Lista3 = [
   { NAME: "🍿", URL: "" }
 ]
    
-
 
   
   
