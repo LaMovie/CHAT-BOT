@@ -148,8 +148,25 @@ var Lista3 = [
   { NAME: "🍿LA BRUJA DORADA", URL: "https://latino.solo-latino.com/es/detail/movie/So5Cd36EDKa9KkO6TK0CD-The-Golden-Compass" },
   { NAME: "🍿LA LIGA EXTRAORDINARIA", URL: "https://latino.solo-latino.com/es/detail/movie/mu7nzS9yAabL2899oCatd-The-League-of-Extraordinary-Gentlemen" }, 
   { NAME: "🍿EXTRAORDINARY", URL: "https://latino.solo-latino.com/es/detail/drama/8iFrXbuYUm6QOt9u8O48R-Extraordinary/1" },
+  { NAME: "🍿SON COMO NIÑOS", URL: "https://latino.solo-latino.com/es/detail/movie/m2o8MZY0b6VO7TTdhismE-Grown-Ups" }, 
+  { NAME: "🍿EL DICTADOR", URL: "https://latino.solo-latino.com/es/detail/movie/106699-The-Dictator" },
+  { NAME: "🍿50 PRIMERAS CITAS", URL: "https://latino.solo-latino.com/es/detail/movie/73ibdU4zBmgUenu86Df99-50-First-Dates" }, 
+  { NAME: "🍿EFECTO MARIPOSA", URL: "https://latino.solo-latino.com/es/detail/movie/UekhtPumriEfwjojQQ65A-The-Butterfly-Effect" },
+  { NAME: "🍿ANGELES Y DEMONIOS", URL: "https://latino.solo-latino.com/es/detail/movie/94533-Angels--Demons" }, 
+  { NAME: "🍿EL CODIGO DAVINCI", URL: "https://latino.solo-latino.com/es/detail/movie/99422-The-Da-Vinci-Code" },
+  { NAME: "🍿CODIGO FUENTE", URL: "https://latino.solo-latino.com/es/detail/movie/eaTdYAN3yaK6BWH1YL9Hu-Source-Code" }, 
+  { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
+  { NAME: "🍿", URL: "" }, 
+  { NAME: "🍿", URL: "" },
+  { NAME: "🍿", URL: "" }, 
+  { NAME: "🍿", URL: "" },
+  { NAME: "🍿", URL: "" }, 
+  { NAME: "🍿", URL: "" },
+  { NAME: "🍿", URL: "" }, 
+  { NAME: "🍿", URL: "" },
+  { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
@@ -169,6 +186,7 @@ var Lista3 = [
   { NAME: "🍿", URL: "" }
 ]
    
+
 
   
   
