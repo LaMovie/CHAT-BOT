@@ -161,7 +161,7 @@ var Lista3 = [
   { NAME: "🍿BATMAN", URL: "https://latino.solo-latino.com/es/detail/movie/114421-Batman" }, 
   { NAME: "🍿LINTERNA VERDE", URL: "https://latino.solo-latino.com/es/detail/movie/107726-Green-Lantern" },
   { NAME: "🍿ESCUADRON SUICIDA", URL: "https://latino.solo-latino.com/es/detail/movie/ZzShZoN4jC8M8caqA2vcT-Suicide-Squad" }, 
-  { NAME: "🍿", URL: "" },
+  { NAME: "🍿VICTOR FRANKENSTEIN", URL: "https://latino.solo-latino.com/es/detail/movie/112787-Victor-Frankenstein" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
