@@ -162,7 +162,7 @@ var Lista3 = [
   { NAME: "🍿LINTERNA VERDE", URL: "https://latino.solo-latino.com/es/detail/movie/107726-Green-Lantern" },
   { NAME: "🍿ESCUADRON SUICIDA", URL: "https://latino.solo-latino.com/es/detail/movie/ZzShZoN4jC8M8caqA2vcT-Suicide-Squad" }, 
   { NAME: "🍿VICTOR FRANKENSTEIN", URL: "https://latino.solo-latino.com/es/detail/movie/112787-Victor-Frankenstein" },
-  { NAME: "🍿", URL: "" }, 
+  { NAME: "🍿QUE PASO AYER", URL: "https://latino.solo-latino.com/es/detail/movie/eITaDkzTvMYmGEa1C2srZ-The-Hangover" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
