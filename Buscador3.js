@@ -165,7 +165,7 @@ var Lista3 = [
   { NAME: "🍿QUE PASO AYER", URL: "https://latino.solo-latino.com/es/detail/movie/eITaDkzTvMYmGEa1C2srZ-The-Hangover" }, 
   { NAME: "🍿OJOS BIEN CERRADOS", URL: "https://latino.solo-latino.com/es/detail/movie/68450-Eyes-Wide-Shut" },
   { NAME: "🍿AL FILO DEL MAÑANA", URL: "https://latino.solo-latino.com/es/detail/movie/VMDCzKIGKVXjulcgfHMQM-Edge-of-Tomorrow" }, 
-  { NAME: "🍿", URL: "" },
+  { NAME: "🍿EL DESTINO DE JÚPITER", URL: "https://latino.solo-latino.com/es/detail/movie/93703-Jupiter-Ascending" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
