@@ -1,5 +1,5 @@
 var Lista3 = [
-  { NAME: "🍿TED", URL: "https://data-limit-c.solo-latino.com/40245afb678771f0804087c7361c0102/7e0461d51d91405b929943d04b354b0c-878a65f2b4639073c14ece78dbbdffeb-sd.m3u8?hdnts=exp=1780945677_acl=/40245afb678771f0804087c7361c0102/*_hmac=05a6d16ddd276fd46fcab42f594faa303ad2dee6f8e8c73d92764e70509c49e5" },
+  { NAME: "🍿TED", URL: "https://latino.solo-latino.com/es/detail/movie/jYpm5n2JnsFlahGuksW4x-Ted" },
   { NAME: "🍿DESTINO FINAL", URL: "https://latino.solo-latino.com/es/detail/movie/kL3SvPkWfniVKPIPhXcdc-Final-Destination" },
   { NAME: "🍿BORDERLANDS", URL: "https://latino.solo-latino.com/es/detail/movie/tT06q3HHM52YQFyLdL3ID-Borderlands" }, 
   { NAME: "🍿EL MAGO DE OZ", URL: "https://latino.solo-latino.com/es/detail/movie/FXC1Hga5ZJbOyRFCQqf9r-Oz-the-Great-and-Powerful" },
