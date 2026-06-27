@@ -170,6 +170,7 @@ var Lista3 = [
   { NAME: "🍿BACKROOMS", URL: "https://latino.solo-latino.com/es/detail/movie/jMCA2ZTBl5RdjojwQW1PM-Backrooms" }, 
   { NAME: "🍿EL NIÑO DEL PIJAMA DE RAYAS", URL: "https://latino.solo-latino.com/es/detail/movie/YXyYTxI0b3MbvB1fUkCIs-The-Boy-in-the-Striped-Pajamas" },
   { NAME: "🍿LA VIDA ES BELLA", URL: "https://latino.solo-latino.com/es/detail/movie/znduap6pVDC8nnVi8MPR0-Life-Is-Beautiful" }, 
+  { NAME: "🍿AVATAR THE LAST AIRBENDER 2", URL: "https://latino.solo-latino.com/es/detail/drama/fcnb8gvDWOynT7rm0Zu8G-Avatar-The-Last-Airbender-Season-2" },  
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
