@@ -174,7 +174,7 @@ var Lista3 = [
   { NAME: "🍿ODD THOMAS", URL: "https://latino.solo-latino.com/es/detail/movie/5yHChzqQtIPgPiCDLntaz-Odd-Thomas" },
   { NAME: "🍿MADAGASCAR", URL: "https://latino.solo-latino.com/es/detail/movie/07ZApXVHbt7m3DGMPjrae-Madagascar" }, 
   { NAME: "🍿LOS PINGÜINOS DE MADAGASCAR", URL: "https://latino.solo-latino.com/es/detail/drama/4e5CJnLpn6tGS14J2ugZE-The-Penguins-of-Madagascar-Season-1" },
-  { NAME: "🍿", URL: "" }, 
+  { NAME: "🍿EL CABALLERO DE LOS SIETE REINOS", URL: "https://latino.solo-latino.com/es/detail/drama/rPSBbtEDQKUtDVvm0e67f-A-Knight-of-the-Seven-Kingdoms-Season-1/1" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
