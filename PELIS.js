@@ -107,7 +107,7 @@ var PELIS = [
 { name: "🍿Tin y Tina", url: "https://u.pcloud.link/publink/show?code=XZIvCEVZNTR0Vnhp4cjRH2YmzSRY4buaGVdk" },
 { name: "🍿One Punch Man 2", url: "https://u.pcloud.link/publink/show?code=kZcAjX0ZczeInSdPm2QK84nOmFHrL0KSmEsk#folder=17574711090&tpl=publicfolderlist" },
 { name: "🍿One Punch Man Delux", url: "https://u.pcloud.link/publink/show?code=kZcAjX0ZczeInSdPm2QK84nOmFHrL0KSmEsk#folder=18239289585&tpl=publicfolderlist" },
-{ name: "🎵CLOUD-MUSIC🎵", url: "https://drive.google.com/drive/folders/1-D6Lb9B1ye-5rdcAuREb4q7K5yRrikLT" },
+{ name: "🎵MUSIC-CLOUD🎵", url: "https://lamovie.github.io/YOUTUBE-VIDEOS/MUSIC-CLOUD.html" },
 { name: "🍿13 Exorcismos", url: "https://u.pcloud.link/publink/show?code=XZAeKEVZucsrQ54LfpzdtGlJu0ApPJrIbPVk" },
 { name: "🍿Agente Stone", url: "https://u.pcloud.link/publink/show?code=XZEecNVZamvcPBJpfRYNtzDSXla7AB2DWrcX" },
 { name: "🍿Black Panter 2", url: "https://u.pcloud.link/publink/show?code=XZ4nKEVZRCEdMzuLDrzSJdJqeScQoyI0LgLy" },
