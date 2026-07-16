@@ -20,22 +20,19 @@ function Chat() {
        
        setTimeout(() => { 
     Lista.appendChild(Bot);       Bot.scrollIntoView({ behavior: "smooth" }); 
-     <!-- Desplazar al último mensaje del bot -->
+     // Desplazar al último mensaje del bot 
     }, 1000);
    
    
-   var URLs = [ "https://latino.solo-latino.com/es/search?keyword=", "https://ver.123pelicula.com/es/search?keyword=", "https://flixlat.com/es/search?keyword=",  "https://video.playspelis.com/es/search?keyword=",  "https://ww1.123flmsfree.com/es/search?keyword="];
- 
- var STREAMs = Math.floor(Math.random() * URLs.length);
-   
- var ENLACE = URLs[STREAMs] + Input;
+ var TITULO = Input.replace('🍿', ''); 
+ var ENLACE = 'https://www.google.com/search?q=site:sololatino.net+' + TITULO;
     var BOT = "🤖: ";
     var Respuesta = BOT + `Aquí tienes el enlace a: ${Input}<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       Envio.play();
       
 
 
-         <!-- TILDES -->
+         // TILDES 
   function Tildes(texto, preservarÑ = false) {
   let limpio = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   if (!preservarÑ) {
@@ -45,7 +42,7 @@ function Chat() {
 };
 
  
-         <!-- PELIS --> 
+         // PELIS 
 PELIS.forEach(item => {
   var NN = item.name || item.NAME;
   var URL = item.url || item.URL;
@@ -82,13 +79,13 @@ PELIS.forEach(item => {
 });
 
  
-        <!-- LISTA 3--> 
+        // LISTA 3 
     Lista3.forEach(item => {
   var NN = item.name || item.NAME;
   var URL = item.url || item.URL;
 var In = Tildes(Input.replace(/\s+/g, ' '));   
 var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
-   <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->
+   // PERMITE LOS ESPACIOS ENTRE MEDIOS 
     if (In === Items) {
   if (URL.includes('latino.solo-latino')) {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
@@ -107,11 +104,11 @@ var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
 });
  
  
-       <!-- CANALES TV -->
+       // CANALES TV 
     CANALES.forEach(item => {
 var In = Tildes(Input.replace(/\s+/g, ' '));    
    var Items = Tildes(item.name.toLowerCase().replace(/\s+/g, ' '));
-   <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS --> 
+   // PERMITE LOS ESPACIOS ENTRE MEDIOS 
     if (In.includes(Items)) {
   Respuesta = BOT + `Disfruta de: "${item.name}"<br/><br/><iframe src="${item.url}" allowfullscreen="true" allow="encrypted-media"></iframe>`;
     No.style.display = 'none';
@@ -122,7 +119,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 });  
 
   
-         <!-- AYUDA -->
+         // AYUDA 
    HELP.forEach((item) => {
 var In = Tildes(Input.replace(/\s+/g, ' '));   
       if (In.includes(item)) {
@@ -135,7 +132,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 });
 
 
-       <!-- SUGERENCIAS -->
+       // SUGERENCIAS 
    LISTA.forEach((item) => {
       
    var In = Tildes(Input.replace(/\s+/g, ' '));      
@@ -170,11 +167,11 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 
      
 
-         <!-- GAMES -->
+         // GAMES 
    GAMES.forEach((item) => {
 var In = Tildes(Input.replace(/\s+/g, ' '));
         var Items = Tildes(item.name.toLowerCase().replace(/\s+/g, ' '));
-   <!-- PERMITE LOS ESPACIOS ENTRE MEDIOS -->      
+   // PERMITE LOS ESPACIOS ENTRE MEDIOS      
       if (In.includes(Items)) {
      Respuesta = BOT + item.url;
      No.style.display = 'none';
@@ -185,18 +182,18 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
     
 
 
-  <!-- NO CONCATENAR RESPUESTA -->
+  // NO CONCATENAR RESPUESTA 
    Bot.innerHTML = Respuesta;
   Usuario.textContent = Input || "...";
   
   Usuario.scrollIntoView({ behavior: "smooth" }); 
-    <!-- Desplazar al último mensaje del usuario -->
+    // Desplazar al último mensaje del usuario 
     document.getElementById("Input").value = '';             
 
         Input.value = '';
 };
 
-        <!-- PREFIJO -->
+         // PREFIJO 
   Input.addEventListener('keydown', function(event) {
    if (event.key === 'Enter') { 
                 event.preventDefault(); 
@@ -251,15 +248,15 @@ Lista.addEventListener("click", function (event) {
   }
 
 
-<!-- Detectar cuando entra o sale de fullscreen -->
+// Detectar cuando entra o sale de fullscreen 
 document.addEventListener('fullscreenchange', function() {
   if (document.fullscreenElement) {
-    <!-- Si estamos en pantalla completa, bloquear orientación horizontal -->
+    // Si estamos en pantalla completa, bloquear orientación horizontal 
     if (screen.orientation && screen.orientation.lock) {
       screen.orientation.lock('landscape');
     }
   } else {
-    <!-- Si salimos de pantalla completa, volver a orientación vertical -->
+    // Si salimos de pantalla completa, volver a orientación vertical 
     if (screen.orientation && screen.orientation.lock) {
       screen.orientation.lock('portrait');
     }
