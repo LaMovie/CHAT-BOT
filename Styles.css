@@ -1,0 +1,58 @@
+body {
+    background: #000;
+}
+#Input {
+    z-index: 10;
+    color: #000;
+    padding: 2vh;
+    position: fixed;
+    background: gold;
+    font-weight: bold;
+    margin: 70vh -15vh;
+    border-radius: 20px;
+}
+ul li {    
+    width: 70%; 
+    margin-top: 3vh;
+    list-style: none;
+    font-weight: bold;
+    border-radius: 20px;
+}
+ul li:nth-child(odd){
+    color: #000;
+    background: gold;
+    margin-left: 10vh;
+}
+ul li:nth-child(even){
+    color: #fff;
+    background: blue;
+    margin-left: -20vh;
+}
+#All {
+    gap: 10px;
+    width: 90%;
+    height: 70vh;
+    display: grid;
+    overflow-y: auto;  
+    position: fixed;  
+    margin-left: 1vh;
+}
+iframe {
+    border-radius: 10px;
+}
+#No {
+    scale: 60%;
+    display: none;
+    margin-left: -10vh;
+}
+#FULL {   
+    scale: .7;
+    color: black;
+    opacity: 0.8;    
+    padding: 1px;
+    font-size: 15px;
+    background: gray;
+    margin-left: 0vh; 
+    font-weight: bold;
+    border-radius: 50px;
+}
