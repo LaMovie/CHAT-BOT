@@ -118,7 +118,7 @@ iframe {
  
  var STREAMs = Math.floor(Math.random() * URLs.length);
    
- var ENLACE = 'go:SET';
+ var ENLACE = URLs[STREAMs] + Input;
     var BOT = "🤖: ";
     var Respuesta = BOT + `Aquí tienes el enlace a: ${Input}<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       Envio.play();
@@ -136,7 +136,7 @@ iframe {
 
  
          <!-- PELIS --> 
-    PELIS.forEach(item => {
+PELIS.forEach(item => {
   var NN = item.name || item.NAME;
   var URL = item.url || item.URL;
 
@@ -146,6 +146,8 @@ iframe {
   var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '), incluyeÑ);
 
   if (In === Items) {
+    var CADENA = ['play.vidyard', 'dropboxuser'];
+
     if (URL.includes('file')) { 
       var limpioURL = URL.substring(0, URL.indexOf('view?usp'));
       Respuesta = BOT + `Disfruta La Emisión: ${NN} <br/><br/><iframe src="${limpioURL}preview" style="height: 35vh" allowfullscreen="true" allow="encrypted-media"></iframe>`;
@@ -153,13 +155,13 @@ iframe {
       Emision.play();
       Envio.play();
       Erro.pause();
-    } else if (URL.includes('play.vidyard')) {
-    Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><iframe src="${URL}" allowfullscreen="true" allow="encrypted-media"></iframe>`;
-    No.style.display = 'none';
-          Emision.play()
-          Envio.play();
-          Erro.pause();          
-          } else {
+    } else if (CADENA.some(dominio => URL.includes(dominio))) {
+      Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><iframe src="${URL}" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+      No.style.display = 'none';
+      Emision.play();
+      Envio.play();
+      Erro.pause();          
+    } else {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
       Enlace.play();
@@ -168,6 +170,7 @@ iframe {
     }
   } 
 });
+
  
         <!-- LISTA 3--> 
     Lista3.forEach(item => {
