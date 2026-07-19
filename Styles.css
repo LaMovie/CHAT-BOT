@@ -43,16 +43,18 @@ ul li:nth-child(odd){
     margin-left: 10vh;
     border: 2px solid #f09;
     box-shadow: 0 0 30px #f09;
+    font-family: Luckiest Guy, cursive;
+    -webkit-text-stroke: .3px #006;
+    text-shadow: 0px .5px 0 #aaa;
 }
 ul li:nth-child(even){
-    color: #FFD729; 
+    color: #FFD700;
     background: blue;  
     font-weight: bold;          
     margin-left: -20vh;    
     border: 2px solid blue;
     box-shadow: 0 0 30px blue;
     font-family: Luckiest Guy, cursive;
-    color: #FFD700;
     -webkit-text-stroke: .3px #006;
     text-shadow: 0px .5px 0 #aaa;
 }
