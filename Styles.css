@@ -1,15 +1,33 @@
 body {
+    width: 95%;
+    position: fixed;
     background: #000;
+}
+#Nav {
+	background: url(1.gif);
+	border: 2px solid blue;
+	box-shadow: 0 0 30px blue;
+	height: 60px;	
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 10px;
+	z-index: 50;
+	width: 95%;
+	color: #f09;
+	text-shadow: 2px 3px #f09;
 }
 #Input {
     z-index: 10;
-    color: #000;
+    color: #fff;
     padding: 2vh;
+    outline: none;
     position: fixed;
-    background: gold;
+    background: transparent;
     font-weight: bold;
     margin: 70vh -15vh;
     border-radius: 20px;
+    border: 2px solid #f09;
+    box-shadow: 0 0 30px #f09;
 }
 ul li {    
     width: 70%; 
@@ -19,21 +37,31 @@ ul li {
     border-radius: 20px;
 }
 ul li:nth-child(odd){
-    color: #000;
-    background: gold;
+    color: #fff;
+    background: #f09;
+    font-weight: bold;
     margin-left: 10vh;
+    border: 2px solid #f09;
+    box-shadow: 0 0 30px #f09;
 }
 ul li:nth-child(even){
-    color: #fff;
-    background: blue;
-    margin-left: -20vh;
+    color: #FFD729; 
+    background: blue;  
+    font-weight: bold;          
+    margin-left: -20vh;    
+    border: 2px solid blue;
+    box-shadow: 0 0 30px blue;
+    font-family: Luckiest Guy, cursive;
+    color: #FFD700;
+    -webkit-text-stroke: .3px #006;
+    text-shadow: 0px .5px 0 #aaa;
 }
 #All {
     gap: 10px;
     width: 90%;
     height: 70vh;
     display: grid;
-    overflow-y: auto;  
+    overflow: scroll;  
     position: fixed;  
     margin-left: 1vh;
 }

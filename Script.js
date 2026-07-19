@@ -3,7 +3,7 @@ function Chat() {
     
     var HELP = ["hola", "ayuda", "ayudame", "que eres", "que haces", "tele", "television", "canales", "info", "informacion", "tienes", "alguna", "dato"];
     
-    var LISTA = ["sugerencia", "sugiere", "lista", "peliculas", "series", "contenido", "pelicula", "serie", "pelis", "otra", "otro", "catalogo", "buscar"];
+    var LISTA = ["sugerencia", "sugiere", "lista", "peliculas", "series", "contenido", "filme", "serie", "pelis", "otras", "otros", "catalogo", "buscar"];
     
     var RESP = `Hola! Como estás?, Yo bien! <br/> Tengo juegos como: <br/> "TRES EN LINEA" <br/> "FLAPPY DINO" <br/> "AHORCADO" <br/> También contengo pelis, series & canales de Tv <br/><ul style="width: 70%;"><li>📺 Aida Tv</li><li>📺 IPTV</li><li>📺 Pop World Tv</li><li>📺 Universal Tv</li><li>📺 X tv</li><li>📺 Bass Nation tv</li><li>📺 Activa Tv</li><li>📺 Lilo Y Stitch Tv</li><li>📺 4Fun Tv</li><li>📺 Gol Classics Tv</li><li>📺 Autentica Tv</li><li>📺 Fifa Spain Tv</li><li>📺 Studio Delta Tv</li><li>📺 Bum Tv</li></ul><br/><p style="color: red">recuerda usar texto en concreto</p>`;   
        
@@ -57,13 +57,13 @@ PELIS.forEach(item => {
 
     if (URL.includes('file')) { 
       var limpioURL = URL.substring(0, URL.indexOf('view?usp'));
-      Respuesta = BOT + `Disfruta La Emisión: ${NN} <br/><br/><iframe src="${limpioURL}preview" style="height: 35vh" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+      Respuesta = BOT + `Disfruta La Emisión: ${NN} <br/><br/><iframe src="${limpioURL}preview" style="height: 35vh; box-shadow: 0 0 20px blue;" frameborder="0" allowfullscreen="true" allow="encrypted-media"></iframe>`;
       No.style.display = 'none';
       Emision.play();
       Envio.play();
       Erro.pause();
     } else if (CADENA.some(dominio => URL.includes(dominio))) {
-      Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><iframe src="${URL}" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+      Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><iframe src="${URL}" style="box-shadow: 0 0 20px blue;" frameborder="0" allowfullscreen="true" allow="encrypted-media"></iframe>`;
       No.style.display = 'none';
       Emision.play();
       Envio.play();
@@ -110,7 +110,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
    var Items = Tildes(item.name.toLowerCase().replace(/\s+/g, ' '));
    // PERMITE LOS ESPACIOS ENTRE MEDIOS 
     if (In.includes(Items)) {
-  Respuesta = BOT + `Disfruta de: "${item.name}"<br/><br/><iframe src="${item.url}" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+  Respuesta = BOT + `Disfruta de: "${item.name}"<br/><br/><iframe src="${item.url}" style="box-shadow: 0 0 20px blue;" frameborder="0" allowfullscreen="true" allow="encrypted-media"></iframe>`;
     No.style.display = 'none';
           Emision.play()
           Envio.play();
