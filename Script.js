@@ -29,7 +29,14 @@ function Chat() {
     var BOT = "🤖: ";
     var Respuesta = BOT + `Aquí tienes el enlace a: ${Input}<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       Envio.play();
+
       
+      // MOSTRAR VIDEO
+function Visual(url) {
+  PANTALLA.style.display = "block";
+  All.style.height = "40vh";
+  FF.src = url;  
+}
 
 
          // TILDES 
@@ -46,7 +53,7 @@ function Chat() {
 PELIS.forEach(item => {
   var NN = item.name || item.NAME;
   var URL = item.url || item.URL;
-
+  
   var incluyeÑ = Input.toLowerCase().includes("ñ");
   
   var In = Tildes(Input.replace(/\s+/g, ' '), incluyeÑ);   
@@ -56,18 +63,20 @@ PELIS.forEach(item => {
     var CADENA = ['play.vidyard', 'dropboxuser'];
 
     if (URL.includes('file')) { 
-      var limpioURL = URL.substring(0, URL.indexOf('view?usp'));
-      Respuesta = BOT + `Disfruta La Emisión: ${NN} <br/><br/><iframe src="${limpioURL}preview" style="height: 35vh; box-shadow: 0 0 20px blue;" frameborder="0" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+      var limpioURL = URL.substring(0, URL.indexOf('view?usp')) + 'preview';
+      Respuesta = BOT + `Disfruta La Emisión: ${NN}`;
+      Visual(limpioURL);
       No.style.display = 'none';
       Emision.play();
       Envio.play();
       Erro.pause();
     } else if (CADENA.some(dominio => URL.includes(dominio))) {
-      Respuesta = BOT + `Disfruta de: "${NN}"<br/><br/><iframe src="${URL}" style="box-shadow: 0 0 20px blue;" frameborder="0" allowfullscreen="true" allow="encrypted-media"></iframe>`;
+      Respuesta = BOT + `Disfruta de: "${NN}"`; 
+      Visual(URL);
       No.style.display = 'none';
       Emision.play();
       Envio.play();
-      Erro.pause();          
+      Erro.pause();         
     } else {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
@@ -110,8 +119,9 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
    var Items = Tildes(item.name.toLowerCase().replace(/\s+/g, ' '));
    // PERMITE LOS ESPACIOS ENTRE MEDIOS 
     if (In.includes(Items)) {
-  Respuesta = BOT + `Disfruta de: "${item.name}"<br/><br/><iframe src="${item.url}" style="box-shadow: 0 0 20px blue;" frameborder="0" allowfullscreen="true" allow="encrypted-media"></iframe>`;
-    No.style.display = 'none';
+       Respuesta = BOT + `Disfruta de: "${item.name}"`;
+       Visual(item.url);
+       No.style.display = 'none';
           Emision.play()
           Envio.play();
           Erro.pause();
