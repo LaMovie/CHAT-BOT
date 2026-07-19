@@ -3,7 +3,7 @@ function Chat() {
     
     var HELP = ["hola", "ayuda", "ayudame", "que eres", "que haces", "tele", "television", "canales", "info", "informacion", "tienes", "alguna", "dato"];
     
-    var LISTA = ["sugerencia", "sugiere", "lista", "peliculas", "series", "contenido", "filme", "serie", "pelis", "otras", "otros", "catalogo", "buscar"];
+    var LISTA = ["sugerencia", "recomiendas", "sugiere", "lista", "peliculas", "contenido", "filme", "serie", "peli", "otras", "otros", "catalogo", "buscar"];
     
     var RESP = `Hola! Como estás?, Yo bien! <br/> Tengo juegos como: <br/> "TRES EN LINEA" <br/> "FLAPPY DINO" <br/> "AHORCADO" <br/> También contengo pelis, series & canales de Tv <br/><ul style="width: 70%;"><li>📺 Aida Tv</li><li>📺 IPTV</li><li>📺 Pop World Tv</li><li>📺 Universal Tv</li><li>📺 X tv</li><li>📺 Bass Nation tv</li><li>📺 Activa Tv</li><li>📺 Lilo Y Stitch Tv</li><li>📺 4Fun Tv</li><li>📺 Autentica Tv</li><li>📺 Fifa Spain Tv</li><li>📺 Studio Delta Tv</li><li>📺 Bum Tv</li></ul><br/><p style="color: red">recuerda usar texto en concreto</p>`;   
        
@@ -145,34 +145,61 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
        // SUGERENCIAS 
    LISTA.forEach((item) => {
       
-   var In = Tildes(Input.replace(/\s+/g, ' '));      
+      var In = Tildes(Input.replace(/\s+/g, ' '));      
       
-     if (In.includes(item)) {
-          var CATALOGO = PELIS.concat(Lista3 || []);
+      if (In.includes(item)) {
+          // 1. Unimos todo el catálogo disponible
+      var CATALOGO_COMPLETO = PELIS.concat(Lista3 || []);
+      var CATALOGO_FILTRADO = [];
+      var textoSugerencia = 'Hoy Te Sugiero Ver:<br/><br/>';
 
-       var sugeridas = [];
+          // 2. Filtramos según la palabra clave detectada
+          if (item === "serie") {
+              // Solo enlaces que incluyan "folders"
+              CATALOGO_FILTRADO = CATALOGO_COMPLETO.filter(p => (p.url || p.URL).includes('folders'));
+              textoSugerencia = 'Hoy Te Sugiero Ver Estas Series:<br/><br/>';
+          } 
+          else if (item === "peliculas" || item === "peli" || item === "filme") {
+              // Solo enlaces que incluyan "file"
+              CATALOGO_FILTRADO = CATALOGO_COMPLETO.filter(p => (p.url || p.URL).includes('file'));
+              textoSugerencia = 'Hoy Te Sugiero Ver Estas Películas:<br/><br/>';
+          } 
+          else {
+        CATALOGO_FILTRADO = CATALOGO_COMPLETO; 
+          }
+
+      var sugeridas = [];
    for (var i = 0; i < 3; i++) {
-              var randomPeli = CATALOGO[Math.floor(Math.random() * CATALOGO.length)];
-              var NNN = randomPeli.name || randomPeli.NAME;
-              
- var NOMBRE = NNN.replace(/🍿|📺/g, '').trim();       
-              
-        if (NOMBRE && !sugeridas.includes(NOMBRE)) {
-                  sugeridas.push(NOMBRE);
+              // Verificamos que haya elementos para evitar errores si el filtro queda vacío
+              if (CATALOGO_FILTRADO.length > 0) {
+                  var randomPeli = CATALOGO_FILTRADO[Math.floor(Math.random() * CATALOGO_FILTRADO.length)];
+                  var NNN = randomPeli.name || randomPeli.NAME;
+                  
+                  var NOMBRE = NNN.replace(/🍿|📺/g, '').trim();       
+                  
+                  // Evitamos duplicados en las sugerencias
+       if (NOMBRE && !sugeridas.includes(NOMBRE)) {
+                      sugeridas.push(NOMBRE);
+                  } else {
+                      // Si era duplicado, restamos 1 a 'i' para que vuelva a intentar buscar otro
+                      i--;
+                  }
               }
           }
 
-  var SUGG = sugeridas.map(function(nombre) {
-   return '<span style="color: #4f3">🍿' + nombre + '</span>';
+          var SUGG = sugeridas.map(function(nombre) {
+              return '<span style="color: #4f3">🍿' + nombre + '</span>';
           });
 
-          Respuesta = BOT + 'Hoy Te Sugiero Ver:<br/><br/>' + SUGG.join('<br/><br/>');
+          // Concatenamos el texto inicial personalizado con las sugerencias
+          Respuesta = BOT + textoSugerencia + SUGG.join('<br/><br/>');
           
-      No.style.display = 'none';
+          No.style.display = 'none';
           Envio.play();
           Erro.pause();
-    };
- });
+      };
+   });
+
 
 
      
@@ -272,3 +299,6 @@ document.addEventListener('fullscreenchange', function() {
     }
   }
 });
+
+
+  

@@ -1,0 +1,35 @@
+# FUNCION "SUGERENCIAS" MAS SIMPLE.
+
+
+ LISTA.forEach((item) => {
+      
+   var In = Tildes(Input.replace(/\s+/g, ' '));      
+      
+     if (In.includes(item)) {
+          var CATALOGO = PELIS.concat(Lista3 || []);
+
+       var sugeridas = [];
+   for (var i = 0; i < 3; i++) {
+              var randomPeli = CATALOGO[Math.floor(Math.random() * CATALOGO.length)];
+              var NNN = randomPeli.name || randomPeli.NAME;
+              
+ var NOMBRE = NNN.replace(/🍿|📺/g, '').trim();       
+              
+        if (NOMBRE && !sugeridas.includes(NOMBRE)) {
+                  sugeridas.push(NOMBRE);
+              }
+          }
+
+  var SUGG = sugeridas.map(function(nombre) {
+   return '<span style="color: #4f3">🍿' + nombre + '</span>';
+          });
+
+          Respuesta = BOT + 'Hoy Te Sugiero Ver:<br/><br/>' + SUGG.join('<br/><br/>');
+          
+      No.style.display = 'none';
+          Envio.play();
+          Erro.pause();
+    };
+ }); 
+   
+ 
