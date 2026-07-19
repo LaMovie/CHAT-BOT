@@ -10,13 +10,13 @@ body {
     width: 100%;
     position: fixed;
 }
-#PANTALLA {    
+#PANTALLA {
+    scale: 60%;
     width: 100%;    
     height: 25vh;
     display: none; 
 }
 #FF {
-    scale: 60%;
     margin-top: -3vh;
 }
 #All {
