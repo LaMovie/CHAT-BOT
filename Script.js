@@ -301,4 +301,43 @@ document.addEventListener('fullscreenchange', function() {
 });
 
 
+
+// --- MENSAJE DE BIENVENIDA INICIAL CON EFECTO DE ESCRITURA ---
+window.addEventListener('DOMContentLoaded', () => {
+       // 1. Creamos un elemento fantasma para ocupar el puesto impar (usuario) 
+   var UsuarioDummy = document.createElement('li');
+    UsuarioDummy.style.display = 'none';
+    Lista.appendChild(UsuarioDummy);
+    
+  // 2. Creamos la burbuja del bot
+    var BotInicial = document.createElement('li');
+    Lista.appendChild(BotInicial);
+    
+    // Texto de bienvenida
+    var textoBienvenida = "🤖: ¡Hola! ¿Cómo estás? En que te puedo ayudar?";
+    var index = 0;
+    
+    // 3. Función de animación de escritura
+    function maquinaEscribir() {
+        if (index < textoBienvenida.length) {
+            BotInicial.textContent += textoBienvenida.charAt(index);
+            index++;
+            setTimeout(maquinaEscribir, 55); // Velocidad de escritura en milisegundos
+        } else {
+            BotInicial.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+    
+    maquinaEschibir = maquinaEscribir; // Referencia interna
+    setTimeout(() => {
+        maquinaEscribir();
+    }, 1000);
+});
+
+
+
+
+
+
+
   
