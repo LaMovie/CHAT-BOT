@@ -531,7 +531,7 @@ var PELIS = [
   { name: "🍿La Mujer En Las Sombras", url: "https://drive.google.com/file/d/1U_91j6dWT23QHnhca5wm8tP_ZnYATw0T/view?usp=drivesdk" }, 
   { name: "🍿911", url: "https://drive.google.com/file/d/1lqTiLDezenKB_6ZKfYO1MX22hLkBA-sH/view?usp=drivesdk" }, 
   { name: "🍿Tierra Plana", url: "https://drive.google.com/file/d/18-Gw04kF5JE6vBN0b2EKiQDKUstOQp8r/view?usp=drivesdk" }, 
-  { name: "📺Sport Tv", url: "https://lamovie.github.io/Sport-Tv/" }, 
+  { name: "📺Sport Tv", url: "https://lamovie.github.io/CONTENIDO/SPORT-TV.html" }, 
   { name: "🍿El Juego Del Calamar 2", url: "https://drive.google.com/drive/folders/1QHu4Br2gxdwj66KrlGPO-oE5vuuJugEp" }, 
   { name: "🍿Salem", url: "https://drive.google.com/drive/folders/1VQKqWevYKGLTXaoYMUdCWuSJVxZf-8kq" }, 
   { name: "🍿Amenaza En El Aire", url: "https://drive.google.com/file/d/1QKSfMcu9nD0aTcwELLUN9md_Qfi1x9GO/view?usp=drivesdk" }, 
