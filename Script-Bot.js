@@ -27,7 +27,7 @@ function Chat() {
  var TITULO = Input.replace('🍿', ''); 
  var ENLACE = 'go:GOOGLE';
     var BOT = "🤖: ";
-    var Respuesta = BOT + `Aquí tienes el enlace a: ${Input}<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+    var Respuesta = BOT + `Encontraremos:<br/>"${Input}" Para Tí<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       Envio.play();
 
       
