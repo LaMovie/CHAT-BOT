@@ -60,7 +60,7 @@ PELIS.forEach(item => {
   var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '), incluyeÑ);
 
   if (In === Items) {
-    var CADENA = ['play.vidyard', 'dropboxuser'];
+    var CADENA = ['play.vidyard', 'dropbox.com'];
 
     if (URL.includes('file')) { 
       var limpioURL = URL.substring(0, URL.indexOf('view?usp')) + 'preview';
@@ -72,7 +72,9 @@ PELIS.forEach(item => {
       Erro.pause();
     } else if (CADENA.some(dominio => URL.includes(dominio))) {
       Respuesta = BOT + `Disfruta de: "${NN}"`; 
-      Visual(URL);
+      PANTALLA.style.display = "block";
+      All.style.height = "40vh";
+      FF.src = URL.replace('www.dropbox.com', 'dl.dropboxusercontent.com');  
       No.style.display = 'none';
       Emision.play();
       Envio.play();
