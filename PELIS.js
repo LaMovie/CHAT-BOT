@@ -442,7 +442,7 @@ var PELIS = [
   { NAME: "🍿Resident Evil 7", URL: "https://drive.google.com/file/d/1-Sl2gzf4NiyPuQadBvWIvkcb4JrI3y7p/view?usp=drivesdk" },
   { NAME: "🍿Imaginario", URL: "https://u.pcloud.link/publink/show?code=XZSVNR0ZsRoxywYzNLuDXGotKMCaSRb2LARy" },
   { NAME: "🍿La Monja 2", URL: "https://u.pcloud.link/publink/show?code=XZMJbiVZ2ysLWtLqjvyYfR9siJQVRJgpU1p7" },
-  { NAME: "🍿Madre Androide", URL: "https://drive.google.com/file/d/15vB1YAdyImhtboPr7DZgvKGfn9kIIsywA/view?usp=drivesdk" },
+  { NAME: "🍿Madre Androide", URL: "https://drive.google.com/file/d/1sLtmTaBF5WK5IUuyAaOat8I-VT6zr4Ka/view?usp=drivesdk" },
   { NAME: "🍿Old (Viejo)", URL: "https://drive.google.com/file/d/1ttiXVylblbagn978HOffB2FzoNhL5k0M/view?usp=drivesdk" },
   { NAME: "🍿Rumbo Al Infierno", URL: "https://drive.google.com/drive/folders/10ZKyHSmKpyxX6fZC3JgS4pn3gx1wXw2P" },
   { NAME: "🍿DeepCity", URL: "https://drive.google.com/file/d/1-S1cQIEkaOhWvUtNegdJxEaYIWeXj-WH/view?usp=drivesdk" },
@@ -611,7 +611,8 @@ var PELIS = [
   {name: "🍿Ip Man 3", url: "https://drive.google.com/file/d/1aFC2edu1GuVOXU1HAujzqOvcCUeWJFX_/view?usp=drivesdk"}, 
   {name: "🍿Ip Man 4", url: "https://drive.google.com/file/d/1LDctjF-JXrPOV8iEFv-tsm9rMt-RSSMZ/view?usp=drivesdk"}, 
   { name: "🍿La Reunión", url: "https://www.dropbox.com/scl/fi/465v6m1etmyremitb8ws1/LA-REUNION-2026.mp4?rlkey=dty640cj4kt0fr2e5fttc6e1f&st=f15x9xna&dl=0"}, 
-  { name: "🍿La Habitacion", url: "https://www.dropbox.com/scl/fi/hvnznhorj56qvtqhddqlh/LA-HABITACI-N-2019.mp4?rlkey=bh4bhrd6mw07usgytm44yl5ep&st=scdow0nq&dl=0"}    
+  { name: "🍿La Habitacion", url: "https://www.dropbox.com/scl/fi/hvnznhorj56qvtqhddqlh/LA-HABITACI-N-2019.mp4?rlkey=bh4bhrd6mw07usgytm44yl5ep&st=scdow0nq&dl=0"}, 
+  { name: "🍿Los Aristogatos", url: "https://www.dropbox.com/scl/fi/crg9ychjf5ltoba15x1uw/LOS-ARISTOGATOS-1970.mp4?rlkey=q75x8c2gqo6tgaopluhek9pta&st=y2g491fl&dl=0"}    
 ]; 
 
 
