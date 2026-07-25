@@ -612,7 +612,8 @@ var PELIS = [
   {name: "🍿Ip Man 4", url: "https://drive.google.com/file/d/1LDctjF-JXrPOV8iEFv-tsm9rMt-RSSMZ/view?usp=drivesdk"}, 
   { name: "🍿La Reunión", url: "https://www.dropbox.com/scl/fi/465v6m1etmyremitb8ws1/LA-REUNION-2026.mp4?rlkey=dty640cj4kt0fr2e5fttc6e1f&st=f15x9xna&dl=0"}, 
   { name: "🍿La Habitacion", url: "https://www.dropbox.com/scl/fi/hvnznhorj56qvtqhddqlh/LA-HABITACI-N-2019.mp4?rlkey=bh4bhrd6mw07usgytm44yl5ep&st=scdow0nq&dl=0"}, 
-  { name: "🍿Los Aristogatos", url: "https://www.dropbox.com/scl/fi/crg9ychjf5ltoba15x1uw/LOS-ARISTOGATOS-1970.mp4?rlkey=q75x8c2gqo6tgaopluhek9pta&st=y2g491fl&dl=0"}    
+  { name: "🍿Los Aristogatos", url: "https://www.dropbox.com/scl/fi/crg9ychjf5ltoba15x1uw/LOS-ARISTOGATOS-1970.mp4?rlkey=q75x8c2gqo6tgaopluhek9pta&st=y2g491fl&dl=0"}, 
+  {name: "🍿Orgullo Y Prejuicio Zombis", url: "https://play.vidyard.com/TUUdWH9LD6oRMQLb5rsiGd"}    
 ]; 
 
 
