@@ -179,7 +179,7 @@ var Lista3 = [
   { NAME: "🍿IN TIME", URL: "https://latino.solo-latino.com/es/detail/movie/vnZ7I9NPtukVEM1Bc2GHi-In-Time" }, 
   { NAME: "🍿LA CASA DEL DRAGÓN", URL: "https://latino.solo-latino.com/es/detail/drama/fv3CdkPKbxP0JtCNSREsK-House-of-the-Dragon[Audio-Latino]/1" }, 
   { NAME: "🍿Bienvenidos A Derry", URL: "https://latino.solo-latino.com/es/detail/drama/YIbEmf0CEN7cHMhfUqX8W-IT-Welcome-to-Derry-Season-1/1"}, 
-  { NAME: "🍿", URL: "" }, 
+  { NAME: "🍿Legacies", URL: "https://latino.solo-latino.com/es/detail/drama/fMOjyend99yykB2F1vuOi-Legacies-Season-1" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
