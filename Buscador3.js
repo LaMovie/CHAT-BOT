@@ -178,9 +178,9 @@ var Lista3 = [
   { NAME: "🍿ERASE UNA VEZ", URL: "https://latino.solo-latino.com/es/detail/drama/KU9TR8APGjqQIr2pjT6hG-Once-Upon-a-Time-Season-1" },
   { NAME: "🍿IN TIME", URL: "https://latino.solo-latino.com/es/detail/movie/vnZ7I9NPtukVEM1Bc2GHi-In-Time" }, 
   { NAME: "🍿LA CASA DEL DRAGÓN", URL: "https://latino.solo-latino.com/es/detail/drama/fv3CdkPKbxP0JtCNSREsK-House-of-the-Dragon[Audio-Latino]/1" }, 
-  { NAME: "🍿Bienvenidos A Derry", URL: "https://latino.solo-latino.com/es/detail/drama/YIbEmf0CEN7cHMhfUqX8W-IT-Welcome-to-Derry-Season-1/1"}, 
-  { NAME: "🍿Legacies", URL: "https://latino.solo-latino.com/es/detail/drama/fMOjyend99yykB2F1vuOi-Legacies-Season-1" }, 
-  { NAME: "🍿", URL: "" },
+  { NAME: "🍿BIENVENIDOS A DERRY", URL: "https://latino.solo-latino.com/es/detail/drama/YIbEmf0CEN7cHMhfUqX8W-IT-Welcome-to-Derry-Season-1/1"}, 
+  { NAME: "🍿LEGACIES", URL: "https://latino.solo-latino.com/es/detail/drama/fMOjyend99yykB2F1vuOi-Legacies-Season-1" }, 
+  { NAME: "🍿ALGO TERRIBLE ESTA A PUNTO DE SUCEDER", URL: "https://latino.solo-latino.com/es/detail/drama/cBb8QFEOuq8D9RjT861fQ-Something-Very-Bad-Is-Going-to-Happen/1" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
@@ -219,7 +219,7 @@ var Lista3 = [
 
 
   
-  
+ 
   
   
   
