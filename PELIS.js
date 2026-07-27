@@ -615,7 +615,8 @@ var PELIS = [
   { name: "🍿Los Aristogatos", url: "https://www.dropbox.com/scl/fi/crg9ychjf5ltoba15x1uw/LOS-ARISTOGATOS-1970.mp4?rlkey=q75x8c2gqo6tgaopluhek9pta&st=y2g491fl&dl=0"}, 
   {name: "🍿Orgullo Y Prejuicio Zombis", url: "https://play.vidyard.com/TUUdWH9LD6oRMQLb5rsiGd"}, 
   { name: "🍿Mortal Kombat 2", url: "https://www.dropbox.com/scl/fi/onx67snle25kt92k4c83q/Mortal-Kombat-II-2026.mp4?rlkey=8hsjj3g0pb7zpzov8wv435rkn&st=xi6ug8id&dl=0"}, 
-  { name: "🍿Amos Del Universo", url: "https://play.vidyard.com/3qQDpRxSkmPiopVNcC37iQ"}    
+  { name: "🍿Amos Del Universo", url: "https://play.vidyard.com/3qQDpRxSkmPiopVNcC37iQ"}, 
+  { name: "🍿Sobre Tu Cadaver", url: "https://play.vidyard.com/UyzN4qYVfPebJrckVs6B3z"}    
 ]; 
 
 
