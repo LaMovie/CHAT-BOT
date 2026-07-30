@@ -619,7 +619,7 @@ var PELIS = [
   { name: "🍿Sobre Tu Cadaver", url: "https://play.vidyard.com/UyzN4qYVfPebJrckVs6B3z"}, 
   { name: "🍿The Big Bang Theory", url: "https://www.dropbox.com/scl/fi/77ulrdas331l21kda77js/THE-BIG-BANG-THEORY-2026.mp4?rlkey=0mv9xfaz5lhdx89n681wmpvpr&st=6d2mibbi&dl=0"}, 
   { name: "🍿Pixeles", url: "https://www.dropbox.com/scl/fi/9jfi8tsvwtr9rp8xoufrk/PIXELES-2015.mp4?rlkey=5zlz3snspg02y69om7er6dm44&st=hed4tvz8&dl=0"}, 
-  {name: "🍿Tetris", url: "https://www.dropbox.com/scl/fi/9mldjy6d78gyf5u4eyqlx/TETRIS-2023.mp4?rlkey=fsf1o8arwccx81ewc41sl3ivw&st=4yzwf27d&dl=0"}    
+  {name: "🍿Tetris", url: "https://www.dropbox.com/scl/fi/9mldjy6d78gyf5u4eyqlx/TETRIS-2023.mp4?rlkey=fsf1o8arwccx81ewc41sl3ivw&st=96ok07gy&dl=0"}    
 ]; 
 
 
