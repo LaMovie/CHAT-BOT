@@ -617,7 +617,8 @@ var PELIS = [
   { name: "🍿Mortal Kombat 2", url: "https://www.dropbox.com/scl/fi/onx67snle25kt92k4c83q/Mortal-Kombat-II-2026.mp4?rlkey=8hsjj3g0pb7zpzov8wv435rkn&st=xi6ug8id&dl=0"}, 
   { name: "🍿Amos Del Universo", url: "https://play.vidyard.com/3qQDpRxSkmPiopVNcC37iQ"}, 
   { name: "🍿Sobre Tu Cadaver", url: "https://play.vidyard.com/UyzN4qYVfPebJrckVs6B3z"}, 
-  { name: "🍿The Big Bang Theory", url: "https://www.dropbox.com/scl/fi/77ulrdas331l21kda77js/THE-BIG-BANG-THEORY-2026.mp4?rlkey=0mv9xfaz5lhdx89n681wmpvpr&st=6d2mibbi&dl=0"}    
+  { name: "🍿The Big Bang Theory", url: "https://www.dropbox.com/scl/fi/77ulrdas331l21kda77js/THE-BIG-BANG-THEORY-2026.mp4?rlkey=0mv9xfaz5lhdx89n681wmpvpr&st=6d2mibbi&dl=0"}, 
+  { name: "🍿Pixeles", url: "https://www.dropbox.com/scl/fi/9jfi8tsvwtr9rp8xoufrk/PIXELES-2015.mp4?rlkey=5zlz3snspg02y69om7er6dm44&st=hed4tvz8&dl=0"}    
 ]; 
 
 
