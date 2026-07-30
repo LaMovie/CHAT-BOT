@@ -104,12 +104,15 @@ var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
       Enlace.play();
       Envio.play();
       Erro.pause();
-     } else if (URL.includes('limit')) {
-      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+     } else if (URL.includes('www.dropbox.com')) {
+      Respuesta = BOT + `Disfruta de: "${NN}"`; 
+      PANTALLA.style.display = "block";
+      All.style.height = "40vh";
+      FF.src = URL.replace('www.dropbox.com', 'dl.dropboxusercontent.com');  
       No.style.display = 'none';
-      Enlace.play();
+      Emision.play();
       Envio.play();
-      Erro.pause();
+      Erro.pause();      
      }  
    } 
 });
