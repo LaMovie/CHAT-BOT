@@ -48,8 +48,9 @@ function Visual(url) {
   return limpio;
 };
 
-   PELIS = PELIS.concat(Lista1);
- 
+
+  var PELIS = Lista1.concat(Lista2, Lista3); 
+   
          // PELIS 
 PELIS.forEach(item => {
   var NN = item.name || item.NAME;
@@ -61,6 +62,7 @@ PELIS.forEach(item => {
   var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '), incluyeÑ);
 
   if (In === Items) {
+    
     var CADENA = ['play.vidyard', 'dropbox.com'];
 
     if (URL.includes('file')) { 
@@ -80,7 +82,14 @@ PELIS.forEach(item => {
       Emision.play();
       Envio.play();
       Erro.pause();         
-    } else {
+    } else if (NN.includes('📺')) {
+       Respuesta = BOT + `Disfruta de: "${item.name}"`;
+       Visual(item.url);
+       No.style.display = 'none';
+          Emision.play()
+          Envio.play();
+          Erro.pause();
+       } else {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
       Enlace.play();
@@ -91,50 +100,8 @@ PELIS.forEach(item => {
 });
 
  
-        // LISTA 3 
-    Lista3.forEach(item => {
-  var NN = item.name || item.NAME;
-  var URL = item.url || item.URL;
-var In = Tildes(Input.replace(/\s+/g, ' '));   
-var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '));
-   // PERMITE LOS ESPACIOS ENTRE MEDIOS 
-    if (In === Items) {
-  if (URL.includes('latino.solo-latino')) {
-      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-      No.style.display = 'none';
-      Enlace.play();
-      Envio.play();
-      Erro.pause();
-     } else if (URL.includes('www.dropbox.com')) {
-      Respuesta = BOT + `Disfruta de: "${NN}"`; 
-      PANTALLA.style.display = "block";
-      All.style.height = "40vh";
-      FF.src = URL.replace('www.dropbox.com', 'dl.dropboxusercontent.com');  
-      No.style.display = 'none';
-      Emision.play();
-      Envio.play();
-      Erro.pause();      
-     }  
-   } 
-});
- 
- 
-       // CANALES TV 
-    CANALES.forEach(item => {
-var In = Tildes(Input.replace(/\s+/g, ' '));    
-   var Items = Tildes(item.name.toLowerCase().replace(/\s+/g, ' '));
-   // PERMITE LOS ESPACIOS ENTRE MEDIOS 
-    if (In.includes(Items)) {
-       Respuesta = BOT + `Disfruta de: "${item.name}"`;
-       Visual(item.url);
-       No.style.display = 'none';
-          Emision.play()
-          Envio.play();
-          Erro.pause();
-  }
-});  
-
-  
+        
+       
          // AYUDA 
    HELP.forEach((item) => {
 var In = Tildes(Input.replace(/\s+/g, ' '));   
@@ -146,6 +113,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
           Erro.pause();
    };
 });
+
 
 
        // SUGERENCIAS 
@@ -205,7 +173,6 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
           Erro.pause();
       };
    });
-
 
 
      
