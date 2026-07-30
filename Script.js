@@ -48,6 +48,7 @@ function Visual(url) {
   return limpio;
 };
 
+   PELIS = PELIS.concat(Lista1);
  
          // PELIS 
 PELIS.forEach(item => {
