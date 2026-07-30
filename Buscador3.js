@@ -179,7 +179,7 @@ var Lista3 = [
   { NAME: "🍿ALGO TERRIBLE ESTA A PUNTO DE SUCEDER", URL: "https://latino.solo-latino.com/es/detail/drama/cBb8QFEOuq8D9RjT861fQ-Something-Very-Bad-Is-Going-to-Happen/1" }, 
   { NAME: "🍿DEMON SLAYER", URL: "https://latino.solo-latino.com/es/detail/drama/fLlJJ08QFlnGTLNPD9uFs-Demon-Slayer-Kimetsu-no-Yaiba/1" }, 
   { NAME: "🍿SOLO LIVING", URL: "https://latino.solo-latino.com/es/detail/drama/7JUAhDRqVPu4tHaTeglTV-Solo-Leveling" }, 
-  { NAME: "🍿", URL: "" },
+  { NAME: "🍿KICK ASS", URL: "https://latino.solo-latino.com/es/detail/movie/W8ur5UQqkX9ePHvXcGIGG-Kick-Ass" },
   { NAME: "🍿", URL: "" }, 
   { NAME: "🍿", URL: "" },
   { NAME: "🍿", URL: "" }, 
