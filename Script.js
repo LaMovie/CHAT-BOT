@@ -25,7 +25,7 @@ function Chat() {
    
    
  var TITULO = Input.replace('🍿', ''); 
- var ENLACE = 'https://lamovie.github.io/La-Movie-Delux/GOOGLE.html';
+ var ENLACE = `${'GOOGLE.html'}?texto=${TITULO}`;
     var BOT = "🤖: ";
     var Respuesta = BOT + `Encontraremos:<br/>"${Input}" Para Tí<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       Envio.play();
