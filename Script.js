@@ -25,7 +25,7 @@ function Chat() {
    
    
  var TITULO = Input.replace('🍿', ''); 
- var ENLACE = 'https://www.google.com/search?q=site:sololatino.net+' + TITULO;
+ var ENLACE = 'https://lamovie.github.io/La-Movie-Delux/GOOGLE.html';
     var BOT = "🤖: ";
     var Respuesta = BOT + `Encontraremos:<br/>"${Input}" Para Tí<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       Envio.play();
