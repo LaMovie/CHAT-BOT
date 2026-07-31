@@ -25,7 +25,7 @@ function Chat() {
    
    
  var TITULO = Input.replace('🍿', ''); 
- var ENLACE = 'go:GOOGLE';
+ var ENLACE = 'https://www.google.com/search?q=site:sololatino.net+' + TITULO;
     var BOT = "🤖: ";
     var Respuesta = BOT + `Encontraremos:<br/>"${Input}" Para Tí<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       Envio.play();
@@ -99,8 +99,7 @@ PELIS.forEach(item => {
   } 
 });
 
- 
-        
+         
        
          // AYUDA 
    HELP.forEach((item) => {
@@ -116,47 +115,39 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
 
 
 
-       // SUGERENCIAS 
+         // SUGERENCIAS 
    LISTA.forEach((item) => {
-      
       var In = Tildes(Input.replace(/\s+/g, ' '));      
       
-      if (In.includes(item)) {
-          // 1. Unimos todo el catálogo disponible
-      var CATALOGO_COMPLETO = PELIS.concat(Lista3 || []);
-      var CATALOGO_FILTRADO = [];
-      var textoSugerencia = 'Hoy Te Sugiero Ver:<br/><br/>';
+        if (In.includes(item)) {
+     var CATALOGO_FILTRADO = [];
+     var textoSugerencia = 'Hoy Te Sugiero Ver:<br/><br/>';
 
-          // 2. Filtramos según la palabra clave detectada
           if (item === "serie") {
-              // Solo enlaces que incluyan "folders"
-              CATALOGO_FILTRADO = CATALOGO_COMPLETO.filter(p => (p.url || p.URL).includes('folders'));
-              textoSugerencia = 'Hoy Te Sugiero Ver Estas Series:<br/><br/>';
-          } 
-          else if (item === "peliculas" || item === "peli" || item === "filme") {
-              // Solo enlaces que incluyan "file"
-              CATALOGO_FILTRADO = CATALOGO_COMPLETO.filter(p => (p.url || p.URL).includes('file'));
-              textoSugerencia = 'Hoy Te Sugiero Ver Estas Películas:<br/><br/>';
-          } 
-          else {
-        CATALOGO_FILTRADO = CATALOGO_COMPLETO; 
+    // EL SALVAVIDAS: Agregamos || "" para evitar el crasheo por enlaces vacíos o nulos
+              CATALOGO_FILTRADO = PELIS.filter(p => (p.url || p.URL || "").includes('folders'));
+     textoSugerencia = 'Hoy Te Sugiero Ver Estas Series:<br/><br/>';
+          } else if (item === "peliculas" || item === "peli" || item === "filme") {
+              // EL SALVAVIDAS: Agregamos || "" aquí también
+              CATALOGO_FILTRADO = PELIS.filter(p => (p.url || p.URL || "").includes('file'));
+        textoSugerencia = 'Hoy Te Sugiero Ver Estas Películas:<br/><br/>';
+          } else {
+     CATALOGO_FILTRADO = PELIS; 
           }
 
-      var sugeridas = [];
-   for (var i = 0; i < 3; i++) {
-              // Verificamos que haya elementos para evitar errores si el filtro queda vacío
-              if (CATALOGO_FILTRADO.length > 0) {
-                  var randomPeli = CATALOGO_FILTRADO[Math.floor(Math.random() * CATALOGO_FILTRADO.length)];
-                  var NNN = randomPeli.name || randomPeli.NAME;
-                  
-                  var NOMBRE = NNN.replace(/🍿|📺/g, '').trim();       
-                  
-                  // Evitamos duplicados en las sugerencias
-       if (NOMBRE && !sugeridas.includes(NOMBRE)) {
+          var sugeridas = [];
+          // Copiamos y desordenamos la lista de forma segura
+          var disponibles = [...CATALOGO_FILTRADO].sort(() => 0.5 - Math.random());
+
+          // Buscamos hasta 3 resultados únicos sin riesgo de bucles
+          for (var i = 0; i < disponibles.length; i++) {
+     if (sugeridas.length >= 3) break; 
+              
+   var NNN = disponibles[i].name || disponibles[i].NAME;
+              if (NNN) {
+   var NOMBRE = NNN.replace(/🍿|📺/g, '').trim();       
+                  if (NOMBRE && !sugeridas.includes(NOMBRE)) {
                       sugeridas.push(NOMBRE);
-                  } else {
-                      // Si era duplicado, restamos 1 a 'i' para que vuelva a intentar buscar otro
-                      i--;
                   }
               }
           }
@@ -165,7 +156,6 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
               return '<span style="color: #4f3">🍿' + nombre + '</span>';
           });
 
-          // Concatenamos el texto inicial personalizado con las sugerencias
           Respuesta = BOT + textoSugerencia + SUGG.join('<br/><br/>');
           
           No.style.display = 'none';
