@@ -83,12 +83,20 @@ PELIS.forEach(item => {
       Envio.play();
       Erro.pause();         
     } else if (NN.includes('📺')) {
+  if (URL.includes('github')) {
+      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      No.style.display = 'none';
+      Enlace.play();
+      Envio.play();
+      Erro.pause();
+     } else {
        Respuesta = BOT + `Disfruta de: "${item.name}"`;
        Visual(item.url);
        No.style.display = 'none';
           Emision.play()
           Envio.play();
           Erro.pause();
+        }
        } else {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
