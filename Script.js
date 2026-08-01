@@ -130,14 +130,20 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
         if (In.includes(item)) {
      var CATALOGO_FILTRADO = [];
      var textoSugerencia = 'Hoy Te Sugiero Ver:<br/><br/>';
+  var SERIE = ['folders', 'drama'];
+  var MOVIE = ['file', 'movie'];
 
-          if (item === "serie") {
+       if (item === "serie") {
     // EL SALVAVIDAS: Agregamos || "" para evitar el crasheo por enlaces vacíos o nulos
-              CATALOGO_FILTRADO = PELIS.filter(p => (p.url || p.URL || "").includes('folders'));
+              
+ CATALOGO_FILTRADO = PELIS.filter(p => SERIE.some(sss => (p.url || p.URL || "").includes(sss)));
+
      textoSugerencia = 'Hoy Te Sugiero Ver Estas Series:<br/><br/>';
           } else if (item === "peliculas" || item === "peli" || item === "filme") {
               // EL SALVAVIDAS: Agregamos || "" aquí también
-              CATALOGO_FILTRADO = PELIS.filter(p => (p.url || p.URL || "").includes('file'));
+ 
+ CATALOGO_FILTRADO = PELIS.filter(p => MOVIE.some(mmm => (p.url || p.URL || "").includes(mmm)));
+
         textoSugerencia = 'Hoy Te Sugiero Ver Estas Películas:<br/><br/>';
           } else {
      CATALOGO_FILTRADO = PELIS; 
