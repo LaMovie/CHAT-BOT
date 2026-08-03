@@ -65,7 +65,7 @@ PELIS.forEach(item => {
     
     var CADENA = ['play.vidyard', 'dropbox.com'];
 
-    if (URL.includes('file')) { 
+    if (URL.includes('google.com/file')) { 
       var limpioURL = URL.substring(0, URL.indexOf('view?usp')) + 'preview';
       Respuesta = BOT + `Disfruta La Emisión: ${NN}`;
       Visual(limpioURL);
@@ -131,7 +131,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
      var CATALOGO_FILTRADO = [];
      var textoSugerencia = 'Hoy Te Sugiero Ver:<br/><br/>';
   var SERIE = ['folders', 'drama', 'publicfoldergrid'];
-  var MOVIE = ['file', 'movie', 'vidyard.com', 'filemanager'];
+  var MOVIE = ['file', 'movie', 'vidyard.com', 'gallery=open'];
 
        if (item === "serie") {
     // EL SALVAVIDAS: Agregamos || "" para evitar el crasheo por enlaces vacíos o nulos
