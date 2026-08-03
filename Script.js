@@ -130,8 +130,8 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
         if (In.includes(item)) {
      var CATALOGO_FILTRADO = [];
      var textoSugerencia = 'Hoy Te Sugiero Ver:<br/><br/>';
-  var SERIE = ['folders', 'drama'];
-  var MOVIE = ['file', 'movie'];
+  var SERIE = ['folders', 'drama', 'publicfoldergrid'];
+  var MOVIE = ['file', 'movie', 'vidyard.com', 'filemanager'];
 
        if (item === "serie") {
     // EL SALVAVIDAS: Agregamos || "" para evitar el crasheo por enlaces vacíos o nulos
