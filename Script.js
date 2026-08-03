@@ -139,7 +139,7 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
  CATALOGO_FILTRADO = PELIS.filter(p => SERIE.some(sss => (p.url || p.URL || "").includes(sss)));
 
      textoSugerencia = 'Hoy Te Sugiero Ver Estas Series:<br/><br/>';
-          } else if (item === "peliculas" || item === "peli" || item === "filme") {
+          } else if (item === "peliculas" || item === "pelis" || item === "filme") {
               // EL SALVAVIDAS: Agregamos || "" aquí también
  
  CATALOGO_FILTRADO = PELIS.filter(p => MOVIE.some(mmm => (p.url || p.URL || "").includes(mmm)));
