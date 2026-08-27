@@ -48,7 +48,8 @@ function Visual(url) {
   return limpio;
 };
 
-
+   var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+   
   var PELIS = Lista1.concat(Lista2, Lista3); 
    
          // PELIS 
@@ -97,7 +98,14 @@ PELIS.forEach(item => {
           Envio.play();
           Erro.pause();
         }
-       } else {
+       } else if (!isMobile && URL.includes('latino.solo')) {
+        var URL = URL.replace('latino.solo-latino', 'h5.swplayer'); 
+      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      No.style.display = 'none';
+      Enlace.play();
+      Envio.play();
+      Erro.pause();
+    } else {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
       Enlace.play();
