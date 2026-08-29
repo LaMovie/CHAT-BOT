@@ -1,21 +1,28 @@
 body {
-    width: 95%;
+    width: 100%;
+    max-width: 600px; /* Límite de ancho para que no se estire en PC */
+    margin: 0 auto;   /* Centra la app en medio de la pantalla en PC */
     position: fixed;
+    left: 50%;
+    transform: translateX(-50%); /* Asegura el centrado exacto */
     background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #Container {
     display: flex;
     flex-direction: column;
-    height: 90vh; /* Ajusta según tu diseño */
+    align-items: center;
+    height: 90vh; 
     width: 100%;
-    position: fixed;
+    position: relative; /* Ayuda a controlar mejor los elementos internos */
 }
 #PANTALLA {
     scale: 60%;
     width: 100%;    
     height: 25vh;
     display: none; 
-    margin-left: -6.5vh;
 }
 #FF {
     width: 70vh;
@@ -25,16 +32,17 @@ body {
 }
 #All {
     gap: 10px;
-    width: 90%;
+    width: 95%;
     height: 60vh;
-    display: grid;
-    overflow: scroll;      
-    margin-left: 1vh;
+    display: flex; /* Cambiado a flex para controlar mejor la lista */
+    flex-direction: column;
+    overflow-y: auto; /* Mejor que scroll para no mostrar barra inactiva */      
     margin-top: 10px;
     transition: height 0.3s ease; 
+    padding-bottom: 80px; /* Espacio para que el input no tape el último mensaje */
 }
 #Nav {
-	background: url(1.gif);
+	background: url(1.gif) center/cover; /* Mantiene la imagen proporcionada */
 	border: 2px solid blue;
 	box-shadow: 0 0 30px blue;
 	height: 60px;	
@@ -45,46 +53,63 @@ body {
 	width: 95%;
 	color: #f09;
 	text-shadow: 2px 3px #f09;
+    display: flex; /* Centra el texto del bot automáticamente */
+    justify-content: center;
+    align-items: center;
+}
+#Nav p {
+    margin: 0; /* Quita el margen extra por defecto de la etiqueta p */
 }
 #Input {
     z-index: 10;
     color: #fff;
-    padding: 2vh;
+    padding: 15px;
+    width: 60%; /* Se adapta al ancho del celular */
+    max-width: 500px; /* Evita que sea gigantesco en PC */
     outline: none;
-    position: fixed;
-    background: transparent;
+    position: fixed; /* Lo pega directamente a la pantalla */
+    bottom: 20px; /* Siempre a 20 pixeles del fondo, evita que se coma el borde en PC */
+    left: 50%; /* Lo empuja a la mitad */
+    transform: translateX(-50%); /* Corrige el eje para un centrado milimétrico */
+    background: #000;
     font-weight: bold;
-    margin: 70vh -15vh;
     border-radius: 20px;
     border: 2px solid #f09;
     box-shadow: 0 0 30px #f09;
 }
+ul {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Apila los mensajes */
+}
 ul li {    
-    width: 70%; 
-    margin-top: 3vh;
+    width: 75%; 
+    margin-top: 15px;
     list-style: none;
     font-weight: bold;
     border-radius: 20px;
+    padding: 10px; /* Espacio interno para que el texto respire */
 }
+/* Mensajes impares (Usuario / Derecha) */
 ul li:nth-child(odd){
     color: #fff;
     background: #f09;
-    font-weight: bold;
-    margin-left: 10vh;
+    align-self: flex-end; /* Lo pega a la derecha automáticamente */
     border: 2px solid #f09;
-    box-shadow: 0 0 30px #f09;
-    font-family: Luckiest Guy, cursive;
+    box-shadow: 0 0 20px #f09;
+    font-family: 'Luckiest Guy', cursive;
     -webkit-text-stroke: .3px #006;
     text-shadow: 0px .5px 0 #aaa;
 }
+/* Mensajes pares (Bot / Izquierda) */
 ul li:nth-child(even){
     color: #FFD700;
-    background: blue;  
-    font-weight: bold;          
-    margin-left: -20vh;    
+    background: blue;            
+    align-self: flex-start; /* Lo pega a la izquierda automáticamente */
     border: 2px solid blue;
-    box-shadow: 0 0 30px blue;
-    font-family: Luckiest Guy, cursive;
+    box-shadow: 0 0 20px blue;
+    font-family: 'Luckiest Guy', cursive;
     -webkit-text-stroke: .3px #006;
     text-shadow: 0px .5px 0 #aaa;
 }
@@ -94,7 +119,6 @@ iframe {
 #No {
     scale: 60%;
     display: none;
-    margin-left: -10vh;
 }
 #FULL {   
     scale: .7;
@@ -103,7 +127,6 @@ iframe {
     padding: 1px;
     font-size: 15px;
     background: gray;
-    margin-left: 0vh; 
     font-weight: bold;
     border-radius: 50px;
 }
