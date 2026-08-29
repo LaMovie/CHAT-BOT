@@ -19,27 +19,33 @@ body {
     position: relative; /* Ayuda a controlar mejor los elementos internos */
 }
 #PANTALLA {
-    scale: 60%;
-    width: 100%;    
-    height: 25vh;
+    width: 120%;   
+    scale: 70%; 
     display: none; 
+    justify-content: center; /* Centra el iframe internamente */
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 #FF {
-    width: 70vh;
-    height: 35vh;
-    margin-top: -3vh;
+    width: 95%; 
+    max-width: 550px; 
+    height: 35vh; 
     box-shadow: 0 0 20px blue;
+    border-radius: 10px;
 }
 #All {
     gap: 10px;
     width: 95%;
     height: 60vh;
-    display: flex; /* Cambiado a flex para controlar mejor la lista */
+    display: flex; 
     flex-direction: column;
-    overflow-y: auto; /* Mejor que scroll para no mostrar barra inactiva */      
+    overflow-y: auto; 
+    overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
     margin-top: 10px;
     transition: height 0.3s ease; 
-    padding-bottom: 80px; /* Espacio para que el input no tape el último mensaje */
+    padding-bottom: 80px; 
+    box-sizing: border-box; /* Protege el ancho del contenedor */
 }
 #Nav {
 	background: url(1.gif) center/cover; /* Mantiene la imagen proporcionada */
@@ -79,19 +85,23 @@ body {
 }
 ul {
     padding: 0;
+    margin: 0; /* Quitamos márgenes residuales */
     width: 100%;
     display: flex;
-    flex-direction: column; /* Apila los mensajes */
+    flex-direction: column; 
+    box-sizing: border-box;
 }
 ul li {    
     width: 75%; 
+    max-width: 75%; /* Límite estricto para que no se estire de más */
     margin-top: 15px;
     list-style: none;
     font-weight: bold;
     border-radius: 20px;
-    padding: 10px; /* Espacio interno para que el texto respire */
+    padding: 10px; 
+    box-sizing: border-box; /* Obliga al padding a quedarse por dentro */
+    word-wrap: break-word; /* Evita que palabras o enlaces muy largos rompan la burbuja */
 }
-/* Mensajes impares (Usuario / Derecha) */
 ul li:nth-child(odd){
     color: #fff;
     background: #f09;
