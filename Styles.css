@@ -74,7 +74,7 @@ body {
     max-width: 500px; /* Evita que sea gigantesco en PC */
     outline: none;
     position: fixed; /* Lo pega directamente a la pantalla */
-    bottom: 20px; /* Siempre a 20 pixeles del fondo, evita que se coma el borde en PC */
+    bottom: 10vh; /* Siempre a 20 pixeles del fondo, evita que se coma el borde en PC */
     left: 50%; /* Lo empuja a la mitad */
     transform: translateX(-50%); /* Corrige el eje para un centrado milimétrico */
     background: #000;
