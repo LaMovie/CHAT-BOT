@@ -319,8 +319,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 1000);
 });
 
-
-
+     var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
+   if (!isMobile) {
+     FF.style.height = '45vh';
+     Pantalla.style.scale = '50%'; 
+        
+   };
 
 
 
