@@ -27,19 +27,23 @@ document.documentElement.innerHTML = "<head></head><body style='background:#000;
 <nav id="Nav">
   <p>🤖 CHAT BOT 🤖</p>
 </nav>
-  <div id="Container">
-<div id="Container">
-    <div id="PANTALLA">
-        <iframe id="FF" frameborder="0" allowfullscreen="true" allow="encrypted-media"></iframe>
+    <div id="Container">
+       <div id="PANTALLA">
+          <iframe id="FF" frameborder="0" allowfullscreen="true" allow="encrypted-media"></iframe>
     </div>
     
      <div id="All">  
         <ul id="Lista"></ul>       
-             </div>
-                </div>
+     </div>
+  </div>
+
+  <!-- NUEVO: Contenedor del filtro en tiempo real -->
+  <ul id="FiltroSugerencias"></ul>
+
   <form onsubmit="event.preventDefault(); Chat()">
    <input id="Input" type="text" placeholder="CHAT..."/>
   </form>
+
 </center>
 <img id="No" src="https://bit.ly/3y2BVCO"/>
 

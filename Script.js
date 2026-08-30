@@ -363,4 +363,123 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+// 🦥 FILTRO función Chat()
+function TildesFiltro(texto, preservarÑ = false) {
+    let limpio = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    if (!preservarÑ) {
+        limpio = limpio.replace(/ñ/g, "n");
+    }
+    return limpio;
+}
+
+// 2. Construir la lista oculta con un verificador de carga
+function construirFiltroChat() {
+    // Verificamos si la base de datos ya terminó de cargar desde GitHub
+    if (typeof Lista1 === 'undefined' || typeof Lista2 === 'undefined' || typeof Lista3 === 'undefined') {
+        setTimeout(construirFiltroChat, 500); // Si no ha cargado, reintenta en medio segundo
+        return; 
+    }
+
+    var PELIS_TOTAL = Lista1.concat(Lista2, Lista3); 
+    var listaSugerencias = document.getElementById("FiltroSugerencias");
+    listaSugerencias.innerHTML = ''; // Limpiamos antes de construir
+
+    PELIS_TOTAL.forEach(item => {
+        var li = document.createElement("li");
+        var name = item.NAME || item.name || '';
+        
+        li.innerHTML = `<span class="titulo-txt">${name}</span>`;
+        li.classList.add("Data-Filtro");
+        li.style.display = "none";
+        listaSugerencias.appendChild(li);
+    });
+}
+
+// Iniciamos la construcción segura
+construirFiltroChat();
+
+// 3. Filtrado en tiempo real al escribir
+document.getElementById("Input").addEventListener("keyup", function(e) {
+    if (e.key === "Enter") {
+        FiltroSugerencias.style.display = "none";
+    } 
+
+    var In = e.target.value.toLowerCase().trim();
+    var incluyeÑ = In.includes("ñ");
+    
+    // Usamos la nueva función TildesFiltro
+    var InputLimpiado = TildesFiltro(In.replace(/\s+/g, ' '), incluyeÑ);
+    
+    var listaSugerencias = document.getElementById("FiltroSugerencias");
+    var itemsFiltro = document.querySelectorAll(".Data-Filtro");
+    let foundMatch = false;
+
+    if (InputLimpiado === '') {
+        listaSugerencias.style.display = "none";
+        return;
+    }
+
+    listaSugerencias.style.display = "block";
+
+    itemsFiltro.forEach(item => {
+        let elTitulo = item.querySelector(".titulo-txt").textContent;
+        let itemText = TildesFiltro(elTitulo.toLowerCase().trim(), incluyeÑ);
+
+        if (itemText.includes(InputLimpiado)) {
+    item.style.display = "block";
+            foundMatch = true;
+        } else {
+   item.style.display = "none";
+        }
+    });
+
+    if (!foundMatch) {
+        listaSugerencias.style.display = "none";
+    }
+});
+
+// 4. Comportamiento al hacer clic en un resultado
+document.getElementById("FiltroSugerencias").addEventListener("click", function(e) {
+    var matchedItem = e.target.closest(".Data-Filtro");
+
+    if (matchedItem) {
+        var textoCrudo = matchedItem.textContent;
+        var textoSinEmojis = textoCrudo.replace(/🍿|🌐|📺|⚙️|🧋/g, '').trim(); 
+        
+        var inputElement = document.getElementById("Input");
+        document.getElementById("FiltroSugerencias").style.display = "none";
+
+        var TextPre = textoSinEmojis.toLowerCase();
+        
+        // Verificamos de forma segura Lista3
+        var DATA = (typeof Lista3 !== 'undefined') ? Lista3.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🧋', '') === TextPre) : null;
+        
+        let Prefijo;
+        if (TextPre.includes('tv')) {
+            Prefijo = '📺';
+        } else if (TextPre.includes('sofia')){
+            Prefijo = '⚙️';
+        } else if (DATA && DATA.CAPS){
+            Prefijo = '🧋';
+        } else {
+            Prefijo = '🍿';
+        }   
+        
+        inputElement.value = Prefijo + TextPre;
+        Chat(); 
+    }
+});
+
+// 5. Ocultar el filtro si el usuario toca fuera de la caja
+document.addEventListener("click", function(e) {
+    if (e.target.id !== "Input" && e.target.id !== "FiltroSugerencias") {
+        var filtro = document.getElementById("FiltroSugerencias");
+        if(filtro) filtro.style.display = "none";
+    }
+});
+
+
+
+
   
