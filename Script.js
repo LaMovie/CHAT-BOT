@@ -82,8 +82,23 @@ PELIS.forEach(item => {
       No.style.display = 'none';
       Emision.play();
       Envio.play();
-      Erro.pause();         
-    } else if (NN.includes('📺')) {
+      Erro.pause();    
+      
+      if (NN.includes('🧋')) {
+       NN = NN.replace('🧋', '');
+       URL = `https://lamovie.github.io/La-Movie-Delux/PLAY2.html?titulo=${NN}&url=${URL}`;
+      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      PANTALLA.style.display = "none";
+      All.style.height = "60vh";
+      FF.src = ''; 
+      No.style.display = 'none';
+      Enlace.play();
+      Envio.play();
+      Erro.pause(); 
+      Emision.pause()
+    } 
+  
+   } else if (NN.includes('📺')) {
   if (URL.includes('github')) {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
@@ -215,17 +230,26 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
         Input.value = '';
 };
 
+
+  
+ 
          // PREFIJO 
   Input.addEventListener('keydown', function(event) {
    if (event.key === 'Enter') { 
-                event.preventDefault(); 
+          event.preventDefault(); 
+
   var TextPre = Input.value.toLowerCase().trim(); 
+  
+  var DATA = Lista3.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🧋', '') === TextPre);
+  
   let Prefijo;
  
  if (TextPre.includes('tv')) {
          Prefijo = '📺';
-     } else if(TextPre.includes('sofia')){
+     } else if (TextPre.includes('sofia')){
          Prefijo = '⚙️';
+     } else if (DATA && DATA.CAPS){
+         Prefijo = '🧋';
      } else {
          Prefijo = '🍿';
      }   
