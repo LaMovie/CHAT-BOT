@@ -122,6 +122,13 @@ PELIS.forEach(item => {
       Enlace.play();
       Envio.play();
       Erro.pause();
+    } else if (URL.includes('pelisflix')) {
+      URL = `https://lamovie.github.io/La-Movie-Delux/AUX.html?titulo=${NN}&url=${URL}`;    
+      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      No.style.display = 'none';
+      Enlace.play();
+      Envio.play();
+      Erro.pause();
     } else {
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
