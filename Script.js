@@ -254,11 +254,17 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
    if (event.key === 'Enter') { 
           event.preventDefault(); 
 
-  var TextPre = Input.value.toLowerCase().trim(); 
+  var incluyeÑ = Input.value.includes("ñ");
   
-  var DATA = Lista3.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🧋', '') === TextPre);
-  
-  var PRE = Lista2.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🌐', '') === TextPre);
+  var TextPre = TildesFiltro(Input.value.replace(/🍿|🌐|📺|⚙️|🧋/g, '').trim(), incluyeÑ); 
+
+  var DATA = Lista3.find(item => 
+    TildesFiltro((item.NAME || item.name).replace('🧋', '').trim(), incluyeÑ) === TextPre
+);
+
+  var PRE = Lista2.find(item => 
+    TildesFiltro((item.NAME || item.name).replace('🌐', '').trim(), incluyeÑ) === TextPre
+);
   
   let Prefijo;
  
@@ -464,14 +470,18 @@ document.getElementById("FiltroSugerencias").addEventListener("click", function(
         var TextPre = textoSinEmojis.toLowerCase();
         
         // Verificamos de forma segura Lista3
-        var DATA = (typeof Lista3 !== 'undefined') ? Lista3.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🧋', '') === TextPre) : null;
+        var DATAS = (typeof Lista3 !== 'undefined') ? Lista3.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🧋', '') === TextPre) : null;
+        
+        var PRES = (typeof Lista2 !== 'undefined') ? Lista2.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🌐', '') === TextPre) : null;
         
         let Prefijo;
-        if (TextPre.includes('tv')) {
+   if (TextPre.includes('tv')) {
             Prefijo = '📺';
-        } else if (TextPre.includes('sofia')){
-            Prefijo = '⚙️';
-        } else if (DATA && DATA.CAPS){
+     } else if (TextPre.includes('sofia')){
+            Prefijo = '⚙️';    
+   } else if (PRES) {
+         Prefijo = '🌐';
+   } else if (DATAS && DATAS.CAPS){
             Prefijo = '🧋';
         } else {
             Prefijo = '🍿';
