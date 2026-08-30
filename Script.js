@@ -51,7 +51,8 @@ function Visual(url) {
    var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
    
   var PELIS = Lista1.concat(Lista2, Lista3); 
-   
+    // Limpiamos los emojis tanto de la entrada del usuario como de la base de datos
+       
          // PELIS 
 PELIS.forEach(item => {
   var NN = item.name || item.NAME;
@@ -59,8 +60,9 @@ PELIS.forEach(item => {
   
   var incluyeÑ = Input.toLowerCase().includes("ñ");
   
-  var In = Tildes(Input.replace(/\s+/g, ' '), incluyeÑ);   
-  var Items = Tildes(NN.toLowerCase().replace(/\s+/g, ' '), incluyeÑ);
+  var In = Tildes(Input.replace(/🍿|📺|🧋|⚙️/g, '').replace(/\s+/g, ' '), incluyeÑ);   
+  
+  var Items = Tildes(NN.toLowerCase().replace(/🍿|📺|🧋|⚙️/g, '').replace(/\s+/g, ' '), incluyeÑ);
 
   if (In === Items) {
     
@@ -87,7 +89,7 @@ PELIS.forEach(item => {
       if (NN.includes('🧋')) {
        NN = NN.replace('🧋', '');
        URL = `https://lamovie.github.io/La-Movie-Delux/PLAY2.html?titulo=${NN}&url=${URL}`;
-      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      Respuesta = BOT + `Aquí tienes el enlace a: 🧋${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       PANTALLA.style.display = "none";
       All.style.height = "60vh";
       FF.src = ''; 
