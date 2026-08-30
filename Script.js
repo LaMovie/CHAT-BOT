@@ -60,9 +60,9 @@ PELIS.forEach(item => {
   
   var incluyeÑ = Input.toLowerCase().includes("ñ");
   
-  var In = Tildes(Input.replace(/🍿|📺|🧋|⚙️/g, '').replace(/\s+/g, ' '), incluyeÑ);   
+  var In = Tildes(Input.replace(/🍿|📺|🌐|⚙️|🧋/g, '').replace(/\s+/g, ' '), incluyeÑ);   
   
-  var Items = Tildes(NN.toLowerCase().replace(/🍿|📺|🧋|⚙️/g, '').replace(/\s+/g, ' '), incluyeÑ);
+  var Items = Tildes(NN.toLowerCase().replace(/🍿|📺|🌐|⚙️|🧋/g, '').replace(/\s+/g, ' '), incluyeÑ);
 
   if (In === Items) {
     
@@ -125,6 +125,13 @@ PELIS.forEach(item => {
     } else if (URL.includes('pelisflix')) {
       URL = `https://lamovie.github.io/La-Movie-Delux/AUX.html?titulo=${NN}&url=${URL}`;    
       Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+      No.style.display = 'none';
+      Enlace.play();
+      Envio.play();
+      Erro.pause();
+    } else if (NN.includes('🌐')) {
+      URL = `https://lamovie.github.io/PRE-ESTRENOS/?texto=${Items}`;    
+      Respuesta = BOT + `Aquí tienes tu Estreno: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       No.style.display = 'none';
       Enlace.play();
       Envio.play();
@@ -251,12 +258,16 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
   
   var DATA = Lista3.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🧋', '') === TextPre);
   
+  var PRE = Lista2.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🌐', '') === TextPre);
+  
   let Prefijo;
  
  if (TextPre.includes('tv')) {
          Prefijo = '📺';
      } else if (TextPre.includes('sofia')){
          Prefijo = '⚙️';
+     } else if (PRE) {
+         Prefijo = '🌐';
      } else if (DATA && DATA.CAPS){
          Prefijo = '🧋';
      } else {
