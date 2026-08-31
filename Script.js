@@ -88,7 +88,7 @@ PELIS.forEach(item => {
       
       if (NN.includes('🧋')) {
        NN = NN.replace('🧋', '');
-       URL = `https://lamovie.github.io/La-Movie-Delux/PLAY2.html?titulo=${NN}&url=${URL}`;
+       URL = `https://lamovie.github.io/La-Movie-Delux/PLAY.html?titulo=${NN}&url=${URL}`;
       Respuesta = BOT + `Aquí tienes el enlace a: 🧋${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
       PANTALLA.style.display = "none";
       All.style.height = "60vh";
