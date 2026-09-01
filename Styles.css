@@ -1,10 +1,10 @@
 body {
     width: 100%;
-    max-width: 600px; /* Límite de ancho para que no se estire en PC */
-    margin: 0 auto;   /* Centra la app en medio de la pantalla en PC */
+    max-width: 600px; 
+    margin: 0 auto;   
     position: fixed;
     left: 50%;
-    transform: translateX(-50%); /* Asegura el centrado exacto */
+    transform: translateX(-50%); 
     background: #000;
     display: flex;
     flex-direction: column;
@@ -16,20 +16,19 @@ body {
     align-items: center;
     height: 90vh; 
     width: 100%;
-    position: relative; /* Ayuda a controlar mejor los elementos internos */
+    position: relative; 
 }
 #PANTALLA {
-    width: 120%;   
+    width: 120%;  
     scale: 70%; 
+    max-width: 550px; /* Reemplaza el scale por un límite de ancho */
     display: none; 
-    justify-content: center; /* Centra el iframe internamente */
-    align-items: center;
+    place-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 #FF {
     width: 95%; 
-    max-width: 550px; 
     height: 35vh; 
     box-shadow: 0 0 20px blue;
     border-radius: 10px;
@@ -41,14 +40,14 @@ body {
     display: flex; 
     flex-direction: column;
     overflow-y: auto; 
-    overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+    overflow-x: hidden; 
     margin-top: 10px;
     transition: height 0.3s ease; 
     padding-bottom: 80px; 
-    box-sizing: border-box; /* Protege el ancho del contenedor */
+    box-sizing: border-box; 
 }
 #Nav {
-	background: url(1.gif) center/cover; /* Mantiene la imagen proporcionada */
+	background: url(1.gif) center/cover; 
 	border: 2px solid blue;
 	box-shadow: 0 0 30px blue;
 	height: 60px;	
@@ -59,24 +58,24 @@ body {
 	width: 95%;
 	color: #f09;
 	text-shadow: 2px 3px #f09;
-    display: flex; /* Centra el texto del bot automáticamente */
+    display: flex; 
     justify-content: center;
     align-items: center;
 }
 #Nav p {
-    margin: 0; /* Quita el margen extra por defecto de la etiqueta p */
+    margin: 0; 
 }
 #Input {
     z-index: 10;
     color: #fff;
     padding: 15px;
-    width: 60%; /* Se adapta al ancho del celular */
-    max-width: 500px; /* Evita que sea gigantesco en PC */
+    width: 60%; 
+    max-width: 500px; 
     outline: none;
-    position: fixed; /* Lo pega directamente a la pantalla */
-    bottom: 10vh; /* Siempre a 20 pixeles del fondo, evita que se coma el borde en PC */
-    left: 50%; /* Lo empuja a la mitad */
-    transform: translateX(-50%); /* Corrige el eje para un centrado milimétrico */
+    position: fixed; 
+    bottom: 10vh; 
+    left: 50%; 
+    transform: translateX(-50%); 
     background: #000;
     font-weight: bold;
     border-radius: 20px;
@@ -85,7 +84,7 @@ body {
 }
 ul {
     padding: 0;
-    margin: 0; /* Quitamos márgenes residuales */
+    margin: 0; 
     width: 100%;
     display: flex;
     flex-direction: column; 
@@ -93,30 +92,29 @@ ul {
 }
 ul li {    
     width: 75%; 
-    max-width: 75%; /* Límite estricto para que no se estire de más */
+    max-width: 75%; 
     margin-top: 15px;
     list-style: none;
     font-weight: bold;
     border-radius: 20px;
     padding: 10px; 
-    box-sizing: border-box; /* Obliga al padding a quedarse por dentro */
-    word-wrap: break-word; /* Evita que palabras o enlaces muy largos rompan la burbuja */
+    box-sizing: border-box; 
+    word-wrap: break-word; 
 }
 ul li:nth-child(odd){
     color: #fff;
     background: #f09;
-    align-self: flex-end; /* Lo pega a la derecha automáticamente */
+    align-self: flex-end; 
     border: 2px solid #f09;
     box-shadow: 0 0 20px #f09;
     font-family: 'Luckiest Guy', cursive;
     -webkit-text-stroke: .3px #006;
     text-shadow: 0px .5px 0 #aaa;
 }
-/* Mensajes pares (Bot / Izquierda) */
 ul li:nth-child(even){
     color: #FFD700;
     background: blue;            
-    align-self: flex-start; /* Lo pega a la izquierda automáticamente */
+    align-self: flex-start; 
     border: 2px solid blue;
     box-shadow: 0 0 20px blue;
     font-family: 'Luckiest Guy', cursive;
@@ -141,11 +139,9 @@ iframe {
     border-radius: 50px;
 }
 
-
 /* --- BUSCADOR FILTRO --- */
-
 #FiltroSugerencias {
-    display: none; /* Oculto hasta que se escriba */
+    display: none; 
     list-style: none;
     padding: 0;
     margin: 0;
@@ -155,7 +151,7 @@ iframe {
     overflow-y: auto;
     background: #000;
     position: fixed;
-    bottom: 25vh; /* Flota justo por encima de tu #Input */
+    bottom: 25vh; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
@@ -167,7 +163,6 @@ iframe {
     border-bottom: .8px solid #f09;
 }
 
-/* Neutraliza las burbujas de chat para esta lista específica */
 #FiltroSugerencias li {
     width: 100% !important;
     max-width: 100% !important;
@@ -193,5 +188,12 @@ iframe {
 }
 
 
-
-
+/* Estilos para PC: ID PANTALLA corregido a mayúsculas y ajustado el iframe */
+@media (min-width: 1024px) {
+  #PANTALLA { 
+    scale: 70%;
+  }
+  #FF {
+    height: 45vh;
+  }
+}

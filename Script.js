@@ -1,204 +1,177 @@
 function Chat() {
     var Input = document.getElementById("Input").value.toLowerCase().trim();
-    
     var HELP = ["hola", "ayuda", "ayudame", "que eres", "que haces", "tele", "television", "canales", "info", "informacion", "tienes", "alguna", "dato"];
-    
     var LISTA = ["sugerencia", "recomiendas", "sugiere", "lista", "peliculas", "contenido", "filme", "serie", "pelis", "otras", "otros", "catalogo", "buscar"];
     
     var RESP = `Hola! Como estás?, Yo bien! <br/> Tengo juegos como: <br/> "TRES EN LINEA" <br/> "FLAPPY DINO" <br/> "AHORCADO" <br/> También contengo pelis, series & canales de Tv <br/><ul style="width: 70%;"><li>📺 Aida Tv</li><li>📺 IPTV</li><li>📺 Pop World Tv</li><li>📺 Universal Tv</li><li>📺 X tv</li><li>📺 Bass Nation tv</li><li>📺 Activa Tv</li><li>📺 Lilo Y Stitch Tv</li><li>📺 4Fun Tv</li><li>📺 Autentica Tv</li><li>📺 Fifa Spain Tv</li><li>📺 Studio Delta Tv</li><li>📺 Bum Tv</li></ul><br/><p style="color: red">recuerda usar texto en concreto</p>`;   
        
-     
-      var GAMES = [
+    var GAMES = [
       { name: "Tres En Linea", url: `<iframe src="3EnLinea.html" style="width: 50vh; height: 50vh;"></iframe>`}, 
       { name: "Flappy Dino", url: `<a href="https://codepen.io/mlho/full/zMejmo" style="color: #4f9; text-decoration: none">🦖 FLAPPY DINO</a>`}, 
       { name: "Ahorcado", url: `<a href="AHORCADO.html" style="color: #4f9; text-decoration: none">⛓️ AHORCADO</a>`}
-      ];
+    ];
 
-       var Usuario = document.createElement('li');
+    var Usuario = document.createElement('li');
     var Bot = document.createElement('li');    
     Lista.appendChild(Usuario); 
        
-       setTimeout(() => { 
-    Lista.appendChild(Bot);       Bot.scrollIntoView({ behavior: "smooth" }); 
-     // Desplazar al último mensaje del bot 
+    setTimeout(() => { 
+        Lista.appendChild(Bot);       
+        Bot.scrollIntoView({ behavior: "smooth" }); 
     }, 1000);
    
-   
- var TITULO = Input.replace('🍿', ''); 
- var ENLACE = `${'GOOGLE-S.html'}?texto=${TITULO}`;
+    var TITULO = Input.replace('🍿', ''); 
+    var ENLACE = `${'GOOGLE-S.html'}?texto=${TITULO}`;
     var BOT = "🤖: ";
     var Respuesta = BOT + `Encontraremos:<br/>"${Input}" Para Tí<br/><br/><a href="${ENLACE}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-      Envio.play();
+    Envio.play();
 
-      
-      // MOSTRAR VIDEO
-function Visual(url) {
-  PANTALLA.style.display = "block";
-  All.style.height = "40vh";
-  FF.src = url;  
-}
-
-
-         // TILDES 
-  function Tildes(texto, preservarÑ = false) {
-  let limpio = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-  if (!preservarÑ) {
-    limpio = limpio.replace(/ñ/g, "n");
-  }
-  return limpio;
-};
-
-   var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-   
-  var PELIS = Lista1.concat(Lista2, Lista3); 
-    // Limpiamos los emojis tanto de la entrada del usuario como de la base de datos
-       
-         // PELIS 
-PELIS.forEach(item => {
-  var NN = item.name || item.NAME;
-  var URL = item.url || item.URL;
-  
-  var incluyeÑ = Input.toLowerCase().includes("ñ");
-  
-  var In = Tildes(Input.replace(/🍿|📺|🌐|⚙️|🧋/g, '').replace(/\s+/g, ' '), incluyeÑ);   
-  
-  var Items = Tildes(NN.toLowerCase().replace(/🍿|📺|🌐|⚙️|🧋/g, '').replace(/\s+/g, ' '), incluyeÑ);
-
-  if (In === Items) {
-    
-    var CADENA = ['play.vidyard', 'dropbox.com'];
-
-    if (URL.includes('google.com/file')) { 
-      var limpioURL = URL.substring(0, URL.indexOf('view?usp')) + 'preview';
-      Respuesta = BOT + `Disfruta La Emisión: ${NN}`;
-      Visual(limpioURL);
-      No.style.display = 'none';
-      Emision.play();
-      Envio.play();
-      Erro.pause();
-    } else if (CADENA.some(dominio => URL.includes(dominio))) {
-      Respuesta = BOT + `Disfruta de: "${NN}"`; 
+    // MOSTRAR VIDEO
+    function Visual(url) {
       PANTALLA.style.display = "block";
       All.style.height = "40vh";
-      FF.src = URL.replace('www.dropbox.com', 'dl.dropboxusercontent.com');  
-      No.style.display = 'none';
-      Emision.play();
-      Envio.play();
-      Erro.pause();    
-      
-      if (NN.includes('🧋')) {
-       NN = NN.replace('🧋', '');
-       URL = `https://lamovie.github.io/La-Movie-Delux/PLAY2.html?titulo=${NN}&url=${URL}`;
-      Respuesta = BOT + `Aquí tienes el enlace a: 🧋${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-      PANTALLA.style.display = "none";
-      All.style.height = "60vh";
-      FF.src = ''; 
-      No.style.display = 'none';
-      Enlace.play();
-      Envio.play();
-      Erro.pause(); 
-      Emision.pause()
-    } 
-  
-   } else if (NN.includes('📺')) {
-  if (URL.includes('github')) {
-      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-      No.style.display = 'none';
-      Enlace.play();
-      Envio.play();
-      Erro.pause();
-     } else {
-       Respuesta = BOT + `Disfruta de: "${item.name}"`;
-       Visual(item.url);
-       No.style.display = 'none';
-          Emision.play()
+      FF.src = url;  
+    }
+
+    // TILDES 
+    function Tildes(texto, preservarÑ = false) {
+      let limpio = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      if (!preservarÑ) {
+        limpio = limpio.replace(/ñ/g, "n");
+      }
+      return limpio;
+    }
+
+    var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    var PELIS = Lista1.concat(Lista2, Lista3); 
+       
+    // PELIS 
+    PELIS.forEach(item => {
+      var NN = item.name || item.NAME;
+      var URL = item.url || item.URL;
+      var incluyeÑ = Input.toLowerCase().includes("ñ");
+      var In = Tildes(Input.replace(/🍿|📺|🌐|⚙️|🧋/g, '').replace(/\s+/g, ' '), incluyeÑ);   
+      var Items = Tildes(NN.toLowerCase().replace(/🍿|📺|🌐|⚙️|🧋/g, '').replace(/\s+/g, ' '), incluyeÑ);
+
+      if (In === Items) {
+        var CADENA = ['play.vidyard', 'dropbox.com'];
+
+        if (URL.includes('google.com/file')) { 
+          var limpioURL = URL.substring(0, URL.indexOf('view?usp')) + 'preview';
+          Respuesta = BOT + `Disfruta La Emisión: ${NN}`;
+          Visual(limpioURL);
+          No.style.display = 'none';
+          Emision.play();
+          Envio.play();
+          Erro.pause();
+        } else if (CADENA.some(dominio => URL.includes(dominio))) {
+          Respuesta = BOT + `Disfruta de: "${NN}"`; 
+          PANTALLA.style.display = "block";
+          All.style.height = "40vh";
+          FF.src = URL.replace('www.dropbox.com', 'dl.dropboxusercontent.com');  
+          No.style.display = 'none';
+          Emision.play();
+          Envio.play();
+          Erro.pause();    
+          
+          if (NN.includes('🧋')) {
+             NN = NN.replace('🧋', '');
+             URL = `https://lamovie.github.io/La-Movie-Delux/PLAY2.html?titulo=${NN}&url=${URL}`;
+             Respuesta = BOT + `Aquí tienes el enlace a: 🧋${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+             PANTALLA.style.display = "none";
+             All.style.height = "60vh";
+             FF.src = ''; 
+             No.style.display = 'none';
+             Enlace.play();
+             Envio.play();
+             Erro.pause(); 
+             Emision.pause()
+          } 
+        } else if (NN.includes('📺')) {
+          if (URL.includes('github')) {
+              Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+              No.style.display = 'none';
+              Enlace.play();
+              Envio.play();
+              Erro.pause();
+          } else {
+              Respuesta = BOT + `Disfruta de: "${item.name}"`;
+              Visual(item.url);
+              No.style.display = 'none';
+              Emision.play()
+              Envio.play();
+              Erro.pause();
+          }
+        } else if (!isMobile && URL.includes('latino.solo')) {
+          var URL = URL.replace('latino.solo-latino', 'h5.swplayer'); 
+          Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+          No.style.display = 'none';
+          Enlace.play();
+          Envio.play();
+          Erro.pause();
+        } else if (URL.includes('pelisflix')) {
+          URL = `https://lamovie.github.io/La-Movie-Delux/AUX.html?titulo=${NN}&url=${URL}`;    
+          Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+          No.style.display = 'none';
+          Enlace.play();
+          Envio.play();
+          Erro.pause();
+        } else if (NN.includes('🌐')) {
+          URL = `https://lamovie.github.io/PRE-ESTRENOS/?texto=${Items}`;    
+          Respuesta = BOT + `Aquí tienes tu Estreno: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+          No.style.display = 'none';
+          Enlace.play();
+          Envio.play();
+          Erro.pause();
+        } else {
+          Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
+          No.style.display = 'none';
+          Enlace.play();
           Envio.play();
           Erro.pause();
         }
-       } else if (!isMobile && URL.includes('latino.solo')) {
-        var URL = URL.replace('latino.solo-latino', 'h5.swplayer'); 
-      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-      No.style.display = 'none';
-      Enlace.play();
-      Envio.play();
-      Erro.pause();
-    } else if (URL.includes('pelisflix')) {
-      URL = `https://lamovie.github.io/La-Movie-Delux/AUX.html?titulo=${NN}&url=${URL}`;    
-      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-      No.style.display = 'none';
-      Enlace.play();
-      Envio.play();
-      Erro.pause();
-    } else if (NN.includes('🌐')) {
-      URL = `https://lamovie.github.io/PRE-ESTRENOS/?texto=${Items}`;    
-      Respuesta = BOT + `Aquí tienes tu Estreno: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-      No.style.display = 'none';
-      Enlace.play();
-      Envio.play();
-      Erro.pause();
-    } else {
-      Respuesta = BOT + `Aquí tienes el enlace a: ${NN} <br/><br/><a href="${URL}" target="_blank">👉🏾🔗🔗🔗👈🏾</a>`;
-      No.style.display = 'none';
-      Enlace.play();
-      Envio.play();
-      Erro.pause();
-    }
-  } 
-});
+      } 
+    });
 
-         
-       
-         // AYUDA 
-   HELP.forEach((item) => {
-var In = Tildes(Input.replace(/\s+/g, ' '));   
+    // AYUDA 
+    HELP.forEach((item) => {
+      var In = Tildes(Input.replace(/\s+/g, ' '));   
       if (In.includes(item)) {
-       Respuesta = BOT + RESP;
-       No.style.display = 'none';
+          Respuesta = BOT + RESP;
+          No.style.display = 'none';
           Ayuda.play();
           Envio.play();
           Erro.pause();
-   };
-});
+      };
+    });
 
-
-
-         // SUGERENCIAS 
-   LISTA.forEach((item) => {
+    // SUGERENCIAS 
+    LISTA.forEach((item) => {
       var In = Tildes(Input.replace(/\s+/g, ' '));      
-      
-        if (In.includes(item)) {
-     var CATALOGO_FILTRADO = [];
-     var textoSugerencia = 'Hoy Te Sugiero Ver:<br/><br/>';
-  var SERIE = ['folders', 'drama', 'publicfoldergrid'];
-  var MOVIE = ['file', 'movie', 'vidyard.com', 'gallery=open'];
+      if (In.includes(item)) {
+          var CATALOGO_FILTRADO = [];
+          var textoSugerencia = 'Hoy Te Sugiero Ver:<br/><br/>';
+          var SERIE = ['folders', 'drama', 'publicfoldergrid'];
+          var MOVIE = ['file', 'movie', 'vidyard.com', 'gallery=open'];
 
-       if (item === "serie") {
-    // EL SALVAVIDAS: Agregamos || "" para evitar el crasheo por enlaces vacíos o nulos
-              
- CATALOGO_FILTRADO = PELIS.filter(p => SERIE.some(sss => (p.url || p.URL || "").includes(sss)));
-
-     textoSugerencia = 'Hoy Te Sugiero Ver Estas Series:<br/><br/>';
+          if (item === "serie") {
+              CATALOGO_FILTRADO = PELIS.filter(p => SERIE.some(sss => (p.url || p.URL || "").includes(sss)));
+              textoSugerencia = 'Hoy Te Sugiero Ver Estas Series:<br/><br/>';
           } else if (item === "peliculas" || item === "pelis" || item === "filme") {
-              // EL SALVAVIDAS: Agregamos || "" aquí también
- 
- CATALOGO_FILTRADO = PELIS.filter(p => MOVIE.some(mmm => (p.url || p.URL || "").includes(mmm)));
-
-        textoSugerencia = 'Hoy Te Sugiero Ver Estas Películas:<br/><br/>';
+              CATALOGO_FILTRADO = PELIS.filter(p => MOVIE.some(mmm => (p.url || p.URL || "").includes(mmm)));
+              textoSugerencia = 'Hoy Te Sugiero Ver Estas Películas:<br/><br/>';
           } else {
-     CATALOGO_FILTRADO = PELIS; 
+              CATALOGO_FILTRADO = PELIS; 
           }
 
           var sugeridas = [];
-          // Copiamos y desordenamos la lista de forma segura
           var disponibles = [...CATALOGO_FILTRADO].sort(() => 0.5 - Math.random());
 
-          // Buscamos hasta 3 resultados únicos sin riesgo de bucles
           for (var i = 0; i < disponibles.length; i++) {
-     if (sugeridas.length >= 3) break; 
-              
-   var NNN = disponibles[i].name || disponibles[i].NAME;
+              if (sugeridas.length >= 3) break; 
+              var NNN = disponibles[i].name || disponibles[i].NAME;
               if (NNN) {
-   var NOMBRE = NNN.replace(/🍿|📺/g, '').trim();       
+                  var NOMBRE = NNN.replace(/🍿|📺/g, '').trim();       
                   if (NOMBRE && !sugeridas.includes(NOMBRE)) {
                       sugeridas.push(NOMBRE);
                   }
@@ -210,176 +183,130 @@ var In = Tildes(Input.replace(/\s+/g, ' '));
           });
 
           Respuesta = BOT + textoSugerencia + SUGG.join('<br/><br/>');
-          
           No.style.display = 'none';
           Envio.play();
           Erro.pause();
       };
-   });
+    });
 
-
-     
-
-         // GAMES 
-   GAMES.forEach((item) => {
-var In = Tildes(Input.replace(/\s+/g, ' '));
-        var Items = Tildes(item.name.toLowerCase().replace(/\s+/g, ' '));
-   // PERMITE LOS ESPACIOS ENTRE MEDIOS      
+    // GAMES 
+    GAMES.forEach((item) => {
+      var In = Tildes(Input.replace(/\s+/g, ' '));
+      var Items = Tildes(item.name.toLowerCase().replace(/\s+/g, ' '));
       if (In.includes(Items)) {
-     Respuesta = BOT + item.url;
-     No.style.display = 'none';
-         Envio.play();
-         Erro.pause();
-   };
-});
+          Respuesta = BOT + item.url;
+          No.style.display = 'none';
+          Envio.play();
+          Erro.pause();
+      };
+    });
     
-
-
-  // NO CONCATENAR RESPUESTA 
-   Bot.innerHTML = Respuesta;
-  Usuario.textContent = Input || "...";
-  
-  Usuario.scrollIntoView({ behavior: "smooth" }); 
-    // Desplazar al último mensaje del usuario 
+    // NO CONCATENAR RESPUESTA 
+    Bot.innerHTML = Respuesta;
+    Usuario.textContent = Input || "...";
+    Usuario.scrollIntoView({ behavior: "smooth" }); 
     document.getElementById("Input").value = '';             
-
-        Input.value = '';
 };
 
+// PREFIJO 
+document.getElementById("Input").addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') { 
+        event.preventDefault(); 
+        var InputElement = document.getElementById("Input");
+        var incluyeÑ = InputElement.value.includes("ñ");
+        var TextPre = TildesFiltro(InputElement.value.replace(/🍿|🌐|📺|⚙️|🧋/g, '').trim(), incluyeÑ); 
 
-  
- 
-         // PREFIJO 
-  Input.addEventListener('keydown', function(event) {
-   if (event.key === 'Enter') { 
-          event.preventDefault(); 
-
-  var incluyeÑ = Input.value.includes("ñ");
-  
-  var TextPre = TildesFiltro(Input.value.replace(/🍿|🌐|📺|⚙️|🧋/g, '').trim(), incluyeÑ); 
-
-  var DATA = Lista3.find(item => 
-    TildesFiltro((item.NAME || item.name).replace('🧋', '').trim(), incluyeÑ) === TextPre
-);
-
-  var PRE = Lista2.find(item => 
-    TildesFiltro((item.NAME || item.name).replace('🌐', '').trim(), incluyeÑ) === TextPre
-);
-  
-  let Prefijo;
- 
- if (TextPre.includes('tv')) {
-         Prefijo = '📺';
-     } else if (TextPre.includes('sofia')){
-         Prefijo = '⚙️';
-     } else if (PRE) {
-         Prefijo = '🌐';
-     } else if (DATA && DATA.CAPS){
-         Prefijo = '🧋';
-     } else {
-         Prefijo = '🍿';
-     }   
-   var Texto = Prefijo + TextPre;       
-   Input.value = Texto; 
-         Chat();
-  }
+        var DATA = Lista3.find(item => 
+          TildesFiltro((item.NAME || item.name).replace('🧋', '').trim(), incluyeÑ) === TextPre
+        );
+        var PRE = Lista2.find(item => 
+          TildesFiltro((item.NAME || item.name).replace('🌐', '').trim(), incluyeÑ) === TextPre
+        );
+        
+        let Prefijo;
+        if (TextPre.includes('tv')) {
+            Prefijo = '📺';
+        } else if (TextPre.includes('sofia')){
+            Prefijo = '⚙️';
+        } else if (PRE) {
+            Prefijo = '🌐';
+        } else if (DATA && DATA.CAPS){
+            Prefijo = '🧋';
+        } else {
+            Prefijo = '🍿';
+        }   
+        var Texto = Prefijo + TextPre;       
+        InputElement.value = Texto; 
+        Chat();
+    }
 });     
-
    
-   var CADENA = ['🍿', '📺'];
-
-Lista.addEventListener("click", function (event) {
+var CADENA = ['🍿', '📺'];
+document.getElementById("Lista").addEventListener("click", function (event) {
     var Text = event.target.textContent;
-    
     var EMOJI = CADENA.find(emoji => Text.includes(emoji));
+    var InputElement = document.getElementById("Input");
 
-        if (EMOJI) {
-  var SUGG = Text.split(EMOJI)[1];   
-        Input.value = SUGG.trim(); 
-    } else if (Text.includes('No tengo')) {
-        Input.value = '';
-    } else if (Text.includes('👉🏾')) {
-        Input.value = '';
-    } else if (Text.includes('Sugerencias')) {
-        Input.value = '';
+    if (EMOJI) {
+        var SUGG = Text.split(EMOJI)[1];   
+        InputElement.value = SUGG.trim(); 
+    } else if (Text.includes('No tengo') || Text.includes('👉🏾') || Text.includes('Sugerencias')) {
+        InputElement.value = '';
     }                     
 });
 
-
-  function fullScreens() {
+function fullScreens() {
     var EMB = document.querySelector('embed');
     if (EMB.requestFullscreen) {
       EMB.requestFullscreen();
-    } else if (EMB.mozRequestFullScreen) { // Firefox
+    } else if (EMB.mozRequestFullScreen) { 
       EMB.mozRequestFullScreen();
-    } else if (EMB.webkitRequestFullscreen) { // Chrome, Safari and Opera
+    } else if (EMB.webkitRequestFullscreen) { 
       EMB.webkitRequestFullscreen();
-    } else if (EMB.msRequestFullscreen) { // IE/Edge
+    } else if (EMB.msRequestFullscreen) { 
       EMB.msRequestFullscreen();
     }
-  }
-
+}
 
 // Detectar cuando entra o sale de fullscreen 
 document.addEventListener('fullscreenchange', function() {
-  if (document.fullscreenElement) {
-    // Si estamos en pantalla completa, bloquear orientación horizontal 
-    if (screen.orientation && screen.orientation.lock) {
-      screen.orientation.lock('landscape');
+    if (document.fullscreenElement) {
+        if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape');
+        }
+    } else {
+        if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('portrait');
+        }
     }
-  } else {
-    // Si salimos de pantalla completa, volver a orientación vertical 
-    if (screen.orientation && screen.orientation.lock) {
-      screen.orientation.lock('portrait');
-    }
-  }
 });
-
-
 
 // --- MENSAJE DE BIENVENIDA INICIAL CON EFECTO DE ESCRITURA ---
 window.addEventListener('DOMContentLoaded', () => {
-       // 1. Creamos un elemento fantasma para ocupar el puesto impar (usuario) 
-   var UsuarioDummy = document.createElement('li');
+    var UsuarioDummy = document.createElement('li');
     UsuarioDummy.style.display = 'none';
-    Lista.appendChild(UsuarioDummy);
+    document.getElementById("Lista").appendChild(UsuarioDummy);
     
-  // 2. Creamos la burbuja del bot
     var BotInicial = document.createElement('li');
-    Lista.appendChild(BotInicial);
+    document.getElementById("Lista").appendChild(BotInicial);
     
-    // Texto de bienvenida
-    var textoBienvenida = "🤖: ¡Hola! ¿Cómo estás? En que te puedo ayudar?";
+    var textoBienvenida = "🤖: ¡Hola! ¿Cómo estás? En qué te puedo ayudar?";
     var index = 0;
     
-    // 3. Función de animación de escritura
     function maquinaEscribir() {
         if (index < textoBienvenida.length) {
             BotInicial.textContent += textoBienvenida.charAt(index);
             index++;
-            setTimeout(maquinaEscribir, 55); // Velocidad de escritura en milisegundos
+            setTimeout(maquinaEscribir, 55); 
         } else {
             BotInicial.scrollIntoView({ behavior: "smooth" });
         }
     }
     
-    maquinaEschibir = maquinaEscribir; // Referencia interna
     setTimeout(() => {
         maquinaEscribir();
     }, 1000);
 });
-
-     var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  
-   if (!isMobile) {
-     FF.style.height = '45vh';
-     Pantalla.style.scale = '50%'; 
-        
-   };
-
-
-
-
 
 // 🦥 FILTRO función Chat()
 function TildesFiltro(texto, preservarÑ = false) {
@@ -390,17 +317,16 @@ function TildesFiltro(texto, preservarÑ = false) {
     return limpio;
 }
 
-// 2. Construir la lista oculta con un verificador de carga
+// 2. Construir la lista oculta
 function construirFiltroChat() {
-    // Verificamos si la base de datos ya terminó de cargar desde GitHub
     if (typeof Lista1 === 'undefined' || typeof Lista2 === 'undefined' || typeof Lista3 === 'undefined') {
-        setTimeout(construirFiltroChat, 500); // Si no ha cargado, reintenta en medio segundo
+        setTimeout(construirFiltroChat, 500); 
         return; 
     }
 
     var PELIS_TOTAL = Lista1.concat(Lista2, Lista3); 
     var listaSugerencias = document.getElementById("FiltroSugerencias");
-    listaSugerencias.innerHTML = ''; // Limpiamos antes de construir
+    listaSugerencias.innerHTML = ''; 
 
     PELIS_TOTAL.forEach(item => {
         var li = document.createElement("li");
@@ -412,30 +338,23 @@ function construirFiltroChat() {
         listaSugerencias.appendChild(li);
     });
 }
-
-// Iniciamos la construcción segura
 construirFiltroChat();
 
-// 3. Filtrado en tiempo real al escribir
-document.getElementById("Input").addEventListener("keyup", function(e) {
-    if (e.key === "Enter") {
-        FiltroSugerencias.style.display = "none";
-    } 
-
-    var In = e.target.value.toLowerCase().trim();
-    var incluyeÑ = In.includes("ñ");
-    
-    // Usamos la nueva función TildesFiltro
-    var InputLimpiado = TildesFiltro(In.replace(/\s+/g, ' '), incluyeÑ);
-    
+// 3. Filtrado en tiempo real al escribir (Cambiado 'keyup' por 'input' para PC)
+document.getElementById("Input").addEventListener("input", function(e) {
     var listaSugerencias = document.getElementById("FiltroSugerencias");
-    var itemsFiltro = document.querySelectorAll(".Data-Filtro");
-    let foundMatch = false;
-
-    if (InputLimpiado === '') {
+    
+    // Evitar errores si se presiona Enter o el campo se limpia 
+    if (e.target.value.trim() === '') {
         listaSugerencias.style.display = "none";
         return;
     }
+
+    var In = e.target.value.toLowerCase().trim();
+    var incluyeÑ = In.includes("ñ");
+    var InputLimpiado = TildesFiltro(In.replace(/\s+/g, ' '), incluyeÑ);
+    var itemsFiltro = document.querySelectorAll(".Data-Filtro");
+    let foundMatch = false;
 
     listaSugerencias.style.display = "block";
 
@@ -444,15 +363,22 @@ document.getElementById("Input").addEventListener("keyup", function(e) {
         let itemText = TildesFiltro(elTitulo.toLowerCase().trim(), incluyeÑ);
 
         if (itemText.includes(InputLimpiado)) {
-    item.style.display = "block";
+            item.style.display = "block";
             foundMatch = true;
         } else {
-   item.style.display = "none";
+            item.style.display = "none";
         }
     });
 
     if (!foundMatch) {
         listaSugerencias.style.display = "none";
+    }
+});
+
+// Ocultar filtro al dar Enter (adicional para seguridad visual)
+document.getElementById("Input").addEventListener("keyup", function(e) {
+    if (e.key === "Enter") {
+        document.getElementById("FiltroSugerencias").style.display = "none";
     }
 });
 
@@ -469,19 +395,17 @@ document.getElementById("FiltroSugerencias").addEventListener("click", function(
 
         var TextPre = textoSinEmojis.toLowerCase();
         
-        // Verificamos de forma segura Lista3
         var DATAS = (typeof Lista3 !== 'undefined') ? Lista3.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🧋', '') === TextPre) : null;
-        
         var PRES = (typeof Lista2 !== 'undefined') ? Lista2.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🌐', '') === TextPre) : null;
         
         let Prefijo;
-   if (TextPre.includes('tv')) {
+    if (TextPre.includes('tv')) {
             Prefijo = '📺';
-     } else if (TextPre.includes('sofia')){
+        } else if (TextPre.includes('sofia')){
             Prefijo = '⚙️';    
-   } else if (PRES) {
-         Prefijo = '🌐';
-   } else if (DATAS && DATAS.CAPS){
+        } else if (PRES) {
+            Prefijo = '🌐';
+        } else if (DATAS && DATAS.CAPS){
             Prefijo = '🧋';
         } else {
             Prefijo = '🍿';
@@ -492,15 +416,10 @@ document.getElementById("FiltroSugerencias").addEventListener("click", function(
     }
 });
 
-// 5. Ocultar el filtro si el usuario toca fuera de la caja
+// 5. Ocultar el filtro si el usuario toca fuera de la caja (Uso de closest para PC)
 document.addEventListener("click", function(e) {
-    if (e.target.id !== "Input" && e.target.id !== "FiltroSugerencias") {
+    if (!e.target.closest("#Input") && !e.target.closest("#FiltroSugerencias")) {
         var filtro = document.getElementById("FiltroSugerencias");
         if(filtro) filtro.style.display = "none";
     }
 });
-
-
-
-
-  
