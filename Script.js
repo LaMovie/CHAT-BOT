@@ -54,7 +54,7 @@ function Chat() {
       var Items = Tildes(NN.toLowerCase().replace(/🍿|📺|🌐|⚙️|🧋/g, '').replace(/\s+/g, ' '), incluyeÑ);
 
       if (In === Items) {
-        var CADENA = ['play.vidyard', 'dropbox.com'];
+        var CADENA = ['play.vidyard', 'dropbox.com', '.mp4'];
 
         if (URL.includes('google.com/file')) { 
           var limpioURL = URL.substring(0, URL.indexOf('view?usp')) + 'preview';
@@ -152,7 +152,7 @@ function Chat() {
           var CATALOGO_FILTRADO = [];
           var textoSugerencia = 'Hoy Te Sugiero Ver:<br/><br/>';
           var SERIE = ['folders', 'drama', 'publicfoldergrid'];
-          var MOVIE = ['file', 'movie', 'vidyard.com', 'gallery=open'];
+          var MOVIE = ['file', 'movie', 'vidyard.com', 'gallery=open', '.mp4'];
 
           if (item === "serie") {
               CATALOGO_FILTRADO = PELIS.filter(p => SERIE.some(sss => (p.url || p.URL || "").includes(sss)));
