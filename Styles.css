@@ -193,12 +193,12 @@ iframe {
 @media (min-width: 500px) {
   #PANTALLA { 
     scale: 70%;
+    height: 35vh;
   }
   #FF {
-    height: 35vh;
+    height: 45vh;
   }
   #All {
     height: 50vh;
-    margin-top: 10px;
   }
 }
