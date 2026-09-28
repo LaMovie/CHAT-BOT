@@ -188,12 +188,17 @@ iframe {
 }
 
 
+
 /* Estilos para PC: ID PANTALLA corregido a mayúsculas y ajustado el iframe */
-@media (min-width: 1024px) {
+@media (min-width: 500px) {
   #PANTALLA { 
     scale: 70%;
   }
   #FF {
-    height: 45vh;
+    height: 35vh;
+  }
+  #All {
+    height: 50vh;
+    margin-top: 10px;
   }
 }
