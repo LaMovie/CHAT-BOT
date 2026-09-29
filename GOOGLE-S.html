@@ -421,10 +421,19 @@ body { display: none !important; }
    <!-- SCRIPTS DE CONTROL -->
 <script>  
   function abrirFuera(urlDestino) {
-     var urlSinProtocolo = urlDestino.replace("https://", "");
-      var intentURL = "intent://" + urlSinProtocolo + "#Intent;scheme=https;action=android.intent.action.VIEW;end;";
-      window.location.href = intentURL;
-  }
+     var isMobile = /Android/i.test(navigator.userAgent);
+
+       if (isMobile) {
+   var urlSinProtocolo = urlDestino.replace("https://", "");
+   
+   var intentURL = "intent://" + urlSinProtocolo + "#Intent;scheme=https;action=android.intent.action.VIEW;end;";
+   
+ window.location.href = intentURL;
+         } else {
+ window.location.href = urlDestino;
+    }
+}
+
 
   function Check() {
     if (Int.value.trim() === "") return;
