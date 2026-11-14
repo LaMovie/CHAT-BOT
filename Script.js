@@ -57,7 +57,7 @@ function Chat() {
         var CADENA = ['play.vidyard', 'dropbox.com', '.mp4'];
 
         if (URL.includes('google.com/file')) { 
-          var limpioURL = URL.substring(0, URL.indexOf('view?usp')) + 'preview';
+          var limpioURL = URL.replace(/view.*/, 'preview');
           Respuesta = BOT + `Disfruta La Emisión: ${NN}`;
           Visual(limpioURL);
           No.style.display = 'none';
@@ -423,3 +423,8 @@ document.addEventListener("click", function(e) {
         if(filtro) filtro.style.display = "none";
     }
 });
+
+
+
+    
+
