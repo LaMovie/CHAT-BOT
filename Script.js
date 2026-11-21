@@ -43,7 +43,8 @@ function Chat() {
     }
 
     var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    var PELIS = Lista1.concat(Lista2, Lista3); 
+    
+    var PELIS = TERROR.concat(ACCION, FICCION, COMEDY, SERIES, ANIME, TV, PRE); 
        
     // PELIS 
     PELIS.forEach(item => {
@@ -208,40 +209,46 @@ function Chat() {
     document.getElementById("Input").value = '';             
 };
 
-// PREFIJO 
+
+   // PREFIJO
 document.getElementById("Input").addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') { 
-        event.preventDefault(); 
+    if (event.key === 'Enter') {
+        event.preventDefault();
         var InputElement = document.getElementById("Input");
         var incluyeÑ = InputElement.value.includes("ñ");
-        var TextPre = TildesFiltro(InputElement.value.replace(/🍿|🌐|📺|⚙️|🧋/g, '').trim(), incluyeÑ); 
+        var TextPre = TildesFiltro(InputElement.value.replace(/🍿|🌐|📺|⚙️|🧋/g, '').trim(), incluyeÑ);
 
-        var DATA = Lista3.find(item => 
-          TildesFiltro((item.NAME || item.name).replace('🧋', '').trim(), incluyeÑ) === TextPre
+        var fuentes = [TERROR, ACCION, FICCION, COMEDY, SERIES, ANIME, TV, PRE].filter(arr => typeof arr !== 'undefined' && Array.isArray(arr));
+        var CATALOGO = [].concat(...fuentes);
+
+        var DATA = CATALOGO.find(item =>
+          TildesFiltro((item.NAME || item.name || '').replace('🧋', '').trim(), incluyeÑ) === TextPre
         );
-        var PRE = Lista2.find(item => 
-          TildesFiltro((item.NAME || item.name).replace('🌐', '').trim(), incluyeÑ) === TextPre
+        var ES_PRE = (typeof PRE !== 'undefined' && Array.isArray(PRE)) && PRE.some(item =>
+          TildesFiltro((item.NAME || item.name || '').replace('🌐', '').trim(), incluyeÑ) === TextPre
         );
-        
+
         let Prefijo;
         if (TextPre.includes('tv')) {
             Prefijo = '📺';
-        } else if (TextPre.includes('sofia')){
+        } else if (TextPre.includes('sofia')) {
             Prefijo = '⚙️';
-        } else if (PRE) {
+        } else if (ES_PRE) {
             Prefijo = '🌐';
-        } else if (DATA && DATA.CAPS){
+        } else if (DATA && DATA.CAPS) {
             Prefijo = '🧋';
         } else {
             Prefijo = '🍿';
-        }   
-        var Texto = Prefijo + TextPre;       
-        InputElement.value = Texto; 
+        }
+
+        var Texto = Prefijo + TextPre;
+        InputElement.value = Texto;
         Chat();
     }
-});     
-   
-var CADENA = ['🍿', '📺'];
+});
+
+           
+  var CADENA = ['🍿', '📺'];
 document.getElementById("Lista").addEventListener("click", function (event) {
     var Text = event.target.textContent;
     var EMOJI = CADENA.find(emoji => Text.includes(emoji));
@@ -319,26 +326,30 @@ function TildesFiltro(texto, preservarÑ = false) {
 
 // 2. Construir la lista oculta
 function construirFiltroChat() {
-    if (typeof Lista1 === 'undefined' || typeof Lista2 === 'undefined' || typeof Lista3 === 'undefined') {
-        setTimeout(construirFiltroChat, 500); 
-        return; 
+    const fuentes = [TERROR, ACCION, FICCION, COMEDY, SERIES, ANIME, TV, PRE];
+    const todosListos = fuentes.every(arr => typeof arr !== 'undefined' && Array.isArray(arr));
+
+    if (!todosListos) {
+        setTimeout(construirFiltroChat, 500);
+        return;
     }
 
-    var PELIS_TOTAL = Lista1.concat(Lista2, Lista3); 
+    var PELIS_TOTAL = [].concat(...fuentes);
     var listaSugerencias = document.getElementById("FiltroSugerencias");
-    listaSugerencias.innerHTML = ''; 
+    listaSugerencias.innerHTML = '';
 
     PELIS_TOTAL.forEach(item => {
         var li = document.createElement("li");
         var name = item.NAME || item.name || '';
-        
+
         li.innerHTML = `<span class="titulo-txt">${name}</span>`;
         li.classList.add("Data-Filtro");
         li.style.display = "none";
         listaSugerencias.appendChild(li);
     });
 }
-construirFiltroChat();
+
+   construirFiltroChat();
 
 // 3. Filtrado en tiempo real al escribir (Cambiado 'keyup' por 'input' para PC)
 document.getElementById("Input").addEventListener("input", function(e) {
@@ -386,34 +397,42 @@ document.getElementById("Input").addEventListener("keyup", function(e) {
 document.getElementById("FiltroSugerencias").addEventListener("click", function(e) {
     var matchedItem = e.target.closest(".Data-Filtro");
 
-    if (matchedItem) {
+        if (matchedItem) {
         var textoCrudo = matchedItem.textContent;
-        var textoSinEmojis = textoCrudo.replace(/🍿|🌐|📺|⚙️|🧋/g, '').trim(); 
-        
+        var textoSinEmojis = textoCrudo.replace(/🍿|🌐|📺|⚙️|🧋/g, '').trim();
+        var incluyeÑ = textoSinEmojis.toLowerCase().includes("ñ");
+
         var inputElement = document.getElementById("Input");
         document.getElementById("FiltroSugerencias").style.display = "none";
 
-        var TextPre = textoSinEmojis.toLowerCase();
-        
-        var DATAS = (typeof Lista3 !== 'undefined') ? Lista3.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🧋', '') === TextPre) : null;
-        var PRES = (typeof Lista2 !== 'undefined') ? Lista2.find(item => (item.NAME || item.name).toLowerCase().trim().replace('🌐', '') === TextPre) : null;
-        
+        var TextPre = TildesFiltro(textoSinEmojis.replace(/\s+/g, ' '), incluyeÑ);
+
+        var fuentesClick = [TERROR, ACCION, FICCION, COMEDY, SERIES, ANIME, TV, PRE].filter(arr => typeof arr !== 'undefined' && Array.isArray(arr));
+        var CATALOGO_CLICK = [].concat(...fuentesClick);
+
+        var DATAS = CATALOGO_CLICK.find(item =>
+          TildesFiltro((item.NAME || item.name || '').replace('🧋', '').trim(), incluyeÑ) === TextPre
+        );
+        var ES_PRES = (typeof PRE !== 'undefined' && Array.isArray(PRE)) && PRE.some(item =>
+          TildesFiltro((item.NAME || item.name || '').replace('🌐', '').trim(), incluyeÑ) === TextPre
+        );
+
         let Prefijo;
-    if (TextPre.includes('tv')) {
+        if (TextPre.includes('tv')) {
             Prefijo = '📺';
-        } else if (TextPre.includes('sofia')){
-            Prefijo = '⚙️';    
-        } else if (PRES) {
+        } else if (TextPre.includes('sofia')) {
+            Prefijo = '⚙️';
+        } else if (ES_PRES) {
             Prefijo = '🌐';
-        } else if (DATAS && DATAS.CAPS){
+        } else if (DATAS && DATAS.CAPS) {
             Prefijo = '🧋';
         } else {
             Prefijo = '🍿';
-        }   
-        
+        }
+
         inputElement.value = Prefijo + TextPre;
-        Chat(); 
-    }
+        Chat();
+    }    
 });
 
 // 5. Ocultar el filtro si el usuario toca fuera de la caja (Uso de closest para PC)
