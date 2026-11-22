@@ -44,7 +44,7 @@ function Chat() {
 
     var isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
-    var PELIS = TERROR.concat(ACCION, FICCION, COMEDY, SERIES, ANIME, TV, PRE); 
+    var PELIS = TERROR.concat(ACCION, FICCION, COMEDY, SERIES, ANIME, TV); 
        
     // PELIS 
     PELIS.forEach(item => {
@@ -218,13 +218,13 @@ document.getElementById("Input").addEventListener('keydown', function(event) {
         var incluyeÑ = InputElement.value.includes("ñ");
         var TextPre = TildesFiltro(InputElement.value.replace(/🍿|🌐|📺|⚙️|🧋/g, '').trim(), incluyeÑ);
 
-        var fuentes = [TERROR, ACCION, FICCION, COMEDY, SERIES, ANIME, TV, PRE].filter(arr => typeof arr !== 'undefined' && Array.isArray(arr));
+        var fuentes = [TERROR, ACCION, FICCION, COMEDY, SERIES, ANIME, TV].filter(arr => typeof arr !== 'undefined' && Array.isArray(arr));
         var CATALOGO = [].concat(...fuentes);
 
         var DATA = CATALOGO.find(item =>
           TildesFiltro((item.NAME || item.name || '').replace('🧋', '').trim(), incluyeÑ) === TextPre
         );
-        var ES_PRE = (typeof PRE !== 'undefined' && Array.isArray(PRE)) && PRE.some(item =>
+        var ES_PRE = (typeof TV !== 'undefined' && Array.isArray(TV)) && TV.some(item =>
           TildesFiltro((item.NAME || item.name || '').replace('🌐', '').trim(), incluyeÑ) === TextPre
         );
 
@@ -326,7 +326,7 @@ function TildesFiltro(texto, preservarÑ = false) {
 
 // 2. Construir la lista oculta
 function construirFiltroChat() {
-    const fuentes = [TERROR, ACCION, FICCION, COMEDY, SERIES, ANIME, TV, PRE];
+    const fuentes = [TERROR, ACCION, FICCION, COMEDY, SERIES, ANIME, TV];
     const todosListos = fuentes.every(arr => typeof arr !== 'undefined' && Array.isArray(arr));
 
     if (!todosListos) {
@@ -407,13 +407,13 @@ document.getElementById("FiltroSugerencias").addEventListener("click", function(
 
         var TextPre = TildesFiltro(textoSinEmojis.replace(/\s+/g, ' '), incluyeÑ);
 
-        var fuentesClick = [TERROR, ACCION, FICCION, COMEDY, SERIES, ANIME, TV, PRE].filter(arr => typeof arr !== 'undefined' && Array.isArray(arr));
+        var fuentesClick = [TERROR, ACCION, FICCION, COMEDY, SERIES, ANIME, TV].filter(arr => typeof arr !== 'undefined' && Array.isArray(arr));
         var CATALOGO_CLICK = [].concat(...fuentesClick);
 
         var DATAS = CATALOGO_CLICK.find(item =>
           TildesFiltro((item.NAME || item.name || '').replace('🧋', '').trim(), incluyeÑ) === TextPre
         );
-        var ES_PRES = (typeof PRE !== 'undefined' && Array.isArray(PRE)) && PRE.some(item =>
+        var ES_PRES = (typeof TV !== 'undefined' && Array.isArray(TV)) && TV.some(item =>
           TildesFiltro((item.NAME || item.name || '').replace('🌐', '').trim(), incluyeÑ) === TextPre
         );
 
